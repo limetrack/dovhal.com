@@ -1,0 +1,22 @@
+.CoreLayout {
+  text-align: center;
+}
+
+.CoreLayout-logo {
+  height: 80px;
+}
+
+.CoreLayout-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.CoreLayout-title {
+  font-size: 1.5em;
+}
+
+.CoreLayout-intro {
+  font-size: large;
+}
