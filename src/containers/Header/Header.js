@@ -8,7 +8,7 @@ class Header extends Component {
       <div className="Header">
         <header className="Header-header">
           <img src={logo} className="Header-logo" alt="logo" />
-          <h1 className="Header-title">Welcome to Dovhal.com</h1>
+          <h1 className="Header-title">Welcome to dovhal.com</h1>
         </header>
       </div>
     );
