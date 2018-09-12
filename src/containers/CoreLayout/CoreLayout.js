@@ -1,24 +1,19 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import { Header, Footer } from 'containers';
-import './CoreLayout.css';
-
-const theme = createMuiTheme();
+import withRoot from 'withRoot';
 
 class CoreLayout extends Component {
   render() {
     return (
       <Router>
-        <MuiThemeProvider theme={theme}>
-          <CssBaseline />
+        <div>
           <Header />
           <Footer />
-        </MuiThemeProvider>
+        </div>
       </Router>
     );
   }
 }
 
-export default CoreLayout;
+export default withRoot(CoreLayout);;
