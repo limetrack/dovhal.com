@@ -3,25 +3,25 @@ const data = {
     specialty: 'Custom Software Development',
     moto: "Let's do it together",
     mission: 'Make websites a better place',
-    img: '/img/',
+    imgPath: '/img/',
     uniqueness: [
         {
-            name: 'App development',
-            text: 'We use our expertise in a variety of technologies to craft code that opens the door for ongoing iterations with our clients’ users. Our teams ensure a build with the foundation for success.',
+            name: 'Creating products people love',
+            text: 'Our differences, both visible and invisible, benefit our teams, our communities, and the products we craft. That’s why WillowTree strives to build a team with diverse backgrounds, skills, and perspectives. We’re committed to creating an environment of inclusion — a place where every Tree can thrive.',
             show: true,
-            logo: 'app.png'
+            logo: 'products.jpg'
         },
         {
-            name: 'Web development',
-            text: 'Our web development process is geared toward an intuitive experience for users. We create products that are both aesthetically pleasing and user friendly.',
+            name: 'Strategy',
+            text: 'We provide strategic guidance for technical implementations, roadmap development, and business decisions that lead to innovative solutions that scale.',
             show: true,
-            logo: 'web.png'
+            logo: 'strategy.jpg'
         },
         {
-            name: 'Support',
-            text: 'A launch date doesn’t mean “goodbye.” We continue collaborating for exponential success, keeping you and your products online.',
+            name: 'Emerging Tech',
+            text: 'We’re constantly iterating and pushing the limitations of our abilities. Experimental projects provide a fresh perspective on how to produce competitive products for each client, regardless of vertical or industry.',
             show: true,
-            logo: 'support.png'
+            logo: 'emergency.jpg'
         }
     ],
     portfolio: '',
