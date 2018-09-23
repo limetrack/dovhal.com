@@ -32,6 +32,7 @@ const styles = theme => ({
   },
   appBar: {
     position: 'relative',
+    backgroundColor: '#555',//theme.palette.primary.dark,
   },
   icon: {
     marginRight: theme.spacing.unit * 2,

@@ -76,7 +76,7 @@ const data = {
         {
             name: 'Apple',
             show: true,
-            logo: 'apple.png'
+            logo: 'Apple.svg'
         },
         {
             name: 'Microsoft',
