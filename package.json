@@ -20,5 +20,8 @@
   },
   "devDependencies": {
     "cross-env": "^5.2.0"
+  },
+  "engines": { 
+    "node": "8.11.3" 
   }
 }
