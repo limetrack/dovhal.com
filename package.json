@@ -10,18 +10,20 @@
   },
   "dependencies": {
     "@material-ui/core": "^3.0.3",
+    "@material-ui/icons": "^3.0.1",
     "jss": "^9.8.7",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-jss": "^8.6.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.5"
+    "react-scripts": "1.1.5",
+    "typeface-roboto": "0.0.54"
   },
   "devDependencies": {
     "cross-env": "^5.2.0"
   },
-  "engines": { 
-    "node": "8.11.3" 
+  "engines": {
+    "node": "8.11.3"
   }
 }

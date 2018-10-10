@@ -8,10 +8,11 @@ import {
   jssPreset,
 } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import dovhalTheme from './theme/dovhalTheme';
 
 // A theme with custom primary and secondary color.
 // It's optional.
-const theme = createMuiTheme();
+const theme = createMuiTheme(dovhalTheme);
 
 // Create a JSS instance with the default preset of plugins.
 // It's optional.

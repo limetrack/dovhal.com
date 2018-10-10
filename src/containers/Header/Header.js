@@ -1,19 +1,87 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import { 
+  Menu,
+  AppBar, 
+  Button,
+  Toolbar, 
+  MenuItem, 
+  IconButton,
+} from '@material-ui/core';
+
+import {
+  MoreVert as MoreIcon,
+} from '@material-ui/icons';
+
 import logo from './logo.svg';
 import styles from './Header.style.js';
 
-class Header extends Component {
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      mobileMoreAnchorEl: null,
+    };
+  }
+
+  handleMobileMenuOpen = event => {
+    this.setState({ mobileMoreAnchorEl: event.currentTarget });
+  };
+
+  handleMobileMenuClose = () => {
+    this.setState({ mobileMoreAnchorEl: null });
+  };
+
   render() {
+    const { mobileMoreAnchorEl } = this.state;
     const { classes } = this.props;
+    const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+    const renderMobileMenu = (
+      <Menu
+        anchorEl={mobileMoreAnchorEl}
+        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+        open={isMobileMenuOpen}
+        onClose={this.handleMobileMenuClose}
+      >
+        <MenuItem>
+          <p>Services</p>
+        </MenuItem>
+        <MenuItem>
+          <p>Works</p>
+        </MenuItem>
+        <MenuItem>
+          <p>About</p>
+        </MenuItem>
+        <MenuItem onClick={this.handleProfileMenuOpen}>
+          <p>Careers</p>
+        </MenuItem>
+      </Menu>
+    );
 
     return (
-      <div className={classes.header}>
-        <header className={classes.headerHeader}>
-          <img src={logo} className={classes.headerLogo} alt="logo" />
-          <h1 className={classes.headerTitle}>Welcome to dovhal.com</h1>
-        </header>
+      <div className={classes.root}>
+        <AppBar position="sticky" className={classes.menuBar}>
+          <Toolbar className={classes.menuContent}>
+            <img src={logo} className={classes.headerLogo} alt="dovhal" />
+            <div className={classes.grow} />
+            <div className={classes.sectionDesktop}>
+              <Button color="inherit">Services</Button>
+              <Button color="inherit">Works</Button>
+              <Button color="inherit">About</Button>
+              <Button color="inherit">Careers</Button>
+            </div>
+            <div className={classes.sectionMobile}>
+              <IconButton aria-haspopup="true" onClick={this.handleMobileMenuOpen} color="inherit">
+                <MoreIcon />
+              </IconButton>
+            </div>
+          </Toolbar>
+        </AppBar>
+        {renderMobileMenu}
       </div>
     );
   }
@@ -24,3 +92,5 @@ Header.propTypes = {
 };
 
 export default withStyles(styles)(Header);
+
+
