@@ -1,14 +1,4 @@
 export default theme => ({
-  root: {
-    width: '100%',
-  },
-  menuBar: {
-    alignItems: 'center',
-  },
-  menuContent: {
-    maxWidth: 960,
-    width: '100%',
-  },
   grow: {
     flexGrow: 1,
   },

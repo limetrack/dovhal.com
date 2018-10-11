@@ -1,16 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Header, Footer } from 'containers';
+import { Header } from 'containers';
 import withRoot from 'withRoot';
+
+import styles from './CoreLayout.style';
 
 class CoreLayout extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <Fragment className={styles.root}>
           <Header />
-          <Footer />
-        </div>
+        </Fragment>
       </Router>
     );
   }

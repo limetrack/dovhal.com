@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import { SectionLayout } from 'containers';
 import { 
   Menu,
   AppBar, 
@@ -17,7 +18,7 @@ import {
 import logo from './logo.svg';
 import styles from './Header.style.js';
 
-class Header extends React.Component {
+class Header extends Component {
   constructor(props) {
     super(props);
 
@@ -63,26 +64,28 @@ class Header extends React.Component {
     );
 
     return (
-      <div className={classes.root}>
-        <AppBar position="sticky" className={classes.menuBar}>
-          <Toolbar className={classes.menuContent}>
-            <img src={logo} className={classes.headerLogo} alt="dovhal" />
-            <div className={classes.grow} />
-            <div className={classes.sectionDesktop}>
-              <Button color="inherit">Services</Button>
-              <Button color="inherit">Works</Button>
-              <Button color="inherit">About</Button>
-              <Button color="inherit">Careers</Button>
-            </div>
-            <div className={classes.sectionMobile}>
-              <IconButton aria-haspopup="true" onClick={this.handleMobileMenuOpen} color="inherit">
-                <MoreIcon />
-              </IconButton>
-            </div>
-          </Toolbar>
+      <Fragment>
+        <AppBar position="sticky">
+          <SectionLayout>
+            <Toolbar>
+              <img src={logo} className={classes.headerLogo} alt="dovhal" />
+              <div className={classes.grow} />
+              <div className={classes.sectionDesktop}>
+                <Button color="inherit">Services</Button>
+                <Button color="inherit">Works</Button>
+                <Button color="inherit">About</Button>
+                <Button color="inherit">Careers</Button>
+              </div>
+              <div className={classes.sectionMobile}>
+                <IconButton aria-haspopup="true" onClick={this.handleMobileMenuOpen} color="inherit">
+                  <MoreIcon />
+                </IconButton>
+              </div>
+            </Toolbar>
+          </SectionLayout>
         </AppBar>
         {renderMobileMenu}
-      </div>
+      </Fragment>
     );
   }
 }
