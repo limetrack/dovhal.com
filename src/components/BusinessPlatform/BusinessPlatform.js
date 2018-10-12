@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import { SectionLayout } from 'containers';
 import styles from './BusinessPlatform.style.js';
 
 class BusinessPlatform extends Component {
@@ -11,28 +12,15 @@ class BusinessPlatform extends Component {
 
     return (
       <section className={classes.business}>
-        <Grid container spacing={32} justify="space-around">
-          <Grid item xs>
-            <Typography variant="h6" color="textPrimary" gutterBottom>
-              Coca-Cola
-            </Typography>
+        <SectionLayout>
+          <Grid container spacing={32} justify="center" alignItems="center" direction="column" className={classes.main}>
+            <Grid item xs={6}>
+              <Typography variant="h2" color="primary" gutterBottom>
+                BusinessPlatform
+              </Typography>
+            </Grid>
           </Grid>
-          <Grid item xs>
-            <Typography variant="h6" color="textPrimary" gutterBottom>
-              Ford
-            </Typography>
-          </Grid>
-          <Grid item xs>
-            <Typography variant="h6" color="textPrimary" gutterBottom>
-              BMW
-            </Typography>
-          </Grid>
-          <Grid item xs>
-            <Typography variant="h6" color="textPrimary" gutterBottom>
-              Military
-            </Typography>
-          </Grid>
-        </Grid>
+        </SectionLayout>
       </section>
     );
   }

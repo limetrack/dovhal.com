@@ -13,25 +13,10 @@ class Projects extends Component {
     return (
       <section className={classes.projects}>
         <SectionLayout>
-          <Grid container spacing={32} justify="space-around">
-            <Grid item xs>
-              <Typography variant="h6" color="textPrimary" gutterBottom>
-                Coca-Cola
-              </Typography>
-            </Grid>
-            <Grid item xs>
-              <Typography variant="h6" color="textPrimary" gutterBottom>
-                Ford
-              </Typography>
-            </Grid>
-            <Grid item xs>
-              <Typography variant="h6" color="textPrimary" gutterBottom>
-                BMW
-              </Typography>
-            </Grid>
-            <Grid item xs>
-              <Typography variant="h6" color="textPrimary" gutterBottom>
-                Military
+          <Grid container spacing={32} justify="center" alignItems="center" direction="column" className={classes.main}>
+            <Grid item xs={6}>
+              <Typography variant="h2" color="primary" gutterBottom>
+                Projects
               </Typography>
             </Grid>
           </Grid>
