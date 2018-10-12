@@ -15,5 +15,8 @@ export default {
         main: secondaryMain,
       }
     }
-  }
+  },
+  typography: {
+    useNextVariants: true,
+  },
 };

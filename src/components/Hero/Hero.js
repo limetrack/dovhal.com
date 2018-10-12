@@ -19,7 +19,7 @@ class Hero extends Component {
               </Typography>
             </Grid>
             <Grid item xs={6}>
-              <Typography variant="h6" color="secondary" gutterBottom>
+              <Typography variant="h3" color="secondary" gutterBottom>
                 we strive to create the best user experience
               </Typography>
             </Grid>
