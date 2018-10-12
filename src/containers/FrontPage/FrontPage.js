@@ -1,15 +1,11 @@
 import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
 import * as Sections from 'components';
-import styles from './FrontPage.style.js';
 
-class Footer extends Component {
+class FrontPage extends Component {
   render() {
-    const { classes } = this.props;
 
     return (
-      <Fragment className={classes.frontPage}>
+      <Fragment>
         <Sections.Hero />
         <Sections.About />
         <Sections.Dream />
@@ -25,8 +21,4 @@ class Footer extends Component {
   }
 }
 
-Footer.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(Footer);
+export default FrontPage;
