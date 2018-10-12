@@ -18,7 +18,7 @@ class SectionLayout extends React.Component {
 
 SectionLayout.propTypes = {
   classes: PropTypes.object.isRequired,
-  children: PropTypes.arrayOf(PropTypes.node).isRequired,
+  children: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(SectionLayout);
