@@ -1,5 +1,8 @@
 export default (theme) => ({
   read: {
-    minHeight: 600,
+    backgroundColor: theme.palette.primary.main,
+  },
+  main: {
+    minHeight: 100,
   }
 })
