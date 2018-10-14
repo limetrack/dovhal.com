@@ -10,10 +10,8 @@ export default {
       main: primaryMain,
       contrastText: primaryContrastText
     },
-    palette: {
-      secondary: {
-        main: secondaryMain,
-      }
+    secondary: {
+      main: secondaryMain,
     }
   },
   typography: {
