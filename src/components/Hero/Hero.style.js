@@ -2,7 +2,7 @@ import hero from './img/hero.jpg';
 
 export default (theme) => ({
   hero: {
-    background: 'rgba(0, 0, 0, 0.3)',
+    // background: 'rgba(0, 0, 0, 0.6)',
     position: 'relative',
     '&:before': {
       content: '""',
