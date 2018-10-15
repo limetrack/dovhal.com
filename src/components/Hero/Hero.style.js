@@ -16,7 +16,7 @@ export default (theme) => ({
     }
   },
   main: {
-    minHeight: 600,
+    minHeight: `${theme.spacing.unit * 80}px`,
   },
   title: {
     textTransform: 'uppercase',
