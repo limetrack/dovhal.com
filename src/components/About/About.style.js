@@ -1,7 +1,7 @@
 export default (theme) => ({
   about: {
-    top: '-50px',
-    minHeight: 600,
+    marginTop: `-${theme.spacing.unit * 10}px`,
+    minHeight: `${theme.spacing.unit * 70}px`,
     position: 'relative',
     // backgroundColor: theme.palette.grey['100'],
   },
