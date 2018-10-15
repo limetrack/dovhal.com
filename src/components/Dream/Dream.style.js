@@ -7,6 +7,6 @@ export default (theme) => ({
     maxHeight: `${theme.spacing.unit * 70}px`,
   },
   description: {
-    height: '100%',
+    // height: '100%',
   },
 })

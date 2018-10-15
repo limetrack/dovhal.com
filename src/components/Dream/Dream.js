@@ -23,21 +23,22 @@ class Dream extends Component {
     return (
       <section className={classes.dream}>
         <SectionLayout>
-          <Grid container spacing={32} justify="center" className={classes.main}>
+          <Grid container spacing={32} alignItems="center" justify="center" className={classes.main}>
             <Grid item xs={12} md={6}>
               <img src={adovgal} alt="CEO" className={classes.photo} />
             </Grid>
             <Grid item xs={12} md={6}>
               <Grid container spacing={32} alignItems="center" justify="center" className={classes.description}>
                 <Grid item xs={12}>
-                  <Typography variant="h3" gutterBottom>
+                  <Typography variant="h4" gutterBottom>
                     If you have a dream,
                   </Typography>
                 </Grid>
                 <Grid item xs={12}>
-                  <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+                  <Typography variant="subtitle2" color="textSecondary" gutterBottom>
                     then we are the ones who will help you make it come true. We know that software, 
-                    like a magic wand, turns an idea into a real business. Advantages of custom software:
+                    like a magic wand, turns an idea into a real business.
+                    Advantages of custom software:
                   </Typography>
                 </Grid>
                 <Grid item xs={12}>
