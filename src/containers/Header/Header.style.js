@@ -1,4 +1,8 @@
 export default theme => ({
+  appBar: {
+    backgroundColor: 'transparent',
+    boxShadow: 'none',
+  },
   grow: {
     flexGrow: 1,
   },
