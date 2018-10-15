@@ -12,10 +12,21 @@ class Consultation extends Component {
     return (
       <section className={classes.consultation}>
         <SectionLayout>
-          <Grid container spacing={32} justify="center" alignItems="center" direction="column" className={classes.main}>
-            <Grid item xs={6}>
-              <Typography variant="h2" color="primary" gutterBottom>
-                Consultation
+          <Grid container spacing={32} justify="center" direction="row" className={classes.main}>
+            <Grid item xs={12} md={6}>
+              <Typography variant="h4" gutterBottom>
+                Get in Touch
+              </Typography>
+              <Typography variant="subtitle2" color="textSecondary" gutterBottom>
+                The more information we know, the better we’ll be prepared and able to help. Our team will be in touch soon!
+              </Typography>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Typography variant="h4" color="secondary" gutterBottom>
+                Our customers are our friends
+              </Typography>
+              <Typography variant="subtitle2" color="secondary" gutterBottom>
+                Our customers are our friends
               </Typography>
             </Grid>
           </Grid>
