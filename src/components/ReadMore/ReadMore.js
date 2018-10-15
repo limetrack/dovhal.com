@@ -12,9 +12,9 @@ class ReadMore extends Component {
     return (
       <section className={classes.read}>
         <SectionLayout>
-          <Grid container spacing={32} justify="space-around" className={classes.main}>
+          <Grid container spacing={32} justify="space-around" alignItems="center" className={classes.main}>
             <Grid item xs={12} md={9}>
-              <Typography variant="h6" color="textPrimary" align="left" gutterBottom>
+              <Typography variant="h4" align="left" gutterBottom className={classes.text}>
                 Last go with us for your future business
               </Typography>
             </Grid>

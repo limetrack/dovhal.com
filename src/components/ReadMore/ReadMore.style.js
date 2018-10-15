@@ -3,6 +3,10 @@ export default (theme) => ({
     backgroundColor: theme.palette.primary.main,
   },
   main: {
-    minHeight: 100,
-  }
+    paddingBottom: `${theme.spacing.unit * 2}px`,
+    minHeight: `${theme.spacing.unit * 20}px`,
+  },
+  text: {
+    color: theme.palette.grey['50'],
+  },
 })

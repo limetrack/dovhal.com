@@ -17,5 +17,5 @@ export default (theme) => ({
   icon: {
     width: '100%',
     margin: `${theme.spacing.unit * 2}px auto`,
-  }
+  },
 })
