@@ -1,6 +1,12 @@
 export default (theme) => ({
   dream: {
-    minHeight: 600,
-    backgroundColor: theme.palette.grey['50'],
-  }
+    minHeight: `${theme.spacing.unit * 80}px`,
+  },
+  photo: {
+    maxWidth: '100%',
+    maxHeight: `${theme.spacing.unit * 70}px`,
+  },
+  description: {
+    height: '100%',
+  },
 })

@@ -3,7 +3,6 @@ export default (theme) => ({
     marginTop: `-${theme.spacing.unit * 10}px`,
     minHeight: `${theme.spacing.unit * 70}px`,
     position: 'relative',
-    // backgroundColor: theme.palette.grey['100'],
   },
   paper: {
     paddingTop: `${theme.spacing.unit * 6}px`,
