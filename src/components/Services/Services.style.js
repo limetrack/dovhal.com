@@ -10,14 +10,14 @@ export default (theme) => ({
     textTransform: 'uppercase',
   },
   description: {
-    margin: `0 ${theme.spacing.unit * 5}px`,
+    margin: `0 ${theme.spacing.unit * 2}px`,
   },
   papers: {
     marginTop: `${theme.spacing.unit * 2}px`,
   },
   paper: {
     height: '100%',
-    padding: `${theme.spacing.unit * 2}px`,
+    padding: `${theme.spacing.unit * 1}px`,
   },
   icon: {
     width: '100%',

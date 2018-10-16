@@ -15,15 +15,12 @@ class Services extends Component {
         <SectionLayout>
           <Grid container spacing={32} justify="center" className={classes.main}>
             <Grid item xs={12}>
-              <Typography variant="subtitle2" align="center" color="primary" className={classes.title}>
-                Services
-              </Typography>
               <Typography variant="h4" align="center">
                 Advantages
               </Typography>
             </Grid>
             <Grid item xs={12} md={8}>
-              <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
+              <Typography variant="subtitle2" color="textSecondary" align="center">
                 We believe in building software that improves lives and makes us a little happier
               </Typography>
             </Grid> 
@@ -37,7 +34,7 @@ class Services extends Component {
                     </Typography>
                     <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
                       As capabilities of technology are expected to continue growing exponentially, it is certain that the 
-                      future of business will increasingly efficient, streamlined, and will move at a faster pace.
+                      future of business will increasingly efficient.
                     </Typography>
                   </Paper>
                 </Grid> 
@@ -45,7 +42,7 @@ class Services extends Component {
                   <Paper className={classes.paper} elevation={1}>
                     <HighQualityOutlined fontSize="large" color="primary" className={classes.icon} />
                     <Typography variant="h6" align="center">
-                      High quality and balanced cost
+                      High quality
                     </Typography>
                     <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
                       It’s easier than you think to balance quality and cost for your business when real professionals come to work.
