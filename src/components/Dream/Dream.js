@@ -12,7 +12,6 @@ const advantages = [
   'It is easier and more intuitive to use and does not contain unnecessary installations.',
   'One of the most important aspects is its flexibility.',
   'Expandable and connectable to different web services.',
-  'Personalized workflow, specific departments, concrete limitations and endless possibilities.',
   'Custom software is created to have a simple interface with other software.',
 ];
 
