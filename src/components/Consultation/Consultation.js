@@ -26,20 +26,20 @@ const things = [
 
 const currencies = [
   {
-    value: 'USD',
-    label: '$',
+    value: 'email',
+    label: 'Email',
   },
   {
-    value: 'EUR',
-    label: '€',
+    value: 'telegram',
+    label: 'Telegram',
   },
   {
-    value: 'BTC',
-    label: '฿',
+    value: 'viber',
+    label: 'Viber',
   },
   {
-    value: 'JPY',
-    label: '¥',
+    value: 'whatsapp',
+    label: 'WhatsApp',
   },
 ];
 

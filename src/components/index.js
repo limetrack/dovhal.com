@@ -7,4 +7,4 @@ export { default as ReadMore } from './ReadMore/ReadMore';
 export { default as BusinessPlatform } from './BusinessPlatform/BusinessPlatform';
 export { default as Projects } from './Projects/Projects';
 export { default as Phrase } from './Phrase/Phrase';
-export { default as Partners } from './Partners/Partners';
+export { default as Technologies } from './Technologies/Technologies';
