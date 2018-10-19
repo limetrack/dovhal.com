@@ -33,8 +33,8 @@ class Projects extends Component {
                         <Typography variant="h5" align="center" gutterBottom className={classes.itemText}>
                           NEWTEND
                         </Typography>
-                        <Typography variant="h5" align="center" gutterBottom className={classes.itemText}>
-                          |||
+                        <Typography variant="subtitle2" align="center" gutterBottom className={classes.itemText}>
+                          www.newtend.com
                         </Typography>
                         <Button color="inherit" target="_blank" href="https://www.newtend.com" className={classes.button}>
                           Visit
@@ -50,8 +50,8 @@ class Projects extends Component {
                         <Typography variant="h5" align="center" gutterBottom className={classes.itemText}>
                           video intelligence
                         </Typography>
-                        <Typography variant="h5" align="center" gutterBottom className={classes.itemText}>
-                          |||
+                        <Typography variant="subtitle2" align="center" gutterBottom className={classes.itemText}>
+                          www.vi.ai
                         </Typography>
                         <Button color="inherit" target="_blank" href="https://www.vi.ai" className={classes.button}>
                           Visit
@@ -67,8 +67,8 @@ class Projects extends Component {
                         <Typography variant="h5" align="center" gutterBottom className={classes.itemText}>
                           TeslaEnergo
                         </Typography>
-                        <Typography variant="h5" align="center" gutterBottom className={classes.itemText}>
-                          |||
+                        <Typography variant="subtitle2" align="center" gutterBottom className={classes.itemText}>
+                          www.teslaenergo.com
                         </Typography>
                         <Button color="inherit" target="_blank" href="https://www.teslaenergo.com" className={classes.button}>
                           Visit
