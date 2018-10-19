@@ -3,6 +3,9 @@ export default theme => ({
     backgroundColor: 'transparent',
     boxShadow: 'none',
   },
+  toolBar: {
+    margin: `-${theme.spacing.unit * 2}px -${theme.spacing.unit * 2}px`,
+  },
   grow: {
     flexGrow: 1,
   },

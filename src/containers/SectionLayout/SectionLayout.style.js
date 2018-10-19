@@ -3,5 +3,6 @@ export default theme => ({
     width: '100%',
     maxWidth: 1236,
     margin: '0 auto',
+    padding: `${theme.spacing.unit * 2}px`,
   },
 });

@@ -67,7 +67,7 @@ class Header extends Component {
       <Fragment>
         <AppBar position="absolute" className={classes.appBar}>
           <SectionLayout>
-            <Toolbar>
+            <Toolbar className={classes.toolBar}>
               <img src={logo} className={classes.headerLogo} alt="dovhal" />
               <div className={classes.grow} />
               <div className={classes.sectionDesktop}>

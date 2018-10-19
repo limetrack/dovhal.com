@@ -16,7 +16,7 @@ class Technologies extends Component {
     return (
       <section className={classes.technologies}>
         <SectionLayout>
-          <Grid container spacing={32} justify="space-around" alignItems="center" className={classes.main}>
+          <Grid container justify="space-around" alignItems="center" className={classes.main}>
             <Grid item xs={6} md={3} className={classes.imgGrid}>
               <img src={mongodbImg} alt="MongoDB" className={classes.img} />
             </Grid>

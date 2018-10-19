@@ -15,7 +15,10 @@ class Hero extends Component {
         <SectionLayout>
           <Grid container spacing={32} justify="center" alignItems="center" direction="column" className={classes.main}>
             <Grid item xs={12} md={6}>
-              <Typography variant="h2" align="center" className={classNames(classes.title, classes.text)}>
+              <Typography variant="h2" align="center" className={classNames(classes.title, classes.text, classes.desktop)}>
+                Custom software development
+              </Typography>
+              <Typography variant="h3" align="center" className={classNames(classes.title, classes.text, classes.mobile)}>
                 Custom software development
               </Typography>
             </Grid>

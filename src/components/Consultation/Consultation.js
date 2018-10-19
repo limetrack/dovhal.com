@@ -99,19 +99,6 @@ class Consultation extends Component {
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <TextField
-                    id="outlined-email-input"
-                    label="Email"
-                    className={classes.textField}
-                    type="email"
-                    name="email"
-                    autoComplete="email"
-                    margin="dense"
-                    variant="outlined"
-                    fullWidth
-                  />
-                </Grid>
-                <Grid item xs={12} md={6}>
-                  <TextField
                     id="outlined-select-currency"
                     select
                     label="Preferred means of communication"
@@ -133,6 +120,19 @@ class Consultation extends Component {
                       </MenuItem>
                     ))}
                   </TextField>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <TextField
+                    id="outlined-email-input"
+                    label="Email"
+                    className={classes.textField}
+                    type="email"
+                    name="email"
+                    autoComplete="email"
+                    margin="dense"
+                    variant="outlined"
+                    fullWidth
+                  />
                 </Grid>
                 <Grid item xs={12}>
                   <TextField

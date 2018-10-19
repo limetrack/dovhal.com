@@ -2,18 +2,18 @@ import hero from './img/hero.jpg';
 
 export default (theme) => ({
   hero: {
+    backgroundImage: `url(${hero})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
     // background: 'rgba(0, 0, 0, 0.6)',
-    position: 'relative',
-    '&:before': {
-      content: '""',
-      position: 'absolute',
-      backgroundImage: `url(${hero})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      width: '100%',
-      height: '100%',
-      zIndex: '-1',
-    }
+    // position: 'relative',
+    // '&:before': {
+    //   content: '""',
+    //   position: 'absolute',
+    //   width: '100%',
+    //   height: '100%',
+    //   zIndex: '-1',
+    // }
   },
   main: {
     minHeight: `${theme.spacing.unit * 80}px`,
@@ -29,5 +29,17 @@ export default (theme) => ({
   },
   buttons: {
     marginTop: 0,
+  },
+  mobile: {
+    display: 'flex',
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
+    },
+  },
+  desktop: {
+    display: 'none',
+    [theme.breakpoints.up('md')]: {
+      display: 'flex',
+    },
   }
 })

@@ -15,12 +15,12 @@ class ReadMore extends Component {
           <Grid container spacing={32} justify="space-around" alignItems="center" className={classes.main}>
             <Grid item xs={12} md={9}>
               <Typography variant="h4" align="left" gutterBottom className={classes.text}>
-                Last go with us for your future business
+                I have a brilliant idea!
               </Typography>
             </Grid>
             <Grid item xs={12} md={3}>
               <Button variant="contained" color="secondary">
-                Read more
+                Share!
               </Button>
             </Grid>
           </Grid>
