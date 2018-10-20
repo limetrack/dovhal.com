@@ -11,4 +11,7 @@ export default (theme) => ({
   icon: {
     marginRight: `${theme.spacing.unit * 2}px`,
   },
+  logo: {
+    height: 30,
+  },
 })

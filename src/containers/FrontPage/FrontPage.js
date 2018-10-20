@@ -12,10 +12,10 @@ class FrontPage extends Component {
         <Sections.Consultation />
         <Sections.BusinessPlatform />
         <Sections.Technologies />
-        <Sections.Services />
+        <Sections.Projects />
         <Sections.Phrase />
         {/* <Sections.ReadMore /> */}
-        <Sections.Projects />
+        <Sections.Services />
       </Fragment>
     );
   }
