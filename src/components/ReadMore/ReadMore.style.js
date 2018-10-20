@@ -4,7 +4,7 @@ export default (theme) => ({
   },
   main: {
     paddingBottom: `${theme.spacing.unit * 2}px`,
-    minHeight: `${theme.spacing.unit * 20}px`,
+    // minHeight: `${theme.spacing.unit * 20}px`,
   },
   text: {
     color: theme.palette.grey['50'],

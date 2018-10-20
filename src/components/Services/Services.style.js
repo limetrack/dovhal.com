@@ -1,10 +1,10 @@
 export default (theme) => ({
   services: {
-    minHeight: 600,
+    // minHeight: 600,
   },
   main: {
-    paddingTop: `${theme.spacing.unit * 6}px`,
-    paddingBottom: `${theme.spacing.unit * 12}px`,
+    // paddingTop: `${theme.spacing.unit * 6}px`,
+    // paddingBottom: `${theme.spacing.unit * 12}px`,
   },
   title: {
     textTransform: 'uppercase',

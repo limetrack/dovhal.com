@@ -1,6 +1,6 @@
 export default (theme) => ({
   dream: {
-    minHeight: `${theme.spacing.unit * 80}px`,
+    // minHeight: `${theme.spacing.unit * 80}px`,
   },
   photo: {
     maxWidth: '100%',

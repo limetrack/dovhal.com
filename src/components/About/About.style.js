@@ -1,7 +1,7 @@
 export default (theme) => ({
   about: {
     marginTop: `-${theme.spacing.unit * 10}px`,
-    minHeight: `${theme.spacing.unit * 70}px`,
+    // minHeight: `${theme.spacing.unit * 70}px`,
     position: 'relative',
   },
   paper: {

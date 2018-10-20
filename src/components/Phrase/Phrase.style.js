@@ -2,7 +2,7 @@ import planet from './img/planet.png';
 
 export default (theme) => ({
   phrase: {
-    minHeight: `${theme.spacing.unit * 80}px`,
+    // minHeight: `${theme.spacing.unit * 80}px`,
     // backgroundColor: theme.palette.grey['100'],
     backgroundImage: `url(${planet})`,
     backgroundSize: 'auto',

@@ -152,7 +152,7 @@ class Consultation extends Component {
               </Grid>
               </form>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={6} className={classes.friends}>
               <Typography variant="h4" gutterBottom className={classes.text}>
                 Our customers are our friends
               </Typography>
