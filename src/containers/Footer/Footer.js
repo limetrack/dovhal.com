@@ -13,45 +13,17 @@ class Footer extends Component {
 
     return (
       <footer className={classes.footer}>
-        {/* <SectionLayout>
-          <Grid container spacing={32} justify="space-around" className={classes.main}>
-            <Grid item xs={8} md={4}>
-              <Typography variant="h6" gutterBottom className={classes.text}>  
-                Address
-              </Typography>
-              <Typography variant="subtitle2" className={classes.text}>
-                Heroiv Stalinhrada Ave, 6a
-              </Typography>
-              <Typography variant="subtitle2" className={classes.text}>
-                Kyiv, 04210
-              </Typography>
-              <Typography variant="subtitle2" className={classes.text}>
-                Ukraine
-              </Typography>
-            </Grid>
-            <Grid item xs={8} md={4}>
-              <Typography variant="h6" gutterBottom className={classes.text}>  
-                Email
-              </Typography>
-              <Typography variant="subtitle2" className={classes.text}>
-                support@dovhal.com
-              </Typography>
-              <Typography variant="h6" className={classes.text}>
-                <FontAwesomeIcon icon={['fab', 'skype']} className={classes.icon} />
-                <FontAwesomeIcon icon={['fab', 'telegram']} className={classes.icon} />
-                <FontAwesomeIcon icon={['fab', 'viber']} className={classes.icon} />
-                <FontAwesomeIcon icon={['fab', 'whatsapp']} className={classes.icon} />
-              </Typography>
-            </Grid>
-          </Grid>
-        </SectionLayout>
-        <Divider className={classes.divider} /> */}
         <SectionLayout>
           <Grid container spacing={32} justify="space-around">
-            <Grid item xs={4}>
+            <Grid item xs={12} md={4} className={classes.item} >
               <img src={logo} className={classes.logo} alt="dovhal" />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} md={4} className={classes.item} >
+              <Typography variant="subtitle2" align="center" className={classes.text}>  
+                support@dovhal.com
+              </Typography>
+            </Grid>
+            <Grid item xs={12} md={4} className={classes.item} >
               <Typography variant="h6" align="right" className={classes.text}>
                 <FontAwesomeIcon icon={['fab', 'skype']} className={classes.icon} />
                 <FontAwesomeIcon icon={['fab', 'telegram']} className={classes.icon} />

@@ -2,6 +2,9 @@ export default (theme) => ({
   footer: {
     backgroundColor: '#262729',
   },
+  footer1: {
+    backgroundColor: '#262729',
+  },
   divider: {
     backgroundColor: theme.palette.grey['800'],
   },
@@ -13,5 +16,11 @@ export default (theme) => ({
   },
   logo: {
     height: 30,
+  },
+  item: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 })
