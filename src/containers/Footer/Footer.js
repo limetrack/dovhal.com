@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import { Grid, Typography, Divider } from '@material-ui/core';
 import { SectionLayout } from 'containers';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Footer.style.js';
 
 class Footer extends Component {
@@ -13,39 +13,43 @@ class Footer extends Component {
     return (
       <footer className={classes.footer}>
         <SectionLayout>
-          <Grid container spacing={32} justify="space-around">
-            <Grid item xs>
-              <Typography variant="h6" color="textPrimary" gutterBottom>  
-                About company
+          <Grid container spacing={32} justify="space-around" className={classes.main}>
+            <Grid item xs={8} md={4}>
+              <Typography variant="h6" gutterBottom className={classes.text}>  
+                Address
               </Typography>
-              <Typography variant="subtitle1" color="textSecondary">
-                Just the best company that have ever been
+              <Typography variant="subtitle2" className={classes.text}>
+                Heroiv Stalinhrada Ave, 6a
+              </Typography>
+              <Typography variant="subtitle2" className={classes.text}>
+                Kyiv, 04210
+              </Typography>
+              <Typography variant="subtitle2" className={classes.text}>
+                Ukraine
               </Typography>
             </Grid>
-            <Grid item xs>
-              <Typography variant="h6" color="textPrimary" gutterBottom>
-                Our services
+            <Grid item xs={8} md={4}>
+              <Typography variant="h6" gutterBottom className={classes.text}>  
+                Email
               </Typography>
-              <Typography variant="subtitle1" color="textSecondary">
-                Web development
+              <Typography variant="subtitle2" className={classes.text}>
+                support@dovhal.com
+              </Typography>
+              <Typography variant="h6" className={classes.text}>
+                <FontAwesomeIcon icon={['fab', 'skype']} className={classes.icon} />
+                <FontAwesomeIcon icon={['fab', 'telegram']} className={classes.icon} />
+                <FontAwesomeIcon icon={['fab', 'viber']} className={classes.icon} />
+                <FontAwesomeIcon icon={['fab', 'whatsapp']} className={classes.icon} />
               </Typography>
             </Grid>
           </Grid>
-          <Grid container spacing={32} justify="space-around">
-            <Grid item xs>
-              <Typography variant="h6" color="textPrimary" gutterBottom>  
-                About company
-              </Typography>
-              <Typography variant="subtitle1" color="textSecondary">
-                Just the best company that have ever been
-              </Typography>
-            </Grid>
-            <Grid item xs>
-              <Typography variant="h6" color="textPrimary" gutterBottom>
-                Our services
-              </Typography>
-              <Typography variant="subtitle1" color="textSecondary">
-                Web development
+        </SectionLayout>
+        <Divider className={classes.divider} />
+        <SectionLayout>
+          <Grid container spacing={32} justify="center">
+            <Grid item xs={12}>
+              <Typography variant="subtitle2" align="right" gutterBottom className={classes.text}>  
+                © 2018 Dovhal. All rights reserved.
               </Typography>
             </Grid>
           </Grid>
