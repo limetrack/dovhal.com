@@ -9,13 +9,13 @@ class FrontPage extends Component {
         <Sections.Hero />
         <Sections.About />
         <Sections.Dream />
-        <Sections.Consultation />
+        <Sections.Services />
         <Sections.BusinessPlatform />
         <Sections.Technologies />
-        <Sections.Projects />
         <Sections.Phrase />
+        <Sections.Projects />
         {/* <Sections.ReadMore /> */}
-        <Sections.Services />
+        <Sections.Consultation />
       </Fragment>
     );
   }
