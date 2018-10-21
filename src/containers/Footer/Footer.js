@@ -26,9 +26,9 @@ class Footer extends Component {
             <Grid item xs={12} md={4} className={classes.item} >
               <Typography variant="h6" align="right" className={classes.text}>
                 <FontAwesomeIcon icon={['fab', 'skype']} className={classes.icon} />
+                <FontAwesomeIcon icon={['fab', 'whatsapp']} className={classes.icon} />
                 <FontAwesomeIcon icon={['fab', 'telegram']} className={classes.icon} />
                 <FontAwesomeIcon icon={['fab', 'viber']} className={classes.icon} />
-                <FontAwesomeIcon icon={['fab', 'whatsapp']} className={classes.icon} />
               </Typography>
             </Grid>
           </Grid>
