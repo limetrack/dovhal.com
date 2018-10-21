@@ -8,7 +8,8 @@ export default (theme) => ({
     backgroundSize: 'auto',
     backgroundPosition: 'right',
     backgroundRepeat: 'no-repeat',
-    marginBottom: `${theme.spacing.unit * 10}px`,
+    paddingTop: `${theme.spacing.unit * 5}px`,
+    paddingBottom: `${theme.spacing.unit * 5}px`,
   },
   photo: {
     maxWidth: '100%',

@@ -1,7 +1,9 @@
 export default (theme) => ({
   services: {
     // minHeight: 600,
-    marginBottom: `${theme.spacing.unit * 10}px`,
+    paddingTop: `${theme.spacing.unit * 4}px`,
+    paddingBottom: `${theme.spacing.unit * 6}px`,
+    backgroundColor: theme.palette.grey['100'],
   },
   main: {
     // paddingTop: `${theme.spacing.unit * 6}px`,

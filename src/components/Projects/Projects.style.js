@@ -5,7 +5,9 @@ import teslaEnergo from './img/TeslaEnergo.png';
 export default (theme) => ({
   projects: {
     // minHeight: 600,
-    marginBottom: `${theme.spacing.unit * 10}px`,
+    paddingTop: `${theme.spacing.unit * 5}px`,
+    paddingBottom: `${theme.spacing.unit * 6}px`,
+    backgroundColor: theme.palette.grey['100'],
   },
   main: {
     // paddingTop: `${theme.spacing.unit * 6}px`,

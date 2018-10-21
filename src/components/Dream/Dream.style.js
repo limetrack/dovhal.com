@@ -1,7 +1,7 @@
 export default (theme) => ({
   dream: {
     // minHeight: `${theme.spacing.unit * 80}px`,
-    marginBottom: `${theme.spacing.unit * 10}px`,
+    paddingBottom: `${theme.spacing.unit * 5}px`,
   },
   photo: {
     maxWidth: '100%',
