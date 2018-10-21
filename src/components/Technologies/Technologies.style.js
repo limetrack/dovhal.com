@@ -1,7 +1,7 @@
 export default (theme) => ({
   technologies: {
     backgroundColor: theme.palette.primary.main,
-    marginBottom: `${theme.spacing.unit * 14}px`,
+    marginBottom: `${theme.spacing.unit * 10}px`,
   },
   main: {
     minHeight: `${theme.spacing.unit * 16}px`,
