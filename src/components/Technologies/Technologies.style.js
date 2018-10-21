@@ -12,6 +12,7 @@ export default (theme) => ({
     alignItems: 'center',
   },
   img: {
+    maxWidth: '100%',
     maxHeight: `${theme.spacing.unit * 8}px`,
   },
 })
