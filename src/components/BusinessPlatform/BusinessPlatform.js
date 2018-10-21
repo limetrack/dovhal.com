@@ -1,10 +1,38 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import { Grid, Typography } from '@material-ui/core';
+import { Grid, Typography, LinearProgress } from '@material-ui/core';
 import { SectionLayout } from 'containers';
 import styles from './BusinessPlatform.style.js';
 import girl from './img/girl.png';
+
+const budgets = [
+  {
+    name: 'Tencent',
+    progress: 50,
+    amount: '$21.9 Billion',
+  },
+  {
+    name: 'Facebook',
+    progress: 55,
+    amount: '$40.65 Billion',
+  },
+  {
+    name: 'JD.com',
+    progress: 60,
+    amount: '$55.7 Billion',
+  },
+  {
+    name: 'Alphabet Inc.',
+    progress: 65,
+    amount: '$110.8 Billion',
+  },
+  {
+    name: 'Amazon',
+    progress: 70,
+    amount: '$177.86 Billion',
+  },
+]
 
 class BusinessPlatform extends Component {
   render() {
@@ -26,8 +54,17 @@ class BusinessPlatform extends Component {
                     All you need is an idea and the rest we will do ourselves!
                   </Typography>
                 </Grid>
-                <Grid item xs={12}>
-                </Grid>
+                  {budgets.map(budget => (
+                    <Grid item xs={12} className={classes.companyItem}>
+                      <Typography variant="h6" align="justify" gutterBottom className={classes.companyName}>
+                        {budget.name}
+                      </Typography>
+                      <Typography variant="subtitle1" align="justify" gutterBottom className={classes.companyAmount} style={{ left: `${budget.progress}%` }}>
+                        {budget.amount}
+                      </Typography>
+                      <LinearProgress variant="determinate" value={budget.progress} />
+                    </Grid>
+                  ))}
               </Grid>
             </Grid>
             <Grid item xs={12} md={6}>
