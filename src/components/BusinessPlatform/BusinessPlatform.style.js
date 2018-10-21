@@ -18,7 +18,7 @@ export default (theme) => ({
   companyAmount: {
     display: 'inline-block',
     position: 'absolute',
-    transform: 'translateX(-50%)',
+    transform: 'translateX(-55%)',
     marginTop: '-5px',
     color: theme.palette.grey['50'],
     padding: `${theme.spacing.unit * 0.5}px ${theme.spacing.unit * 1.5}px`,

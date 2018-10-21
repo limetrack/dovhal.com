@@ -9,28 +9,28 @@ import girl from './img/girl.png';
 const budgets = [
   {
     name: 'Tencent',
-    progress: 50,
+    progress: 55,
     amount: '$21.9 Billion',
   },
   {
     name: 'Facebook',
-    progress: 55,
-    amount: '$40.65 Billion',
+    progress: 60,
+    amount: '$40.6 Billion',
   },
   {
     name: 'JD.com',
-    progress: 60,
+    progress: 65,
     amount: '$55.7 Billion',
   },
   {
     name: 'Alphabet Inc.',
-    progress: 65,
+    progress: 70,
     amount: '$110.8 Billion',
   },
   {
     name: 'Amazon',
-    progress: 70,
-    amount: '$177.86 Billion',
+    progress: 75,
+    amount: '$177.8 Billion',
   },
 ]
 
@@ -59,7 +59,7 @@ class BusinessPlatform extends Component {
                       <Typography variant="h6" align="justify" gutterBottom className={classes.companyName}>
                         {budget.name}
                       </Typography>
-                      <Typography variant="subtitle1" align="justify" gutterBottom className={classes.companyAmount} style={{ left: `${budget.progress}%` }}>
+                      <Typography variant="subtitle1" align="justify" noWrap gutterBottom className={classes.companyAmount} style={{ left: `${budget.progress}%` }}>
                         {budget.amount}
                       </Typography>
                       <LinearProgress variant="determinate" value={budget.progress} />
