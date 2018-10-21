@@ -1,6 +1,7 @@
 export default (theme) => ({
   consultation: {
     // minHeight: `${theme.spacing.unit * 40}px`,
+    backgroundColor: theme.palette.grey['100'],
     [theme.breakpoints.up('md')]: {
       backgroundImage: `linear-gradient(left, transparent 50%, ${theme.palette.primary.main} 50%, ${theme.palette.primary.main} 100%)`,
     },

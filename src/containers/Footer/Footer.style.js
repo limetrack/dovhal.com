@@ -14,7 +14,7 @@ export default (theme) => ({
   icon: {
     marginRight: `${theme.spacing.unit * 2}px`,
     '&:hover': {
-      color: theme.palette.primary.main,
+      color: theme.palette.primary.light,
     },
   },
   logo: {
