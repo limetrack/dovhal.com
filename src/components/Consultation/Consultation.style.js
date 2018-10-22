@@ -20,4 +20,7 @@ export default (theme) => ({
   textField: {
     backgroundColor: theme.palette.grey['50'],
   },
+  listItem: {
+    paddingLeft: 0,
+  },
 })

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import { Grid, Typography, List, ListItem, ListItemText, Avatar, TextField, MenuItem } from '@material-ui/core';
+import { Grid, Typography, List, ListItem, ListItemText, Avatar, TextField, MenuItem, Button } from '@material-ui/core';
 import { HearingOutlined, WhereToVoteOutlined, BeachAccessOutlined } from '@material-ui/icons';
 import { SectionLayout } from 'containers';
 import styles from './Consultation.style.js';
@@ -48,7 +48,7 @@ class Consultation extends Component {
     name: '',
     age: '',
     multiline: '',
-    currency: 'EUR',
+    currency: 'email',
   };
 
   handleChange = name => event => {
@@ -65,91 +65,96 @@ class Consultation extends Component {
         <SectionLayout>
           <Grid container spacing={32} justify="center" direction="row" className={classes.main}>
             <Grid item xs={12} md={6}>
-              <Typography variant="h4" gutterBottom>
-                Get in Touch
-              </Typography>
-              <Typography variant="subtitle2" color="textSecondary" gutterBottom>
-                The more information we know, the better we’ll be prepared and able to help. Our team will be in touch soon!
-              </Typography>
-              <form className={classes.container} noValidate autoComplete="off">
-              <Grid container spacing={8}>
-                <Grid item xs={12} md={6}>
-                  <TextField
-                    id="outlined-name"
-                    label="Name"
-                    className={classes.textField}
-                    value={this.state.name}
-                    onChange={this.handleChange('name')}
-                    margin="dense"
-                    variant="outlined"
-                    fullWidth
-                  />
+              <form noValidate autoComplete="off">
+                <Grid container spacing={8}>
+                  <Grid item xs={12}>
+                    <Typography variant="h4" gutterBottom>
+                      Get in Touch
+                    </Typography>
+                    <Typography variant="subtitle2" color="textSecondary" gutterBottom>
+                      The more information we know, the better we’ll be prepared and able to help. Our team will be in touch soon!
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      id="outlined-name"
+                      label="Name"
+                      className={classes.textField}
+                      value={this.state.name}
+                      onChange={this.handleChange('name')}
+                      margin="dense"
+                      variant="outlined"
+                      fullWidth
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      id="outlined-name"
+                      label="Company"
+                      className={classes.textField}
+                      value={this.state.name}
+                      onChange={this.handleChange('name')}
+                      margin="dense"
+                      variant="outlined"
+                      fullWidth
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      id="outlined-select-currency"
+                      select
+                      label="Preferred means of communication"
+                      className={classes.textField}
+                      value={this.state.currency}
+                      onChange={this.handleChange('currency')}
+                      SelectProps={{
+                        MenuProps: {
+                          className: classes.menu,
+                        },
+                      }}
+                      margin="dense"
+                      variant="outlined"
+                      fullWidth
+                    >
+                      {currencies.map(option => (
+                        <MenuItem key={option.value} value={option.value}>
+                          {option.label}
+                        </MenuItem>
+                      ))}
+                    </TextField>
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <TextField
+                      id="outlined-email-input"
+                      label={this.state.currency}
+                      className={classes.textField}
+                      type="email"
+                      name="email"
+                      autoComplete="email"
+                      margin="dense"
+                      variant="outlined"
+                      fullWidth
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField
+                      id="outlined-multiline-flexible"
+                      label="How can we help"
+                      multiline
+                      rows="5"
+                      rowsMax="5"
+                      value={this.state.multiline}
+                      onChange={this.handleChange('multiline')}
+                      className={classes.textField}
+                      margin="dense"
+                      variant="outlined"
+                      fullWidth
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Button variant="outlined" color="primary">Send request</Button>
+                  </Grid>
                 </Grid>
-                <Grid item xs={12} md={6}>
-                  <TextField
-                    id="outlined-name"
-                    label="Company"
-                    className={classes.textField}
-                    value={this.state.name}
-                    onChange={this.handleChange('name')}
-                    margin="dense"
-                    variant="outlined"
-                    fullWidth
-                  />
-                </Grid>
-                <Grid item xs={12} md={6}>
-                  <TextField
-                    id="outlined-select-currency"
-                    select
-                    label="Preferred means of communication"
-                    className={classes.textField}
-                    value={this.state.currency}
-                    onChange={this.handleChange('currency')}
-                    SelectProps={{
-                      MenuProps: {
-                        className: classes.menu,
-                      },
-                    }}
-                    margin="dense"
-                    variant="outlined"
-                    fullWidth
-                  >
-                    {currencies.map(option => (
-                      <MenuItem key={option.value} value={option.value}>
-                        {option.label}
-                      </MenuItem>
-                    ))}
-                  </TextField>
-                </Grid>
-                <Grid item xs={12} md={6}>
-                  <TextField
-                    id="outlined-email-input"
-                    label="Email"
-                    className={classes.textField}
-                    type="email"
-                    name="email"
-                    autoComplete="email"
-                    margin="dense"
-                    variant="outlined"
-                    fullWidth
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    id="outlined-multiline-flexible"
-                    label="How can we help"
-                    multiline
-                    rows="5"
-                    rowsMax="5"
-                    value={this.state.multiline}
-                    onChange={this.handleChange('multiline')}
-                    className={classes.textField}
-                    margin="dense"
-                    variant="outlined"
-                    fullWidth
-                  />
-                </Grid>
-              </Grid>
               </form>
             </Grid>
             <Grid item xs={12} md={6} className={classes.friends}>
@@ -160,7 +165,7 @@ class Consultation extends Component {
                 {things.map(thing => {
                   const Icon = thing.icon;
 
-                  return <ListItem key={thing.title}>
+                  return <ListItem key={thing.title} className={classes.listItem}>
                     <Avatar className={classes.avatar}>
                       <Icon fontSize="large" />
                     </Avatar>
