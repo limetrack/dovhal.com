@@ -70,7 +70,7 @@ class Services extends Component {
                       alt={service.title}
                       className={classes.media}
                       height="240"
-                      image={app}
+                      image={service.image}
                       title={service.title}
                     />
                     <CardContent>
