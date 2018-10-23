@@ -53,13 +53,13 @@ class Header extends Component {
           <Link to="/services">Services</Link>
         </MenuItem>
         <MenuItem>
-          <p>Works</p>
+          <Link to="/works">Works</Link>
         </MenuItem>
         <MenuItem>
-          <p>About</p>
+          <Link to="/about">About</Link>
         </MenuItem>
         <MenuItem onClick={this.handleProfileMenuOpen}>
-          <p>Careers</p>
+          <Link to="/careers">Careers</Link>
         </MenuItem>
       </Menu>
     );
@@ -73,9 +73,9 @@ class Header extends Component {
               <div className={classes.grow} />
               <div className={classes.sectionDesktop}>
                 <Button color="inherit" component={Link} to="/services">Services</Button>
-                <Button color="inherit">Works</Button>
-                <Button color="inherit">About</Button>
-                <Button color="inherit">Careers</Button>
+                <Button color="inherit" component={Link} to="/works">Works</Button>
+                <Button color="inherit" component={Link} to="/about">About</Button>
+                <Button color="inherit" component={Link} to="/careers">Careers</Button>
               </div>
               <div className={classes.sectionMobile}>
                 <IconButton aria-haspopup="true" onClick={this.handleMobileMenuOpen} color="inherit">

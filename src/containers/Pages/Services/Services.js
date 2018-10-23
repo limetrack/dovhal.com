@@ -61,6 +61,9 @@ class Services extends Component {
         <Hero backgroundImage={hero} title="Our services" />
         <section className={classes.services}>
           <SectionLayout>
+            <Typography variant="h4" align="center" gutterBottom paragraph>
+              We Know That The Service Should Please
+            </Typography>
             <Grid container spacing={32} justify="center" className={classes.main}>
               {services.map(service => (
                 <Grid item xs={12} md={4} key={service.title}>

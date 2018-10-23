@@ -1,12 +1,6 @@
 export default (theme) => ({
-  services: {
+  about: {
     paddingTop: `${theme.spacing.unit * 4}px`,
     paddingBottom: `${theme.spacing.unit * 6}px`,
-  },
-  card: {
-    height: '100%',
-  },
-  media: {
-    objectFit: 'cover',
   },
 })
