@@ -14,8 +14,6 @@ class FrontPage extends Component {
         <Sections.Technologies />
         <Sections.Projects />
         <Sections.Phrase />
-        {/* <Sections.ReadMore /> */}
-        <Sections.Consultation />
       </Fragment>
     );
   }
