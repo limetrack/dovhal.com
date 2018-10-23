@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 import { SectionLayout } from 'containers';
 import { 
   Menu,
@@ -49,7 +50,7 @@ class Header extends Component {
         onClose={this.handleMobileMenuClose}
       >
         <MenuItem>
-          <p>Services</p>
+          <Link to="/services">Services</Link>
         </MenuItem>
         <MenuItem>
           <p>Works</p>
@@ -68,10 +69,10 @@ class Header extends Component {
         <AppBar position="absolute" className={classes.appBar}>
           <SectionLayout>
             <Toolbar className={classes.toolBar}>
-              <img src={logo} className={classes.headerLogo} alt="dovhal" />
+              <Link to="/"><img src={logo} className={classes.headerLogo} alt="dovhal" /></Link>
               <div className={classes.grow} />
               <div className={classes.sectionDesktop}>
-                <Button color="inherit">Services</Button>
+                <Button color="inherit" component={Link} to="/services">Services</Button>
                 <Button color="inherit">Works</Button>
                 <Button color="inherit">About</Button>
                 <Button color="inherit">Careers</Button>

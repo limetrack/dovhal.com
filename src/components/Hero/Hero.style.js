@@ -1,8 +1,5 @@
-import hero from './img/hero.jpg';
-
 export default (theme) => ({
   hero: {
-    backgroundImage: `url(${hero})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     // background: 'rgba(0, 0, 0, 0.6)',
@@ -16,7 +13,7 @@ export default (theme) => ({
     // }
   },
   main: {
-    minHeight: `${theme.spacing.unit * 80}px`,
+    minHeight: `${theme.spacing.unit * 40}px`,
   },
   title: {
     textTransform: 'uppercase',

@@ -6,7 +6,7 @@ class FrontPage extends Component {
 
     return (
       <Fragment>
-        <Sections.Hero />
+        <Sections.Hero mainHero />
         <Sections.About />
         <Sections.Dream />
         <Sections.Services />

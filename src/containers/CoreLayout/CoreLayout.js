@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Header, Footer, FrontPage } from 'containers';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Header, Footer, FrontPage, Services } from 'containers';
 import withRoot from 'withRoot';
 
 class CoreLayout extends Component {
@@ -8,9 +8,12 @@ class CoreLayout extends Component {
     return (
       <Router>
         <Fragment>
-          <Header />
-          <FrontPage />
-          <Footer />
+          <Route component={Header}/>
+          <Switch>
+            <Route exact path="/" component={FrontPage} />
+            <Route path="/services" component={Services} />
+          </Switch>
+          <Route component={Footer}/>
         </Fragment>
       </Router>
     );
