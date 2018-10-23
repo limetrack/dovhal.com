@@ -16,6 +16,14 @@ export default (theme) => ({
   },
   friends: {
     backgroundColor: theme.palette.primary.main,
+    [theme.breakpoints.up('lg')]: {
+      paddingLeft: `${theme.spacing.unit * 6}px !important`,
+    },
+  },
+  contactForm: {
+    [theme.breakpoints.up('lg')]: {
+      paddingRight: `${theme.spacing.unit * 6}px !important`,
+    },
   },
   textField: {
     backgroundColor: theme.palette.grey['50'],

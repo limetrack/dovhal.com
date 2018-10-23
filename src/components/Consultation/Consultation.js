@@ -64,7 +64,7 @@ class Consultation extends Component {
       <section className={classes.consultation}>
         <SectionLayout>
           <Grid container spacing={32} justify="center" direction="row" className={classes.main}>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={6} className={classes.contactForm}>
               <form noValidate autoComplete="off">
                 <Grid container spacing={8}>
                   <Grid item xs={12}>
