@@ -152,7 +152,7 @@ class Consultation extends Component {
                     />
                   </Grid>
                   <Grid item xs={12}>
-                    <Button variant="outlined" color="primary">Send request</Button>
+                    <Button variant="outlined" color="primary" fullWidth>Send request</Button>
                   </Grid>
                 </Grid>
               </form>
