@@ -1,13 +1,13 @@
 import React, { Component, Fragment } from 'react';
-import * as Sections from 'components';
-import hero from 'assets/images/ourServices.jpg';
+import { Hero } from 'components';
+import hero from './images/hero.jpg';
 
 class Services extends Component {
   render() {
 
     return (
       <Fragment>
-        <Sections.Hero backgroundImage={hero} title="Our services" />
+        <Hero backgroundImage={hero} title="Our services" />
       </Fragment>
     );
   }
