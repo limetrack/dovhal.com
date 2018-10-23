@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { Grid, Button, Typography } from '@material-ui/core';
 import { SectionLayout } from 'containers';
 import styles from './Hero.style.js';
-import hero from './img/hero.jpg';
+import hero from './images/hero.jpg';
 
 class Hero extends Component {
   render() {
@@ -16,7 +16,7 @@ class Hero extends Component {
         <SectionLayout>
           <Grid container spacing={32} justify="center" alignItems="center" direction="column" 
                 className={classes.main} 
-                style={mainHero && { minHeight: '640px' }}>
+                style={{ minHeight: mainHero ? '640px' : '' }}>
             {mainHero && (
               <Fragment>
                 <Grid item xs={12} md={6}>
@@ -66,6 +66,7 @@ class Hero extends Component {
 }
 
 Hero.defaultProps = {
+  mainHero: false,
   backgroundImage: hero,
   title: 'Default title',
 }
@@ -73,7 +74,7 @@ Hero.defaultProps = {
 Hero.propTypes = {
   classes: PropTypes.object.isRequired,
   title: PropTypes.string,
-  mainHero: PropTypes.boolean,
+  mainHero: PropTypes.bool,
   backgroundImage: PropTypes.string,
 };
 

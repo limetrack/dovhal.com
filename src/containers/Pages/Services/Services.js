@@ -63,7 +63,7 @@ class Services extends Component {
           <SectionLayout>
             <Grid container spacing={32} justify="center" className={classes.main}>
               {services.map(service => (
-                <Grid item xs={12} md={4}>
+                <Grid item xs={12} md={4} key={service.title}>
                   <Card className={classes.card}>
                     <CardMedia
                       component="img"

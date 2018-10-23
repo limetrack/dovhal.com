@@ -18,7 +18,7 @@ class Phrase extends Component {
               <img src={idovgal} alt="CTO" className={classes.photo} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <Grid container spacing={32} alignItems="center" justify="left" className={classes.description}>
+              <Grid container spacing={32} alignItems="center" className={classes.description}>
                 <Grid item xs={12}>
                   <Typography variant="h4" gutterBottom>
                     Dovhal Ivan

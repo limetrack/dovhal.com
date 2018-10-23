@@ -55,7 +55,7 @@ class BusinessPlatform extends Component {
                   </Typography>
                 </Grid>
                   {budgets.map(budget => (
-                    <Grid item xs={12} className={classes.companyItem}>
+                    <Grid item xs={12} className={classes.companyItem} key={budget.name}>
                       <Typography variant="h6" align="justify" gutterBottom className={classes.companyName}>
                         {budget.name}
                       </Typography>
