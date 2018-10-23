@@ -27,7 +27,7 @@ class Dream extends Component {
               <img src={adovgal} alt="CEO" className={classes.photo} />
             </Grid>
             <Grid item xs={12} md={6}>
-              <Grid container spacing={32} alignItems="center" justify="center" className={classes.description}>
+              <Grid container spacing={32} alignItems="center" justify="center">
                 <Grid item xs={12}>
                   <Typography variant="h4" gutterBottom>
                     If you have a dream,

@@ -9,7 +9,7 @@ class FrontPage extends Component {
         <Sections.Hero mainHero />
         <Sections.About />
         <Sections.Dream />
-        <Sections.Services />
+        <Sections.Advantages />
         <Sections.BusinessPlatform />
         <Sections.Technologies />
         <Sections.Projects />

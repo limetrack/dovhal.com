@@ -4,14 +4,14 @@ import { withStyles } from '@material-ui/core/styles';
 import { Grid, Paper, Typography } from '@material-ui/core';
 import { FingerprintOutlined, HighQualityOutlined, PeopleOutlined, VerifiedUserOutlined } from '@material-ui/icons';
 import { SectionLayout } from 'containers';
-import styles from './Services.style.js';
+import styles from './Advantages.style.js';
 
-class Services extends Component {
+class Advantages extends Component {
   render() {
     const { classes } = this.props;
 
     return (
-      <section className={classes.services}>
+      <section className={classes.advantages}>
         <SectionLayout>
           <Grid container spacing={32} justify="center" className={classes.main}>
             <Grid item xs={12}>
@@ -80,8 +80,8 @@ class Services extends Component {
   }
 }
 
-Services.propTypes = {
+Advantages.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Services);
+export default withStyles(styles)(Advantages);
