@@ -4,9 +4,6 @@ export default (theme) => ({
     paddingBottom: `${theme.spacing.unit * 6}px`,
     backgroundColor: theme.palette.grey['100'],
   },
-  title: {
-    textTransform: 'uppercase',
-  },
   description: {
     margin: `0 ${theme.spacing.unit * 2}px`,
   },

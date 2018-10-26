@@ -4,14 +4,9 @@ import teslaEnergo from './img/TeslaEnergo.png';
 
 export default (theme) => ({
   projects: {
-    // minHeight: 600,
     paddingTop: `${theme.spacing.unit * 5}px`,
     paddingBottom: `${theme.spacing.unit * 6}px`,
     backgroundColor: theme.palette.grey['100'],
-  },
-  main: {
-    // paddingTop: `${theme.spacing.unit * 6}px`,
-    // paddingBottom: `${theme.spacing.unit * 12}px`,
   },
   title: {
     textTransform: 'uppercase',
@@ -28,20 +23,7 @@ export default (theme) => ({
     backgroundSize: '80%',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-    // backgroundOrigin: 'content-box',
-    // padding: `${theme.spacing.unit * 4}px`,
     height: `${theme.spacing.unit * 30}px`,
-    '&:hover': {
-      // '&:before': {
-      //   top: 0,
-      //   left: 0,
-      //   content: '""',
-      //   position: 'absolute',
-      //   width: '100%',
-      //   height: '100%',
-      //   background: theme.palette.primary.main,
-      // },
-    }
   },
   vi: {
     backgroundImage: `url(${vi})`,

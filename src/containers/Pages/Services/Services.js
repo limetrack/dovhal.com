@@ -69,9 +69,6 @@ class Services extends Component {
           <SectionLayout>
             <Grid container spacing={32} justify="center">
                 <Grid item xs={12}>
-                  <Typography variant="subtitle2" align="center" color="primary" className={classes.title}>
-                    Services
-                  </Typography>
                   <Typography variant="h4" align="center">
                     We Know That The Service Should Please
                   </Typography>

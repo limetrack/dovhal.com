@@ -13,7 +13,7 @@ class Projects extends Component {
     return (
       <section className={classes.projects}>
         <SectionLayout>
-          <Grid container spacing={32} justify="center" className={classes.main}>
+          <Grid container spacing={32} justify="center">
             <Grid item xs={12}>
               <Typography variant="h4" align="center">
                 Our works
