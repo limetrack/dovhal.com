@@ -48,7 +48,13 @@ const services = [
     image: support,
     title: 'Support',
     description: 'A launch date doesn’t mean “goodbye.” We continue collaborating for exponential success, keeping you and your products online.',
-    listItems: [],
+    listItems: [
+      'Incident management',
+      'Problem management',
+      'Change management',
+      'IT project management',
+      'Asset management',
+    ],
   },
 ]
 
@@ -61,9 +67,23 @@ class Services extends Component {
         <Hero backgroundImage={hero} title="Our services" />
         <section className={classes.services}>
           <SectionLayout>
-            <Typography variant="h4" align="center" gutterBottom paragraph>
-              We Know That The Service Should Please
-            </Typography>
+            <Grid container spacing={32} justify="center">
+                <Grid item xs={12}>
+                  <Typography variant="subtitle2" align="center" color="primary" className={classes.title}>
+                    Services
+                  </Typography>
+                  <Typography variant="h4" align="center">
+                    We Know That The Service Should Please
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} md={8}>
+                  <Typography variant="subtitle2" color="textSecondary" align="center" gutterBottom className={classes.description}>
+                    Our team uses our expertise in design and development to explore and define the best strategy for your team. 
+                    We work to grow and maintain a transparent collaboration that extends beyond a launch date. From concept to delivery, 
+                    we offer solutions that will ensure a successful product.
+                  </Typography>
+                </Grid>
+            </Grid>
             <Grid container spacing={32} justify="center" className={classes.main}>
               {services.map(service => (
                 <Grid item xs={12} md={4} key={service.title}>

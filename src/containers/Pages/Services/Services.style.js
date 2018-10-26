@@ -9,4 +9,10 @@ export default (theme) => ({
   media: {
     objectFit: 'cover',
   },
+  title: {
+    textTransform: 'uppercase',
+  },
+  description: {
+    marginBottom: `${theme.spacing.unit * 5}px`,
+  },
 })
