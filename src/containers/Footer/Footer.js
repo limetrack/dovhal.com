@@ -5,6 +5,7 @@ import { Grid, Typography, Divider, Button } from '@material-ui/core';
 import { SectionLayout } from 'containers';
 import { Consultation } from 'components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 import styles from './Footer.style.js';
 import logo from 'containers/Header/logo.svg';
 
@@ -41,10 +42,10 @@ class Footer extends Component {
             <Grid container spacing={32} justify="center">
               <Grid item xs={12}>
                 <Typography variant="subtitle2" align="center" gutterBottom className={classes.text}>
-                  <Button color="inherit">Services</Button>
-                  <Button color="inherit">Works</Button>
-                  <Button color="inherit">About</Button>
-                  <Button color="inherit">Careers</Button>
+                  <Button color="inherit" component={Link} to="/services">Services</Button>
+                  <Button color="inherit" component={Link} to="/works">Works</Button>
+                  <Button color="inherit" component={Link} to="/about">About</Button>
+                  <Button color="inherit" component={Link} to="/careers">Careers</Button>
                 </Typography>
                 <Typography variant="subtitle2" align="center" gutterBottom className={classes.text}>  
                   © 2018 Dovhal. All rights reserved.
