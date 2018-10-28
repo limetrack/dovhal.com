@@ -9,13 +9,6 @@ import { Hero } from 'components';
 import styles from './About.style.js';
 import hero from './images/hero.jpg';
 
-// const advantages = [
-//   'up to date technologies',
-//   'high quality and balanced cost',
-//   'individual approach',
-//   'warranty and support',
-// ]
-
 class About extends Component {
   render() {
     const { classes } = this.props;

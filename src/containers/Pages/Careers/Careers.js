@@ -1,18 +1,20 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
-import { Grid, Typography, } from '@material-ui/core';
+import { Grid, Typography, List, ListItem, ListItemText, } from '@material-ui/core';
 import { SectionLayout } from 'containers';
 import { Hero } from 'components';
 import styles from './Careers.style.js';
 import hero from './images/hero.jpg';
 
-// const advantages = [
-//   'up to date technologies',
-//   'high quality and balanced cost',
-//   'individual approach',
-//   'warranty and support',
-// ]
+const developers = [
+  'Front-end developer',
+  'NodeJS developer',
+  'iOs developer',
+  'Android developer',
+  'Designer',
+]
 
 class Careers extends Component {
   render() {
@@ -41,6 +43,36 @@ class Careers extends Component {
                     We’re committed to creating an environment of inclusion — a place where every Tree can thrive.
                   </Typography>
                 </Grid>
+            </Grid>
+          </SectionLayout>
+        </section>
+        <section className={classNames(classes.careers, classes.blueBackground)}>
+          <SectionLayout>
+            <Grid container spacing={32} justify="center">
+                <Grid item xs={12}>
+                  <Typography variant="h4" align="center" className={classes.whiteText}>
+                    We are looking for
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} md={8}>
+                  <List>
+                    {developers.map(dev => (
+                      <ListItem dense key={dev} className={classes.listItem}>
+                        <ListItemText disableTypography>     
+                          <Typography variant="subtitle1" align="center" className={classes.whiteText}>
+                            {dev}
+                          </Typography>
+                        </ListItemText>
+                      </ListItem>
+                    ))}
+                  </List>
+                </Grid>
+            </Grid>
+          </SectionLayout>
+        </section>
+        <section className={classes.careers}>
+          <SectionLayout>
+            <Grid container spacing={32} justify="center">
                 <Grid item xs={12} md={8}>
                   <Typography variant="h6" align="center" gutterBottom className={classes.description}>
                     Join the Team
