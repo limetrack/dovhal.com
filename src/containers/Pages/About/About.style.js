@@ -1,7 +1,7 @@
 export default (theme) => ({
   about: {
-    paddingTop: `${theme.spacing.unit * 4}px`,
-    paddingBottom: `${theme.spacing.unit * 6}px`,
+    paddingTop: `${theme.spacing.unit * 6}px`,
+    paddingBottom: `${theme.spacing.unit * 8}px`,
   },
   text: {
     marginBottom: `${theme.spacing.unit * 5}px`,
