@@ -30,7 +30,7 @@ class Careers extends Component {
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={8}>
-                  <Typography variant="subtitle2" color="textSecondary" align="center" gutterBottom className={classes.description}>
+                  <Typography variant="subtitle1" color="textSecondary" align="center" gutterBottom className={classes.description}>
                     You're a person—not just a resource.
                   </Typography>
                   <Typography variant="subtitle2" color="textSecondary" align="center" gutterBottom className={classes.description}>
@@ -39,6 +39,18 @@ class Careers extends Component {
                     Our differences, both visible and invisible, benefit our teams, our communities, and the products we craft. 
                     That’s why dovhal.com strives to build a team with diverse backgrounds, skills, and perspectives. 
                     We’re committed to creating an environment of inclusion — a place where every Tree can thrive.
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} md={8}>
+                  <Typography variant="h6" align="center" gutterBottom className={classes.description}>
+                    Join the Team
+                  </Typography>
+                  <Typography variant="subtitle2" color="textSecondary" align="center" gutterBottom className={classes.description}>
+                    We’re driven by our goal of improving lives through the products we design and build. We look for people with a commitment 
+                    to excellence who take initiative to make products great.
+                  </Typography>
+                  <Typography variant="subtitle2" color="textSecondary" align="center" gutterBottom className={classes.description}>
+                    We look forward to hearing from you!
                   </Typography>
                 </Grid>
             </Grid>
