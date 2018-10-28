@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
-import { Grid, Paper, Typography } from '@material-ui/core';
+import { Grid, Paper, Typography, Hidden } from '@material-ui/core';
 import { FingerprintOutlined, HighQualityOutlined, PeopleOutlined, VerifiedUserOutlined } from '@material-ui/icons';
 import { SectionLayout } from 'containers';
 import { Hero } from 'components';
@@ -111,24 +111,41 @@ class About extends Component {
           </SectionLayout>
         </section>
         <section>
-          <iframe 
-            title="photo"
-            src="https://www.google.com/maps/embed?pb=!4v1540745392412!6m8!1m7!1sf4rmqdmPtfno7zbATB7WtQ!2m2!1d50.49571534142549!2d30.52025289993295!3f314.91709279733846!4f42.91563514523651!5f0.7820865974627469" 
-            width="50%" 
-            height="550" 
-            frameBorder="0" 
-            style={{ border: 0 }}
-            allowFullScreen>
-          </iframe>
-          <iframe 
-            title="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d634.5138488937392!2d30.51933162924914!3d50.49592675183869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d1b2fb432679%3A0xa494771134c861e6!2sDovhal!5e0!3m2!1sen!2sua!4v1540744625860" 
-            width="50%" 
-            height="550" 
-            frameBorder="0" 
-            style={{ border: 0 }}
-            allowFullScreen>
-          </iframe>
+          <Grid container justify="center">
+            <Hidden smDown>
+              <Grid item xs={12} md={6}>
+                <iframe 
+                  title="photo"
+                  src="https://www.google.com/maps/embed?pb=!4v1540766557111!6m8!1m7!1sHIF3w3_cb6Kf07ALP4NKMw!2m2!1d50.49554639278246!2d30.51985031589832!3f1.0465346188099147!4f36.78086527661742!5f0.7820865974627469" 
+                  width="100%" 
+                  height="500" 
+                  frameBorder="0" 
+                  style={{ border: 0, display: 'block' }}
+                  allowFullScreen>
+                </iframe>
+                {/* <iframe 
+                  title="photo"
+                  src="https://www.google.com/maps/embed?pb=!4v1540766112052!6m8!1m7!1sf4rmqdmPtfno7zbATB7WtQ!2m2!1d50.49571534142549!2d30.52025289993295!3f314.92!4f42.91999999999999!5f0.5970117501821992" 
+                  width="100%" 
+                  height="600" 
+                  frameBorder="0" 
+                  style={{ border: 0, display: 'block' }}
+                  allowFullScreen>
+                </iframe> */}
+              </Grid>
+            </Hidden>
+            <Grid item xs={12} md={6}>
+              <iframe 
+                title="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2538.0552590956436!2d30.517690115912654!3d50.495929291967435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d1b2fb432679%3A0xa494771134c861e6!2sDovhal!5e0!3m2!1sen!2sua!4v1540765820394" 
+                width="100%" 
+                height="500" 
+                frameBorder="0" 
+                style={{ border: 0, display: 'block' }}
+                allowFullScreen>
+              </iframe>
+            </Grid>
+          </Grid>
         </section>
       </Fragment>
     );
