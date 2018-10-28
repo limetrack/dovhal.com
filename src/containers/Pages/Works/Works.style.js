@@ -4,8 +4,8 @@ import teslaEnergo from './images/TeslaEnergo.png';
 
 export default (theme) => ({
   works: {
-    paddingTop: `${theme.spacing.unit * 4}px`,
-    paddingBottom: `${theme.spacing.unit * 6}px`,
+    paddingTop: `${theme.spacing.unit * 6}px`,
+    paddingBottom: `${theme.spacing.unit * 8}px`,
   },
   description: {
     marginBottom: `${theme.spacing.unit * 5}px`,
@@ -56,5 +56,9 @@ export default (theme) => ({
   },
   button: {
     color: theme.palette.grey['50'],
+  },
+  iconRight: {
+    marginRight: 0,
+    marginLeft: `${theme.spacing.unit * 2}px`,
   },
 })

@@ -35,6 +35,16 @@ class Works extends Component {
         <section className={classes.works}>
           <SectionLayout>
             <Grid container spacing={32} alignItems="center" justify="center" className={classes.main}>
+              <Grid item xs={12}>
+                <Typography variant="h4" align="center">
+                  Context is everything
+                </Typography>
+              </Grid>
+              <Grid item xs={12}>
+                <Typography variant="subtitle2" color="textSecondary" align="center" gutterBottom>
+                  vi is a contextual video platform
+                </Typography>
+              </Grid> 
               <Grid item xs={12} md={4}>
                 <Paper className={classNames(classes.paper, classes.vi)} elevation={1}>
                   <Grid container direction="row" spacing={32} justify="center" alignItems="center" className={classes.companyGrid}>
@@ -53,19 +63,13 @@ class Works extends Component {
                 </Paper>
               </Grid>
               <Grid item xs={12} md={8}>
-                <Typography variant="h6" gutterBottom>
-                  Context is everything
-                </Typography>
-                <Typography variant="subtitle2" color="textSecondary" gutterBottom>
-                  vi is a contextual video platform
-                </Typography>
                 <Typography variant="subtitle2" color="textSecondary" gutterBottom>
                   We connect publishers, content providers and brands through video storytelling
                 </Typography>
                 <Typography variant="subtitle2" color="textSecondary" gutterBottom>
                   Our tools use contextual matching to create compelling video experiences.
                 </Typography>
-                <Typography variant="subtitle2" color="textSecondary" gutterBottom>
+                <Typography variant="subtitle2" color="textSecondary" gutterBottom paragraph>
                   vi offers a full suite of self-serve tools:
                 </Typography>
                 <List dense disablePadding>
@@ -95,38 +99,48 @@ class Works extends Component {
         <section className={classNames(classes.works, classes.darkBackground)}>
           <SectionLayout>
             <Grid container spacing={32} alignItems="center" justify="center" className={classes.main}>
-              <Grid item xs={12} md={8}>
-                <Typography variant="h6" gutterBottom>
+              <Grid item xs={12}>
+                <Typography variant="h4" align="center">
                   NEWTEND
                 </Typography>
-                <Typography variant="subtitle2" color="textSecondary" gutterBottom>
+              </Grid>
+              <Grid item xs={12}>
+                <Typography variant="subtitle2" color="textSecondary" align="center" gutterBottom>
                   The electronic trading platform
                 </Typography>
-                <Typography variant="subtitle2" color="textSecondary" gutterBottom>
+              </Grid> 
+              <Grid item xs={12} md={8}>
+                <Typography variant="subtitle2" color="textSecondary" align="right" gutterBottom>
                   NEWTEND is a high quality and prompt service for participation in the pre-threshold and above-threshold government tenders.
                   NEWTEND participated in the development of the ProZorro system and has all four accreditation levels.
                 </Typography>
-                <Typography variant="subtitle2" color="textSecondary" gutterBottom>
+                <Typography variant="subtitle2" color="textSecondary" align="right" gutterBottom paragraph>
                   We provide the suppliers with:
                 </Typography>
                 <List dense disablePadding>
                   <ListItem disableGutters>
-                    <ListItemIcon>
+                    <ListItemText 
+                      primary="open new marketing outlets"
+                      primaryTypographyProps={{ align: 'right' }} />
+                    <ListItemIcon className={classes.iconRight}>
                         <CheckCircle color="primary"/>
                     </ListItemIcon>
-                    <ListItemText primary="open new marketing outlets" />
                   </ListItem>
                   <ListItem disableGutters>
-                    <ListItemIcon>
+                    <ListItemText 
+                      primary="equal access to the government orders"
+                      primaryTypographyProps={{ align: 'right' }} />
+                    <ListItemIcon className={classes.iconRight}>
                         <CheckCircle color="primary"/>
                     </ListItemIcon>
-                    <ListItemText primary="equal access to the government orders" />
                   </ListItem>
                   <ListItem disableGutters>
-                    <ListItemIcon>
+                    <ListItemText 
+                      primary="a prompt mailout of current procurements"
+                      primaryTypographyProps={{ align: 'right' }} />
+                    <ListItemIcon className={classes.iconRight}>
                         <CheckCircle color="primary"/>
                     </ListItemIcon>
-                    <ListItemText primary="a prompt mailout of current procurements" />
                   </ListItem>
                 </List>
               </Grid>
@@ -153,6 +167,16 @@ class Works extends Component {
         <section className={classes.works}>
           <SectionLayout>
             <Grid container spacing={32} alignItems="center" justify="center" className={classes.main}>
+              <Grid item xs={12}>
+                <Typography variant="h4" align="center">
+                  TeslaEnergo
+                </Typography>
+              </Grid>
+              <Grid item xs={12}>
+                <Typography variant="subtitle2" color="textSecondary" align="center" gutterBottom>
+                 The company of energy solutions for houses №1 on the Ukrainian market
+                </Typography>
+              </Grid> 
               <Grid item xs={12} md={4}>
                 <Paper className={classNames(classes.paper, classes.tesla)} elevation={1}>
                   <Grid container direction="row" spacing={32} justify="center" alignItems="center" className={classes.companyGrid}>
@@ -171,17 +195,11 @@ class Works extends Component {
                 </Paper>
               </Grid>
               <Grid item xs={12} md={8}>
-                <Typography variant="h6" gutterBottom>
-                  Teslaenergo
-                </Typography>
-                <Typography variant="subtitle2" color="textSecondary" gutterBottom>
-                  The company of energy solutions for houses №1 on the Ukrainian market
-                </Typography>
                 <Typography variant="subtitle2" color="textSecondary" gutterBottom>
                   Teslaenergo is a demanding professional in the Ukrainian energy market, relying on future innovations and premium quality.
                   We offer business cooperation to those who are willing to invest in the future of green energy.
                 </Typography>
-                <Typography variant="subtitle2" color="textSecondary" gutterBottom>
+                <Typography variant="subtitle2" color="textSecondary" gutterBottom paragraph>
                   We monitor the most promising technological solutions in Europe to create:
                 </Typography>
                 <List dense disablePadding>

@@ -1,9 +1,7 @@
 export default (theme) => ({
   footer: {
     backgroundColor: '#262729',
-  },
-  footer1: {
-    backgroundColor: '#262729',
+    marginTop: '-1px',
   },
   divider: {
     backgroundColor: theme.palette.grey['800'],
