@@ -161,6 +161,10 @@ class Consultation extends Component {
               <Typography variant="h4" gutterBottom className={classes.text}>
                 Our customers are our friends
               </Typography>
+              <Typography variant="subtitle2" color="textSecondary" gutterBottom className={classes.text}>
+                We always try to build our relationships on friendship and trust, hence comes a deep understanding of 
+                desires and successful achievement of goals
+              </Typography>
               <List>
                 {things.map(thing => {
                   const Icon = thing.icon;

@@ -2,7 +2,17 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
-import { Grid, Paper, Typography, Button } from '@material-ui/core';
+import { 
+  Grid, 
+  Paper, 
+  Typography, 
+  Button,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText, 
+} from '@material-ui/core';
+import { CheckCircle } from '@material-ui/icons';
 import { SectionLayout } from 'containers';
 import { Hero } from 'components';
 import styles from './Works.style.js';
@@ -31,7 +41,7 @@ class Works extends Component {
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={8}>
-                  <Typography variant="subtitle2" color="textSecondary" align="center" gutterBottom className={classes.description}>
+                  <Typography variant="subtitle2" color="textSecondary" align="center">
                     We believe in building software that improves lives and makes us a little happier
                   </Typography>
                 </Grid>
@@ -59,24 +69,41 @@ class Works extends Component {
                 </Paper>
               </Grid>
               <Grid item xs={12} md={6}>
-                <Grid container spacing={32} alignItems="center" justify="center">
-                  <Grid item xs={12}>
-                    <Typography variant="subtitle2" color="textSecondary" gutterBottom>
-                      We connect publishers, content providers and brands through video storytelling
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={12}>
-                    <Typography variant="subtitle2" color="textSecondary" gutterBottom>
-                      Context is everything
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={12}>
-                    <Typography variant="subtitle2" color="textSecondary" gutterBottom>
-                      Our tools use contextual matching to create compelling video experiences. vi offers a full suite 
-                      of self-serve tools: a video syndication engine powered by machine learning, a video ad server and an SSP.
-                    </Typography>
-                  </Grid>
-                </Grid>
+                <Typography variant="h6" gutterBottom>
+                  Context is everything
+                </Typography>
+                <Typography variant="subtitle2" color="textSecondary" gutterBottom>
+                  vi is a contextual video platform
+                </Typography>
+                <Typography variant="subtitle2" color="textSecondary" gutterBottom>
+                  We connect publishers, content providers and brands through video storytelling
+                </Typography>
+                <Typography variant="subtitle2" color="textSecondary" gutterBottom>
+                  Our tools use contextual matching to create compelling video experiences.
+                </Typography>
+                <Typography variant="subtitle2" color="textSecondary" gutterBottom>
+                  vi offers a full suite of self-serve tools:
+                </Typography>
+                <List dense disablePadding>
+                  <ListItem disableGutters>
+                    <ListItemIcon>
+                        <CheckCircle color="primary"/>
+                    </ListItemIcon>
+                    <ListItemText primary="a video syndication engine powered by machine learning" />
+                  </ListItem>
+                  <ListItem disableGutters>
+                    <ListItemIcon>
+                        <CheckCircle color="primary"/>
+                    </ListItemIcon>
+                    <ListItemText primary="a video ad server" />
+                  </ListItem>
+                  <ListItem disableGutters>
+                    <ListItemIcon>
+                        <CheckCircle color="primary"/>
+                    </ListItemIcon>
+                    <ListItemText primary="an SSP" />
+                  </ListItem>
+                </List>
               </Grid>
             </Grid>
           </SectionLayout>
@@ -85,20 +112,39 @@ class Works extends Component {
           <SectionLayout>
             <Grid container spacing={32} alignItems="center" justify="center" className={classes.main}>
               <Grid item xs={12} md={6}>
-                <Grid container spacing={32} alignItems="center" justify="center">
-                  <Grid item xs={12}>
-                    <Typography variant="subtitle2" color="textSecondary" gutterBottom>
-                      The electronic trading platform NEWTEND is a high quality and prompt service for participation in 
-                      the pre-threshold and above-threshold government tenders. NEWTEND participated in the development 
-                      of the ProZorro system and has all four accreditation levels.
-                      We open new marketing outlets for the suppliers and provide them with open and equal access to the 
-                      government orders. We provide the participants with Concierge service and Legal support services at 
-                      all stages of bidding. We provide with a prompt mailout of current procurements and inform about the 
-                      status of the tender participant. It is possible to participate in public property biddings at the 
-                      NEWTEND platform.
-                    </Typography>
-                  </Grid>
-                </Grid>
+                <Typography variant="h6" gutterBottom>
+                  NEWTEND
+                </Typography>
+                <Typography variant="subtitle2" color="textSecondary" gutterBottom>
+                  The electronic trading platform
+                </Typography>
+                <Typography variant="subtitle2" color="textSecondary" gutterBottom>
+                  NEWTEND is a high quality and prompt service for participation in the pre-threshold and above-threshold government tenders.
+                  NEWTEND participated in the development of the ProZorro system and has all four accreditation levels.
+                </Typography>
+                <Typography variant="subtitle2" color="textSecondary" gutterBottom>
+                  We provide the suppliers with:
+                </Typography>
+                <List dense disablePadding>
+                  <ListItem disableGutters>
+                    <ListItemIcon>
+                        <CheckCircle color="primary"/>
+                    </ListItemIcon>
+                    <ListItemText primary="open new marketing outlets" />
+                  </ListItem>
+                  <ListItem disableGutters>
+                    <ListItemIcon>
+                        <CheckCircle color="primary"/>
+                    </ListItemIcon>
+                    <ListItemText primary="equal access to the government orders" />
+                  </ListItem>
+                  <ListItem disableGutters>
+                    <ListItemIcon>
+                        <CheckCircle color="primary"/>
+                    </ListItemIcon>
+                    <ListItemText primary="a prompt mailout of current procurements" />
+                  </ListItem>
+                </List>
               </Grid>
               <Grid item xs={12} md={3}>
                 <Paper className={classNames(classes.paper, classes.newtend)} elevation={1}>
@@ -141,18 +187,39 @@ class Works extends Component {
                 </Paper>
               </Grid>
               <Grid item xs={12} md={6}>
-                <Grid container spacing={32} alignItems="center" justify="center">
-                  <Grid item xs={12}>
-                    <Typography variant="subtitle2" color="textSecondary" gutterBottom>
-                      Компания энергетических решений для домов №1 на рынке Украины
-                      Teslaenergo — требовательный профессионал на рынке энергетики Украины, делающий ставку на инновации будущего и 
-                      качество премиум класса.
-                      Мы отслеживаем самые перспективные технологические решения Европы для создания умного энергоэффективного дома и 
-                      первыми выводим их на рынок Украины.
-                      Мы предлагаем бизнес-сотрудничество тем, кто готов инвестировать в будущее экологичной энергетики.
-                    </Typography>
-                  </Grid>
-                </Grid>
+                <Typography variant="h6" gutterBottom>
+                  Teslaenergo
+                </Typography>
+                <Typography variant="subtitle2" color="textSecondary" gutterBottom>
+                  The company of energy solutions for houses №1 on the Ukrainian market
+                </Typography>
+                <Typography variant="subtitle2" color="textSecondary" gutterBottom>
+                  Teslaenergo is a demanding professional in the Ukrainian energy market, relying on future innovations and premium quality.
+                  We offer business cooperation to those who are willing to invest in the future of green energy.
+                </Typography>
+                <Typography variant="subtitle2" color="textSecondary" gutterBottom>
+                  We monitor the most promising technological solutions in Europe to create:
+                </Typography>
+                <List dense disablePadding>
+                  <ListItem disableGutters>
+                    <ListItemIcon>
+                        <CheckCircle color="primary"/>
+                    </ListItemIcon>
+                    <ListItemText primary="a smart" />
+                  </ListItem>
+                  <ListItem disableGutters>
+                    <ListItemIcon>
+                        <CheckCircle color="primary"/>
+                    </ListItemIcon>
+                    <ListItemText primary="energy-efficient home" />
+                  </ListItem>
+                  <ListItem disableGutters>
+                    <ListItemIcon>
+                        <CheckCircle color="primary"/>
+                    </ListItemIcon>
+                    <ListItemText primary="the first to bring them to the Ukrainian market" />
+                  </ListItem>
+                </List>
               </Grid>
             </Grid>
           </SectionLayout>

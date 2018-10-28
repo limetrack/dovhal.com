@@ -23,4 +23,7 @@ export default (theme) => ({
   blueBackground: {
     backgroundColor: theme.palette.primary.main,
   },
+  whiteText: {
+    color: theme.palette.grey['50'],
+  },
 })

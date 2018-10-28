@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import { Grid, Paper, Typography } from '@material-ui/core';
 import { FingerprintOutlined, HighQualityOutlined, PeopleOutlined, VerifiedUserOutlined } from '@material-ui/icons';
@@ -36,7 +37,7 @@ class About extends Component {
                 </Typography>
               </Grid>
               <Grid item xs={12}>
-                <Grid container spacing={32} justify="center" className={classes.papers}>
+                <Grid container spacing={32} justify="center">
                   <Grid item xs={12} md={3}>
                     <Paper className={classes.paper} elevation={1}>
                       <FingerprintOutlined fontSize="large" color="primary" className={classes.icon} />
@@ -85,27 +86,31 @@ class About extends Component {
                 </Grid>
               </Grid> 
             </Grid>
-            <Grid container spacing={32} justify="center" className={classes.blueBackground}>
+          </SectionLayout>
+        </section>
+        <section className={classNames(classes.about, classes.blueBackground)}>
+          <SectionLayout>
+            <Grid container spacing={32} justify="center">
                 <Grid item xs={12}>
-                  <Typography variant="h4" align="center">
+                  <Typography variant="h4" align="center" className={classes.whiteText}>
                     Technology
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={8}>
-                  <Typography variant="subtitle2" color="textSecondary" align="center" gutterBottom>
+                  <Typography variant="subtitle2" align="center" gutterBottom className={classes.whiteText}>
                     Technology is inescapable. It pervades every facet of our life. From how we work, play and live our lives, 
                     technology has created a revolution that will grow for as long as humans continue to advance in their capabilities.
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={8}>
-                  <Typography variant="subtitle2" color="textSecondary" align="center" gutterBottom>
+                  <Typography variant="subtitle2" align="center" gutterBottom className={classes.whiteText}>
                     As the days, months and years go by, technology just gets better and better. What was once the latest 
                     and greatest yesterday, is old hat today. The bottom line is, technology doesn’t wait for you and if 
                     your organization isn’t keeping up with it, you will surely be left in the dust by one of your competitors.
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={8}>
-                  <Typography variant="subtitle2" color="textSecondary" align="center" gutterBottom>
+                  <Typography variant="subtitle2" align="center" gutterBottom className={classes.whiteText}>
                     Our main advantage is the use of only the latest proven technologies.
                   </Typography>
                 </Grid>

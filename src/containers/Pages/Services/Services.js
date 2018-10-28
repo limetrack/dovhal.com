@@ -70,7 +70,7 @@ class Services extends Component {
             <Grid container spacing={32} justify="center">
                 <Grid item xs={12}>
                   <Typography variant="h4" align="center">
-                    We Know That The Service Should Please
+                    We Know That The Service Must Satisfy
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={8}>
