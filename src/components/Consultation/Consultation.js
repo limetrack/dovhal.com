@@ -72,7 +72,7 @@ class Consultation extends Component {
                       Get in Touch
                     </Typography>
                     <Typography variant="subtitle2" color="textSecondary" gutterBottom>
-                      The more information we know, the better we’ll be prepared and able to help. Our team will be in touch soon!
+                      Our team will be in touch soon!
                     </Typography>
                   </Grid>
                   <Grid item xs={12} md={6}>

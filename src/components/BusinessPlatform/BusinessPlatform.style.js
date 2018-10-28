@@ -1,8 +1,8 @@
 export default (theme) => ({
   business: {
     // minHeight: `${theme.spacing.unit * 80}px`,
-    paddingTop: `${theme.spacing.unit * 5}px`,
-    paddingBottom: `${theme.spacing.unit * 5}px`,
+    paddingTop: `${theme.spacing.unit * 7}px`,
+    paddingBottom: `${theme.spacing.unit * 7}px`,
   },
   photo: {
     maxWidth: '100%',

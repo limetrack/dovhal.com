@@ -1,7 +1,7 @@
 export default (theme) => ({
   advantages: {
     paddingTop: `${theme.spacing.unit * 4}px`,
-    paddingBottom: `${theme.spacing.unit * 6}px`,
+    paddingBottom: `${theme.spacing.unit * 8}px`,
     backgroundColor: theme.palette.grey['100'],
   },
   description: {
