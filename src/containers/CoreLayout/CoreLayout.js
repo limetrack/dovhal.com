@@ -23,4 +23,4 @@ class CoreLayout extends Component {
   }
 }
 
-export default withRoot(CoreLayout);;
+export default withRoot(CoreLayout);

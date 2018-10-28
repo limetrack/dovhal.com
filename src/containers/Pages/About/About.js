@@ -119,22 +119,22 @@ class About extends Component {
         </section>
         <section>
           <iframe 
-            title="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d634.5138488937392!2d30.51933162924914!3d50.49592675183869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d1b2fb432679%3A0xa494771134c861e6!2sDovhal!5e0!3m2!1sen!2sua!4v1540744625860" 
-            width="50%" 
-            height="550" 
-            frameborder="0" 
-            style={{ border: 0 }}
-            allowfullscreen>
-          </iframe>
-          <iframe 
             title="photo"
             src="https://www.google.com/maps/embed?pb=!4v1540745392412!6m8!1m7!1sf4rmqdmPtfno7zbATB7WtQ!2m2!1d50.49571534142549!2d30.52025289993295!3f314.91709279733846!4f42.91563514523651!5f0.7820865974627469" 
             width="50%" 
             height="550" 
-            frameborder="0" 
+            frameBorder="0" 
             style={{ border: 0 }}
-            allowfullscreen>
+            allowFullScreen>
+          </iframe>
+          <iframe 
+            title="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d634.5138488937392!2d30.51933162924914!3d50.49592675183869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d1b2fb432679%3A0xa494771134c861e6!2sDovhal!5e0!3m2!1sen!2sua!4v1540744625860" 
+            width="50%" 
+            height="550" 
+            frameBorder="0" 
+            style={{ border: 0 }}
+            allowFullScreen>
           </iframe>
         </section>
       </Fragment>

@@ -77,19 +77,19 @@ class Works extends Component {
                     <ListItemIcon>
                         <CheckCircle color="primary"/>
                     </ListItemIcon>
-                    <ListItemText primary="a video syndication engine powered by machine learning" />
+                    <ListItemText primary="A video syndication engine powered by machine learning" />
                   </ListItem>
                   <ListItem disableGutters>
                     <ListItemIcon>
                         <CheckCircle color="primary"/>
                     </ListItemIcon>
-                    <ListItemText primary="a video ad server" />
+                    <ListItemText primary="A video ad server" />
                   </ListItem>
                   <ListItem disableGutters>
                     <ListItemIcon>
                         <CheckCircle color="primary"/>
                     </ListItemIcon>
-                    <ListItemText primary="an SSP" />
+                    <ListItemText primary="An SSP" />
                   </ListItem>
                 </List>
               </Grid>
@@ -120,7 +120,7 @@ class Works extends Component {
                 <List dense disablePadding>
                   <ListItem disableGutters>
                     <ListItemText 
-                      primary="open new marketing outlets"
+                      primary="Open new marketing outlets"
                       primaryTypographyProps={{ align: 'right' }} />
                     <ListItemIcon className={classes.iconRight}>
                         <CheckCircle color="primary"/>
@@ -128,7 +128,7 @@ class Works extends Component {
                   </ListItem>
                   <ListItem disableGutters>
                     <ListItemText 
-                      primary="equal access to the government orders"
+                      primary="Equal access to the government orders"
                       primaryTypographyProps={{ align: 'right' }} />
                     <ListItemIcon className={classes.iconRight}>
                         <CheckCircle color="primary"/>
@@ -136,7 +136,7 @@ class Works extends Component {
                   </ListItem>
                   <ListItem disableGutters>
                     <ListItemText 
-                      primary="a prompt mailout of current procurements"
+                      primary="A prompt mailout of current procurements"
                       primaryTypographyProps={{ align: 'right' }} />
                     <ListItemIcon className={classes.iconRight}>
                         <CheckCircle color="primary"/>
@@ -207,19 +207,19 @@ class Works extends Component {
                     <ListItemIcon>
                         <CheckCircle color="primary"/>
                     </ListItemIcon>
-                    <ListItemText primary="a smart" />
+                    <ListItemText primary="A smart" />
                   </ListItem>
                   <ListItem disableGutters>
                     <ListItemIcon>
                         <CheckCircle color="primary"/>
                     </ListItemIcon>
-                    <ListItemText primary="energy-efficient home" />
+                    <ListItemText primary="Energy-efficient home" />
                   </ListItem>
                   <ListItem disableGutters>
                     <ListItemIcon>
                         <CheckCircle color="primary"/>
                     </ListItemIcon>
-                    <ListItemText primary="the first to bring them to the Ukrainian market" />
+                    <ListItemText primary="The first to bring them to the Ukrainian market" />
                   </ListItem>
                 </List>
               </Grid>
