@@ -26,7 +26,7 @@ class Projects extends Component {
             </Grid> 
             <Grid item xs={12}>
               <Grid container spacing={32} justify="center" className={classes.papers}>
-                <Grid item xs={12} md={3}>
+                <Grid item xs={12} md={4}>
                   <Paper className={classNames(classes.paper, classes.vi)} elevation={1}>
                     <Grid container direction="row" spacing={32} justify="center" alignItems="center" className={classes.companyGrid}>
                       <Grid item xs={12} className={classes.companyItem}>
@@ -43,7 +43,7 @@ class Projects extends Component {
                     </Grid>
                   </Paper>
                 </Grid> 
-                <Grid item xs={12} md={3}>
+                <Grid item xs={12} md={4}>
                   <Paper className={classNames(classes.paper, classes.newtend)} elevation={1}>
                     <Grid container direction="row" spacing={32} justify="center" alignItems="center" className={classes.companyGrid}>
                       <Grid item xs={12} className={classes.companyItem}>
@@ -60,7 +60,7 @@ class Projects extends Component {
                     </Grid>
                   </Paper>
                 </Grid> 
-                <Grid item xs={12} md={3}>
+                <Grid item xs={12} md={4}>
                   <Paper className={classNames(classes.paper, classes.tesla)} elevation={1}>
                     <Grid container direction="row" spacing={32} justify="center" alignItems="center" className={classes.companyGrid}>
                       <Grid item xs={12} className={classes.companyItem}>

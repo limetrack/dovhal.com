@@ -34,24 +34,8 @@ class Works extends Component {
         <Hero backgroundImage={hero} title="Our works" />
         <section className={classes.works}>
           <SectionLayout>
-            <Grid container spacing={32} justify="center">
-                <Grid item xs={12}>
-                  <Typography variant="h4" align="center">
-                    Our mission
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} md={8}>
-                  <Typography variant="subtitle2" color="textSecondary" align="center">
-                    We believe in building software that improves lives and makes us a little happier
-                  </Typography>
-                </Grid>
-            </Grid>
-          </SectionLayout>
-        </section>
-        <section className={classes.works}>
-          <SectionLayout>
             <Grid container spacing={32} alignItems="center" justify="center" className={classes.main}>
-              <Grid item xs={12} md={3}>
+              <Grid item xs={12} md={4}>
                 <Paper className={classNames(classes.paper, classes.vi)} elevation={1}>
                   <Grid container direction="row" spacing={32} justify="center" alignItems="center" className={classes.companyGrid}>
                     <Grid item xs={12} className={classes.companyItem}>
@@ -68,7 +52,7 @@ class Works extends Component {
                   </Grid>
                 </Paper>
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} md={8}>
                 <Typography variant="h6" gutterBottom>
                   Context is everything
                 </Typography>
@@ -111,7 +95,7 @@ class Works extends Component {
         <section className={classNames(classes.works, classes.darkBackground)}>
           <SectionLayout>
             <Grid container spacing={32} alignItems="center" justify="center" className={classes.main}>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} md={8}>
                 <Typography variant="h6" gutterBottom>
                   NEWTEND
                 </Typography>
@@ -146,7 +130,7 @@ class Works extends Component {
                   </ListItem>
                 </List>
               </Grid>
-              <Grid item xs={12} md={3}>
+              <Grid item xs={12} md={4}>
                 <Paper className={classNames(classes.paper, classes.newtend)} elevation={1}>
                   <Grid container direction="row" spacing={32} justify="center" alignItems="center" className={classes.companyGrid}>
                     <Grid item xs={12} className={classes.companyItem}>
@@ -169,7 +153,7 @@ class Works extends Component {
         <section className={classes.works}>
           <SectionLayout>
             <Grid container spacing={32} alignItems="center" justify="center" className={classes.main}>
-              <Grid item xs={12} md={3}>
+              <Grid item xs={12} md={4}>
                 <Paper className={classNames(classes.paper, classes.tesla)} elevation={1}>
                   <Grid container direction="row" spacing={32} justify="center" alignItems="center" className={classes.companyGrid}>
                     <Grid item xs={12} className={classes.companyItem}>
@@ -186,7 +170,7 @@ class Works extends Component {
                   </Grid>
                 </Paper>
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} md={8}>
                 <Typography variant="h6" gutterBottom>
                   Teslaenergo
                 </Typography>

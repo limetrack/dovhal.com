@@ -2,7 +2,7 @@ export default (theme) => ({
   consultation: {
     // minHeight: `${theme.spacing.unit * 40}px`,
     paddingTop: `${theme.spacing.unit * 5}px`,
-    paddingBottom: `${theme.spacing.unit * 5}px`,
+    paddingBottom: `${theme.spacing.unit * 3}px`,
     backgroundColor: theme.palette.grey['100'],
     [theme.breakpoints.up('md')]: {
       backgroundImage: `linear-gradient(left, transparent 50%, ${theme.palette.primary.main} 50%, ${theme.palette.primary.main} 100%)`,
@@ -30,5 +30,11 @@ export default (theme) => ({
   },
   listItem: {
     paddingLeft: 0,
+  },
+  button: {
+    marginTop: `${theme.spacing.unit * 1}px`,
+  },
+  description: {
+    marginTop: `${theme.spacing.unit * 2.5}px`,
   },
 })

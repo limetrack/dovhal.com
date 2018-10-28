@@ -23,7 +23,7 @@ export default (theme) => ({
     backgroundSize: '80%',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-    height: `${theme.spacing.unit * 30}px`,
+    height: `${theme.spacing.unit * 40}px`,
   },
   vi: {
     backgroundImage: `url(${vi})`,

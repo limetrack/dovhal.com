@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import { Grid, Typography, List, ListItem, ListItemText, Avatar, TextField, MenuItem, Button } from '@material-ui/core';
 import { HearingOutlined, WhereToVoteOutlined, BeachAccessOutlined } from '@material-ui/icons';
@@ -71,9 +72,6 @@ class Consultation extends Component {
                     <Typography variant="h4" gutterBottom>
                       Get in Touch
                     </Typography>
-                    <Typography variant="subtitle2" color="textSecondary" gutterBottom>
-                      Our team will be in touch soon!
-                    </Typography>
                   </Grid>
                   <Grid item xs={12} md={6}>
                     <TextField
@@ -141,8 +139,8 @@ class Consultation extends Component {
                       id="outlined-multiline-flexible"
                       label="How can we help"
                       multiline
-                      rows="5"
-                      rowsMax="5"
+                      rows="4"
+                      rowsMax="4"
                       value={this.state.multiline}
                       onChange={this.handleChange('multiline')}
                       className={classes.textField}
@@ -151,7 +149,7 @@ class Consultation extends Component {
                       fullWidth
                     />
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid item xs={12} className={classes.button}>
                     <Button variant="outlined" color="primary" fullWidth>Send request</Button>
                   </Grid>
                 </Grid>
@@ -161,7 +159,7 @@ class Consultation extends Component {
               <Typography variant="h4" gutterBottom className={classes.text}>
                 Our customers are our friends
               </Typography>
-              <Typography variant="subtitle2" color="textSecondary" gutterBottom className={classes.text}>
+              <Typography variant="subtitle2" color="textSecondary" gutterBottom className={classNames(classes.text, classes.description)}>
                 We always try to build our relationships on friendship and trust, hence comes a deep understanding of 
                 desires and successful achievement of goals
               </Typography>
