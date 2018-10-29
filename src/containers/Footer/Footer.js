@@ -5,7 +5,7 @@ import { Grid, Typography, Divider, Button } from '@material-ui/core';
 import { SectionLayout } from 'containers';
 import { Consultation } from 'components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import styles from './Footer.style.js';
 import logo from 'containers/Header/logo.svg';
 
@@ -20,7 +20,7 @@ class Footer extends Component {
           <SectionLayout>
             <Grid container spacing={32} justify="space-around">
               <Grid item xs={12} md={4} className={classes.item} >
-                <Link to="/"><img src={logo} className={classes.logo} alt="dovhal" /></Link>
+                <Link to="/#top"><img src={logo} className={classes.logo} alt="dovhal" /></Link>
               </Grid>
               <Grid item xs={12} md={4} className={classes.item} >
                 <Typography variant="subtitle2" align="center" className={classes.text}>  
@@ -42,10 +42,10 @@ class Footer extends Component {
             <Grid container spacing={32} justify="center">
               <Grid item xs={12}>
                 <Typography variant="subtitle2" align="center" gutterBottom className={classes.text}>
-                  <Button color="inherit" component={Link} to="/services">Services</Button>
-                  <Button color="inherit" component={Link} to="/works">Works</Button>
-                  <Button color="inherit" component={Link} to="/about">About</Button>
-                  <Button color="inherit" component={Link} to="/careers">Careers</Button>
+                  <Button color="inherit" component={Link} to="/services#top">Services</Button>
+                  <Button color="inherit" component={Link} to="/works#top">Works</Button>
+                  <Button color="inherit" component={Link} to="/about#top">About</Button>
+                  <Button color="inherit" component={Link} to="/careers#top">Careers</Button>
                 </Typography>
                 <Typography variant="subtitle2" align="center" gutterBottom className={classes.text}>  
                   © 2018 Dovhal. All rights reserved.

@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import { Grid, Button, Typography } from '@material-ui/core';
 import { SectionLayout } from 'containers';
+import { HashLink } from 'react-router-hash-link';
 import styles from './Hero.style.js';
 import hero from './images/hero.jpg';
 
@@ -33,7 +34,13 @@ class Hero extends Component {
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={12}>
-                  <Button variant="contained" color="primary" className={classes.button}>
+                  <Button 
+                    variant="contained" 
+                    color="primary" 
+                    component={HashLink} 
+                    smooth 
+                    to={`#contact`} 
+                    className={classes.button}>
                     Contact us
                   </Button>
                 </Grid>

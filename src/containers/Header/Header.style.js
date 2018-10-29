@@ -25,6 +25,6 @@ export default theme => ({
     },
   },
   list: {
-    width: 200,
+    width: `${theme.spacing.unit * 23}px`,
   },
 });

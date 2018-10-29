@@ -8,36 +8,37 @@ import {
   Button,
   Toolbar,
   IconButton,
+  List,
+  Divider,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  SwipeableDrawer,
 } from '@material-ui/core';
-
 import {
   MoreVert as MoreIcon,
+  Work as WorksIcon,
+  Mail as ContactIcon,
+  People as CareersIcon,
+  Grain as ServicesIcon,
+  DonutSmall as AboutIcon,
 } from '@material-ui/icons';
-
+import { HashLink } from 'react-router-hash-link';
 import logo from './logo.svg';
 import styles from './Header.style.js';
-
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 
 class Header extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      right: false,
+      drawer: false,
     };
   }
 
-  toggleDrawer = (side, open) => () => {
+  toggleDrawer = (open) => () => {
     this.setState({
-      [side]: open,
+      drawer: open,
     });
   };
 
@@ -45,24 +46,32 @@ class Header extends Component {
     const { classes } = this.props;
     const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
-    const sideList = (
+    const menu = (
       <div className={classes.list}>
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          <ListItem button component={Link} to={`/services`}>
+            <ListItemIcon><ServicesIcon /></ListItemIcon>
+            <ListItemText primary="Services" />
+          </ListItem>
+          <ListItem button component={Link} to={`/works`}>
+            <ListItemIcon><WorksIcon /></ListItemIcon>
+            <ListItemText primary="Works" />
+          </ListItem>
+          <ListItem button component={Link} to={`/about`}>
+            <ListItemIcon><AboutIcon /></ListItemIcon>
+            <ListItemText primary="About" />
+          </ListItem>
+          <ListItem button component={Link} to={`/careers`}>
+            <ListItemIcon><CareersIcon /></ListItemIcon>
+            <ListItemText primary="Careers" />
+          </ListItem>
         </List>
         <Divider />
         <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          <ListItem button component={HashLink} to={`#contact`}>
+            <ListItemIcon><ContactIcon /></ListItemIcon>
+            <ListItemText primary="Contact us" />
+          </ListItem>
         </List>
       </div>
     );
@@ -72,24 +81,24 @@ class Header extends Component {
         disableBackdropTransition={!iOS} 
         disableDiscovery={iOS}
         anchor="right"
-        open={this.state.right}
-        onClose={this.toggleDrawer('right', false)}
-        onOpen={this.toggleDrawer('right', true)}
+        open={this.state.drawer}
+        onClose={this.toggleDrawer(false)}
+        onOpen={this.toggleDrawer(true)}
       >
         <div
           tabIndex={0}
           role="button"
-          onClick={this.toggleDrawer('right', false)}
-          onKeyDown={this.toggleDrawer('right', false)}
+          onClick={this.toggleDrawer(false)}
+          onKeyDown={this.toggleDrawer(false)}
         >
-          {sideList}
+          {menu}
         </div>
       </SwipeableDrawer>
     );
 
     return (
       <Fragment>
-        <AppBar position="absolute" className={classes.appBar}>
+        <AppBar id="top" position="absolute" className={classes.appBar}>
           <SectionLayout>
             <Toolbar className={classes.toolBar}>
               <Link to="/"><img src={logo} className={classes.headerLogo} alt="dovhal" /></Link>

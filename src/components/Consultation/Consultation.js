@@ -62,7 +62,7 @@ class Consultation extends Component {
     const { classes } = this.props;
 
     return (
-      <section className={classes.consultation}>
+      <section id="contact" className={classes.consultation}>
         <SectionLayout>
           <Grid container spacing={32} justify="center" direction="row" className={classes.main}>
             <Grid item xs={12} md={6} className={classes.contactForm}>
