@@ -24,4 +24,7 @@ export default theme => ({
       display: 'none',
     },
   },
+  list: {
+    width: 250,
+  },
 });

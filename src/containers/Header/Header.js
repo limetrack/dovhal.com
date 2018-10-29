@@ -3,12 +3,10 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import { SectionLayout } from 'containers';
-import { 
-  Menu,
+import {
   AppBar, 
   Button,
-  Toolbar, 
-  MenuItem, 
+  Toolbar,
   IconButton,
 } from '@material-ui/core';
 
@@ -19,49 +17,71 @@ import {
 import logo from './logo.svg';
 import styles from './Header.style.js';
 
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import MailIcon from '@material-ui/icons/Mail';
+
 class Header extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      mobileMoreAnchorEl: null,
+      right: false,
     };
   }
 
-  handleMobileMenuOpen = event => {
-    this.setState({ mobileMoreAnchorEl: event.currentTarget });
-  };
-
-  handleMobileMenuClose = () => {
-    this.setState({ mobileMoreAnchorEl: null });
+  toggleDrawer = (side, open) => () => {
+    this.setState({
+      [side]: open,
+    });
   };
 
   render() {
-    const { mobileMoreAnchorEl } = this.state;
     const { classes } = this.props;
-    const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+    const sideList = (
+      <div className={classes.list}>
+        <List>
+          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+            <ListItem button key={text}>
+              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}
+        </List>
+        <Divider />
+        <List>
+          {['All mail', 'Trash', 'Spam'].map((text, index) => (
+            <ListItem button key={text}>
+              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}
+        </List>
+      </div>
+    );
 
     const renderMobileMenu = (
-      <Menu
-        anchorEl={mobileMoreAnchorEl}
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-        open={isMobileMenuOpen}
-        onClose={this.handleMobileMenuClose}
+      <SwipeableDrawer
+        anchor="right"
+        open={this.state.right}
+        onClose={this.toggleDrawer('right', false)}
+        onOpen={this.toggleDrawer('right', true)}
       >
-        <MenuItem>
-          <Link to="/services">Services</Link>
-        </MenuItem>
-        <MenuItem>
-          <Link to="/works">Works</Link>
-        </MenuItem>
-        <MenuItem>
-          <Link to="/about">About</Link>
-        </MenuItem>
-        <MenuItem onClick={this.handleProfileMenuOpen}>
-          <Link to="/careers">Careers</Link>
-        </MenuItem>
-      </Menu>
+        <div
+          tabIndex={0}
+          role="button"
+          onClick={this.toggleDrawer('right', false)}
+          onKeyDown={this.toggleDrawer('right', false)}
+        >
+          {sideList}
+        </div>
+      </SwipeableDrawer>
     );
 
     return (
@@ -78,7 +98,7 @@ class Header extends Component {
                 <Button color="inherit" component={Link} to="/careers">Careers</Button>
               </div>
               <div className={classes.sectionMobile}>
-                <IconButton aria-haspopup="true" onClick={this.handleMobileMenuOpen} color="inherit">
+                <IconButton aria-haspopup="true" onClick={this.toggleDrawer('right', true)} color="inherit">
                   <MoreIcon />
                 </IconButton>
               </div>
