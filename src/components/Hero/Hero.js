@@ -28,23 +28,14 @@ class Hero extends Component {
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                  <Typography variant="subtitle1" color="textSecondary" align="center" className={classes.text}>
+                  <Typography variant="subtitle1" color="textSecondary" align="center" gutterBottom className={classes.text}>
                     we strive to create the best user experience
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={12}>
-                  <Grid container spacing={32} justify="center" alignItems="center" className={classes.buttons}>
-                    <Grid item xs={6}>
-                      <Button variant="contained" color="primary" className={classes.button}>
-                        Read more
-                      </Button>
-                    </Grid>
-                    <Grid item xs={6}>
-                      <Button variant="contained" color="secondary" className={classes.button}>
-                        Contact us
-                      </Button>
-                    </Grid>
-                  </Grid>
+                  <Button variant="contained" color="primary" className={classes.button}>
+                    Contact us
+                  </Button>
                 </Grid>
               </Fragment>
             )}
