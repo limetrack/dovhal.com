@@ -6,6 +6,27 @@ import { Grid, Paper, Typography, Button } from '@material-ui/core';
 import { SectionLayout } from 'containers';
 import styles from './Projects.style.js';
 
+const projects = [
+  {
+    title: 'video intelligence',
+    linkName: 'www.vi.ai',
+    url: 'https://www.vi.ai',
+    style: 'vi',
+  },
+  {
+    title: 'NEWTEND',
+    linkName: 'www.newtend.com',
+    url: 'https://www.newtend.com',
+    style: 'newtend',
+  },
+  {
+    title: 'TeslaEnergo',
+    linkName: 'www.teslaenergo.com',
+    url: 'https://www.teslaenergo.com',
+    style: 'tesla',
+  },
+];
+
 class Projects extends Component {
   render() {
     const { classes } = this.props;
@@ -26,57 +47,25 @@ class Projects extends Component {
             </Grid> 
             <Grid item xs={12}>
               <Grid container spacing={32} justify="center" className={classes.papers}>
-                <Grid item xs={12} md={4}>
-                  <Paper className={classNames(classes.paper, classes.vi)} elevation={1}>
-                    <Grid container direction="row" spacing={32} justify="center" alignItems="center" className={classes.companyGrid}>
-                      <Grid item xs={12} className={classes.companyItem}>
-                        <Typography variant="h5" align="center" gutterBottom className={classes.itemText}>
-                          video intelligence
-                        </Typography>
-                        <Typography variant="subtitle2" align="center" gutterBottom className={classes.itemText}>
-                          www.vi.ai
-                        </Typography>
-                        <Button color="inherit" target="_blank" href="https://www.vi.ai" className={classes.button}>
-                          Visit
-                        </Button>
+                {projects.map(prj => (
+                  <Grid key={prj.title} item xs={12} md={4}>
+                    <Paper className={classNames(classes.paper, classes[prj.style])} elevation={1}>
+                      <Grid container direction="row" spacing={32} justify="center" alignItems="center" className={classes.companyGrid}>
+                        <Grid item xs={12} className={classes.companyItem}>
+                          <Typography variant="h5" align="center" gutterBottom className={classes.itemText}>
+                            {prj.title}
+                          </Typography>
+                          <Typography variant="subtitle2" align="center" gutterBottom className={classes.itemText}>
+                            {prj.linkName}
+                          </Typography>
+                          <Button color="inherit" target="_blank" href={prj.url} className={classes.button}>
+                            Visit
+                          </Button>
+                        </Grid>
                       </Grid>
-                    </Grid>
-                  </Paper>
-                </Grid> 
-                <Grid item xs={12} md={4}>
-                  <Paper className={classNames(classes.paper, classes.newtend)} elevation={1}>
-                    <Grid container direction="row" spacing={32} justify="center" alignItems="center" className={classes.companyGrid}>
-                      <Grid item xs={12} className={classes.companyItem}>
-                        <Typography variant="h5" align="center" gutterBottom className={classes.itemText}>
-                          NEWTEND
-                        </Typography>
-                        <Typography variant="subtitle2" align="center" gutterBottom className={classes.itemText}>
-                          www.newtend.com
-                        </Typography>
-                        <Button color="inherit" target="_blank" href="https://www.newtend.com" className={classes.button}>
-                          Visit
-                        </Button>
-                      </Grid>
-                    </Grid>
-                  </Paper>
-                </Grid> 
-                <Grid item xs={12} md={4}>
-                  <Paper className={classNames(classes.paper, classes.tesla)} elevation={1}>
-                    <Grid container direction="row" spacing={32} justify="center" alignItems="center" className={classes.companyGrid}>
-                      <Grid item xs={12} className={classes.companyItem}>
-                        <Typography variant="h5" align="center" gutterBottom className={classes.itemText}>
-                          TeslaEnergo
-                        </Typography>
-                        <Typography variant="subtitle2" align="center" gutterBottom className={classes.itemText}>
-                          www.teslaenergo.com
-                        </Typography>
-                        <Button color="inherit" target="_blank" href="https://www.teslaenergo.com" className={classes.button}>
-                          Visit
-                        </Button>
-                      </Grid>
-                    </Grid>
-                  </Paper>
-                </Grid>
+                    </Paper>
+                  </Grid>
+                ))}
               </Grid>
             </Grid> 
           </Grid>
