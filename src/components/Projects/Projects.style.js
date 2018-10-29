@@ -24,6 +24,7 @@ export default (theme) => ({
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     height: `${theme.spacing.unit * 40}px`,
+    width: '100%',
   },
   vi: {
     backgroundImage: `url(${vi})`,
@@ -42,7 +43,7 @@ export default (theme) => ({
     margin: '0 auto',
     background: theme.palette.primary.main,
     '&:hover': {
-      opacity: 0.97,
+      opacity: 0.96,
     }
   },
   companyItem: {
@@ -52,6 +53,7 @@ export default (theme) => ({
     color: theme.palette.grey['50'],
   },
   button: {
-    color: theme.palette.grey['50'],
+    width: '100%',
+    borderRadius: `${theme.spacing.unit * 0.5}px`,
   },
 })

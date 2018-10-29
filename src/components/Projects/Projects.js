@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
-import { Grid, Paper, Typography, Button } from '@material-ui/core';
+import { Grid, Paper, Typography, ButtonBase } from '@material-ui/core';
 import { SectionLayout } from 'containers';
 import styles from './Projects.style.js';
 
@@ -49,21 +49,20 @@ class Projects extends Component {
               <Grid container spacing={32} justify="center" className={classes.papers}>
                 {projects.map(prj => (
                   <Grid key={prj.title} item xs={12} md={4}>
-                    <Paper className={classNames(classes.paper, classes[prj.style])} elevation={1}>
-                      <Grid container direction="row" spacing={32} justify="center" alignItems="center" className={classes.companyGrid}>
-                        <Grid item xs={12} className={classes.companyItem}>
-                          <Typography variant="h5" align="center" gutterBottom className={classes.itemText}>
-                            {prj.title}
-                          </Typography>
-                          <Typography variant="subtitle2" align="center" gutterBottom className={classes.itemText}>
-                            {prj.linkName}
-                          </Typography>
-                          <Button color="inherit" target="_blank" href={prj.url} className={classes.button}>
-                            Visit
-                          </Button>
+                    <ButtonBase href={prj.url} target="_blank" className={classes.button}>
+                      <Paper className={classNames(classes.paper, classes[prj.style])} elevation={1}>
+                        <Grid container direction="row" spacing={32} justify="center" alignItems="center" className={classes.companyGrid}>
+                          <Grid item xs={12} className={classes.companyItem}>
+                            <Typography variant="h5" align="center" gutterBottom className={classes.itemText}>
+                              {prj.title}
+                            </Typography>
+                            <Typography variant="subtitle2" align="center" gutterBottom className={classes.itemText}>
+                              {prj.linkName}
+                            </Typography>
+                          </Grid>
                         </Grid>
-                      </Grid>
-                    </Paper>
+                      </Paper>
+                    </ButtonBase>
                   </Grid>
                 ))}
               </Grid>

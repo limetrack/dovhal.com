@@ -167,19 +167,21 @@ class Consultation extends Component {
                 {things.map(thing => {
                   const Icon = thing.icon;
 
-                  return <ListItem key={thing.title} className={classes.listItem}>
-                    <Avatar className={classes.avatar}>
-                      <Icon fontSize="large" />
-                    </Avatar>
-                    <ListItemText disableTypography>     
-                      <Typography variant="h6" className={classes.text}>
-                        {thing.title}
-                      </Typography>
-                      <Typography variant="subtitle2" gutterBottom className={classes.text}>
-                        {thing.description}
-                      </Typography>
-                    </ListItemText>
-                  </ListItem>
+                  return (
+                    <ListItem key={thing.title} className={classes.listItem}>
+                      <Avatar className={classes.avatar}>
+                        <Icon fontSize="large" />
+                      </Avatar>
+                      <ListItemText disableTypography>     
+                        <Typography variant="h6" className={classes.text}>
+                          {thing.title}
+                        </Typography>
+                        <Typography variant="subtitle2" gutterBottom className={classes.text}>
+                          {thing.description}
+                        </Typography>
+                      </ListItemText>
+                    </ListItem>
+                  )
                 })}
               </List>
             </Grid>
