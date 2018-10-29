@@ -1,7 +1,3 @@
-import vi from './img/vi.png';
-import newtend from './img/NEWTEND.png';
-import teslaEnergo from './img/TeslaEnergo.png';
-
 export default (theme) => ({
   projects: {
     paddingTop: `${theme.spacing.unit * 5}px`,
@@ -18,42 +14,6 @@ export default (theme) => ({
     marginTop: `${theme.spacing.unit * 2}px`,
   },
   paper: {
-    overflow: 'hidden',
-    position: 'relative',
-    backgroundSize: '80%',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
     height: `${theme.spacing.unit * 40}px`,
-    width: '100%',
-  },
-  vi: {
-    backgroundImage: `url(${vi})`,
-  },
-  newtend: {
-    backgroundImage: `url(${newtend})`,
-  },
-  tesla: {
-    backgroundImage: `url(${teslaEnergo})`,
-  },
-  companyGrid: {
-    opacity: 0,
-    transition: 'opacity 0.4s',
-    height: '100%',
-    width: '100%',
-    margin: '0 auto',
-    background: theme.palette.primary.main,
-    '&:hover': {
-      opacity: 0.96,
-    }
-  },
-  companyItem: {
-    textAlign: 'center',
-  },
-  itemText: {
-    color: theme.palette.grey['50'],
-  },
-  button: {
-    width: '100%',
-    borderRadius: `${theme.spacing.unit * 0.5}px`,
   },
 })

@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import { 
-  Grid, 
-  Paper, 
-  Typography, 
-  Button,
+  Grid,
+  Typography,
   List,
   ListItem,
   ListItemIcon,
@@ -14,16 +12,44 @@ import {
 } from '@material-ui/core';
 import { CheckCircle } from '@material-ui/icons';
 import { SectionLayout } from 'containers';
-import { Hero } from 'components';
+import { Hero, Project } from 'components';
 import styles from './Works.style.js';
 import hero from './images/hero.jpg';
 
-// const advantages = [
-//   'up to date technologies',
-//   'high quality and balanced cost',
-//   'individual approach',
-//   'warranty and support',
-// ]
+// import { PROJECTS } from 'components/Projects/Project/Project';
+
+// const WORKS_DATA = {
+//   vi: {
+//     title: '',
+//     subtitle: '',
+//     description: [
+//       '',
+//     ],
+//     list: [
+//       '',
+//     ],
+//   },
+//   newtend: {
+//     title: '',
+//     subtitle: '',
+//     description: [
+//       '',
+//     ],
+//     list: [
+//       '',
+//     ],
+//   },
+//   tesla : {
+//     title: '',
+//     subtitle: '',
+//     description: [
+//       '',
+//     ],
+//     list: [
+//       '',
+//     ],
+//   },
+// }
 
 class Works extends Component {
   render() {
@@ -44,23 +70,9 @@ class Works extends Component {
                 <Typography variant="subtitle2" color="textSecondary" align="center" gutterBottom>
                   vi is a contextual video platform
                 </Typography>
-              </Grid> 
-              <Grid item xs={12} md={4}>
-                <Paper className={classNames(classes.paper, classes.vi)} elevation={1}>
-                  <Grid container direction="row" spacing={32} justify="center" alignItems="center" className={classes.companyGrid}>
-                    <Grid item xs={12} className={classes.companyItem}>
-                      <Typography variant="h5" align="center" gutterBottom className={classes.itemText}>
-                        video intelligence
-                      </Typography>
-                      <Typography variant="subtitle2" align="center" gutterBottom className={classes.itemText}>
-                        www.vi.ai
-                      </Typography>
-                      <Button color="inherit" target="_blank" href="https://www.vi.ai" className={classes.button}>
-                        Visit
-                      </Button>
-                    </Grid>
-                  </Grid>
-                </Paper>
+              </Grid>
+              <Grid item xs={12} md={4} className={classes.paper}>
+                <Project name="vi" />
               </Grid>
               <Grid item xs={12} md={8}>
                 <Typography variant="subtitle2" color="textSecondary" gutterBottom>
@@ -144,22 +156,8 @@ class Works extends Component {
                   </ListItem>
                 </List>
               </Grid>
-              <Grid item xs={12} md={4}>
-                <Paper className={classNames(classes.paper, classes.newtend)} elevation={1}>
-                  <Grid container direction="row" spacing={32} justify="center" alignItems="center" className={classes.companyGrid}>
-                    <Grid item xs={12} className={classes.companyItem}>
-                      <Typography variant="h5" align="center" gutterBottom className={classes.itemText}>
-                        NEWTEND
-                      </Typography>
-                      <Typography variant="subtitle2" align="center" gutterBottom className={classes.itemText}>
-                        www.newtend.com
-                      </Typography>
-                      <Button color="inherit" target="_blank" href="https://www.newtend.com" className={classes.button}>
-                        Visit
-                      </Button>
-                    </Grid>
-                  </Grid>
-                </Paper>
+              <Grid item xs={12} md={4} className={classes.paper}>
+                <Project name="newtend" />
               </Grid>
             </Grid>
           </SectionLayout>
@@ -177,22 +175,8 @@ class Works extends Component {
                  The company of energy solutions for houses №1 on the Ukrainian market
                 </Typography>
               </Grid> 
-              <Grid item xs={12} md={4}>
-                <Paper className={classNames(classes.paper, classes.tesla)} elevation={1}>
-                  <Grid container direction="row" spacing={32} justify="center" alignItems="center" className={classes.companyGrid}>
-                    <Grid item xs={12} className={classes.companyItem}>
-                      <Typography variant="h5" align="center" gutterBottom className={classes.itemText}>
-                        TeslaEnergo
-                      </Typography>
-                      <Typography variant="subtitle2" align="center" gutterBottom className={classes.itemText}>
-                        www.teslaenergo.com
-                      </Typography>
-                      <Button color="inherit" target="_blank" href="https://www.teslaenergo.com" className={classes.button}>
-                        Visit
-                      </Button>
-                    </Grid>
-                  </Grid>
-                </Paper>
+              <Grid item xs={12} md={4} className={classes.paper}>
+                <Project name="tesla" />
               </Grid>
               <Grid item xs={12} md={8}>
                 <Typography variant="subtitle2" color="textSecondary" gutterBottom>
