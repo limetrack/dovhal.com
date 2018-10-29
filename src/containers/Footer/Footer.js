@@ -20,7 +20,7 @@ class Footer extends Component {
           <SectionLayout>
             <Grid container spacing={32} justify="space-around">
               <Grid item xs={12} md={4} className={classes.item} >
-                <img src={logo} className={classes.logo} alt="dovhal" />
+                <Link to="/"><img src={logo} className={classes.logo} alt="dovhal" /></Link>
               </Grid>
               <Grid item xs={12} md={4} className={classes.item} >
                 <Typography variant="subtitle2" align="center" className={classes.text}>  

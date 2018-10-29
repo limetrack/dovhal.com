@@ -11,7 +11,7 @@ import hero from './images/hero.jpg';
 const developers = [
   'Front-end developer',
   'NodeJS developer',
-  'iOs developer',
+  'iOS developer',
   'Android developer',
   'Designer',
 ]
