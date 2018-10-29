@@ -53,7 +53,7 @@ class Advantages extends Component {
                   const Icon = adv.icon;
 
                   return (
-                    <Grid item xs={12} md={3}>
+                    <Grid key={adv.title} item xs={12} md={3}>
                       <Paper className={classes.paper} elevation={1}>
                         <Icon fontSize="large" color="primary" className={classes.icon} />
                         <Typography variant="h6" align="center">

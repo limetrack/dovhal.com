@@ -25,6 +25,6 @@ export default theme => ({
     },
   },
   list: {
-    width: 250,
+    width: 200,
   },
 });

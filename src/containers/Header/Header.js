@@ -43,6 +43,7 @@ class Header extends Component {
 
   render() {
     const { classes } = this.props;
+    const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
     const sideList = (
       <div className={classes.list}>
@@ -68,6 +69,8 @@ class Header extends Component {
 
     const renderMobileMenu = (
       <SwipeableDrawer
+        disableBackdropTransition={!iOS} 
+        disableDiscovery={iOS}
         anchor="right"
         open={this.state.right}
         onClose={this.toggleDrawer('right', false)}
