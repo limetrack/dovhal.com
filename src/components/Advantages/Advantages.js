@@ -6,6 +6,29 @@ import { FingerprintOutlined, HighQualityOutlined, PeopleOutlined, VerifiedUserO
 import { SectionLayout } from 'containers';
 import styles from './Advantages.style.js';
 
+const advantages = [
+  {
+    icon: FingerprintOutlined,
+    title: 'Up to date technologies',
+    description: 'As capabilities of technology are expected to continue growing exponentially, it is certain that the future of business will increasingly efficient.',
+  },
+  {
+    icon: HighQualityOutlined,
+    title: 'High quality',
+    description: 'It’s easier than you think to balance quality and cost for your business when real professionals come to work.',
+  },
+  {
+    icon: PeopleOutlined,
+    title: 'Individual approach',
+    description: 'Every person wants to feel special, and an individual approach lets us give you the care you need.',
+  },
+  {
+    icon: VerifiedUserOutlined,
+    title: 'Warranty and support',
+    description: 'When we talk about warranty, we mean much more, namely warmth and care that we give to our loved ones.',
+  },
+];
+
 class Advantages extends Component {
   render() {
     const { classes } = this.props;
@@ -26,51 +49,23 @@ class Advantages extends Component {
             </Grid> 
             <Grid item xs={12}>
               <Grid container spacing={32} justify="center" className={classes.papers}>
-                <Grid item xs={12} md={3}>
-                  <Paper className={classes.paper} elevation={1}>
-                    <FingerprintOutlined fontSize="large" color="primary" className={classes.icon} />
-                    <Typography variant="h6" align="center">
-                      Up to date technologies
-                    </Typography>
-                    <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
-                      As capabilities of technology are expected to continue growing exponentially, it is certain that the 
-                      future of business will increasingly efficient.
-                    </Typography>
-                  </Paper>
-                </Grid> 
-                <Grid item xs={12} md={3}>
-                  <Paper className={classes.paper} elevation={1}>
-                    <HighQualityOutlined fontSize="large" color="primary" className={classes.icon} />
-                    <Typography variant="h6" align="center">
-                      High quality
-                    </Typography>
-                    <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
-                      It’s easier than you think to balance quality and cost for your business when real professionals come to work.
-                    </Typography>
-                  </Paper>
-                </Grid> 
-                <Grid item xs={12} md={3}>
-                  <Paper className={classes.paper} elevation={1}>
-                    <PeopleOutlined fontSize="large" color="primary" className={classes.icon} />
-                    <Typography variant="h6" align="center">
-                      Individual approach
-                    </Typography>
-                    <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
-                      Every person wants to feel special, and an individual approach lets us give you the care you need.
-                    </Typography>
-                  </Paper>
-                </Grid> 
-                <Grid item xs={12} md={3}>
-                  <Paper className={classes.paper} elevation={1}>
-                    <VerifiedUserOutlined fontSize="large" color="primary" className={classes.icon} />
-                    <Typography variant="h6" align="center">
-                      Warranty and support
-                    </Typography>
-                    <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
-                      When we talk about warranty, we mean much more, namely warmth and care that we give to our loved ones.
-                    </Typography>
-                  </Paper>
-                </Grid> 
+                {advantages.map(adv => {
+                  const Icon = adv.icon;
+
+                  return (
+                    <Grid item xs={12} md={3}>
+                      <Paper className={classes.paper} elevation={1}>
+                        <Icon fontSize="large" color="primary" className={classes.icon} />
+                        <Typography variant="h6" align="center">
+                          {adv.title}
+                        </Typography>
+                        <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
+                          {adv.description}
+                        </Typography>
+                      </Paper>
+                    </Grid>
+                  )
+                })}
               </Grid>
             </Grid> 
           </Grid>
