@@ -49,19 +49,19 @@ class Header extends Component {
     const menu = (
       <div className={classes.list}>
         <List>
-          <ListItem button component={Link} to={`/services`}>
+          <ListItem button component={HashLink} to={`/services#top`}>
             <ListItemIcon><ServicesIcon /></ListItemIcon>
             <ListItemText primary="Services" />
           </ListItem>
-          <ListItem button component={Link} to={`/works`}>
+          <ListItem button component={HashLink} to={`/works#top`}>
             <ListItemIcon><WorksIcon /></ListItemIcon>
             <ListItemText primary="Works" />
           </ListItem>
-          <ListItem button component={Link} to={`/about`}>
+          <ListItem button component={HashLink} to={`/about#top`}>
             <ListItemIcon><AboutIcon /></ListItemIcon>
             <ListItemText primary="About" />
           </ListItem>
-          <ListItem button component={Link} to={`/careers`}>
+          <ListItem button component={HashLink} to={`/careers#top`}>
             <ListItemIcon><CareersIcon /></ListItemIcon>
             <ListItemText primary="Careers" />
           </ListItem>
