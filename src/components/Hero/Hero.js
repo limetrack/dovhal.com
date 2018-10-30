@@ -39,7 +39,16 @@ class Hero extends Component {
                     color="primary" 
                     component={HashLink}
                     to={`#contact`} 
-                    className={classes.button}>
+                    className={classNames(classes.button, classes.mobile)}>
+                    Contact us
+                  </Button>
+                  <Button 
+                    variant="contained" 
+                    color="primary" 
+                    component={HashLink}
+                    smooth
+                    to={`#contact`} 
+                    className={classNames(classes.button, classes.desktop)}>
                     Contact us
                   </Button>
                 </Grid>
