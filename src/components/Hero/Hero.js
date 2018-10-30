@@ -37,8 +37,7 @@ class Hero extends Component {
                   <Button 
                     variant="contained" 
                     color="primary" 
-                    component={HashLink} 
-                    smooth 
+                    component={HashLink}
                     to={`#contact`} 
                     className={classes.button}>
                     Contact us
