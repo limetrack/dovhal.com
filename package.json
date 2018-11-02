@@ -1,35 +1,33 @@
 {
   "name": "dovhal.com",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "start": "cross-env NODE_PATH=src react-scripts start",
-    "build": "react-scripts build",
-    "test": "cross-env NODE_PATH=src react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.6",
-    "@fortawesome/free-brands-svg-icons": "^5.4.1",
-    "@fortawesome/react-fontawesome": "^0.1.3",
-    "@material-ui/core": "^3.2.0",
-    "@material-ui/icons": "^3.0.1",
-    "i": "^0.3.6",
-    "jss": "^9.8.7",
-    "npm": "^6.4.1",
-    "prop-types": "^15.6.2",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-jss": "^8.6.1",
-    "react-router-dom": "^4.3.1",
-    "react-router-hash-link": "^1.2.0",
-    "react-scripts": "1.1.5",
-    "typeface-roboto": "0.0.54"
-  },
-  "devDependencies": {
-    "cross-env": "^5.2.0"
-  },
+  "version": "1.0.0",
+  "description": "Custom Software Development",
   "engines": {
     "node": "8.11.3"
-  }
+  },
+  "scripts": {
+    "start": "node server",
+    "dev": "cd client/ && npm install && npm start",
+    "build": "cd client/ && npm install && npm run build",
+    "heroku-postbuild": "cd react-ui/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "react-ui/node_modules"
+  ],
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/limetrack/dovhal.com.git"
+  },
+  "keywords": [
+    "dovhal",
+    "dovhal.com",
+    "custom",
+    "software",
+    "development"
+  ],
+  "devDependencies": {}
 }
