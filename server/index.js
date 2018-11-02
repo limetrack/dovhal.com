@@ -1,7 +1,9 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
+const mailer = require("./mailer");
 
 const PORT = process.env.PORT || 5000;
 
@@ -21,13 +23,27 @@ if (cluster.isMaster) {
 } else {
   const app = express();
 
+  // Parse json in request
+  app.use(express.json());
+
   // Priority serve any static files.
   app.use(express.static(path.resolve(__dirname, '../client/build')));
 
   // Answer API requests.
-  app.get('/api', function (req, res) {
-    res.set('Content-Type', 'application/json');
-    res.send('{"message":"Hello from the custom server!"}');
+  app.get("/api/send_email", (req, res) => {
+    res.set("Content-Type", "application/json");
+
+    const { userName, email } = req.body;
+    const locals = { userName };
+    const messageInfo = {
+      email,
+      fromEmail: "info@ingsw.com",
+      fromName: "Star Wars",
+      subject: "Checkout this awesome droids"
+    };
+    mailer.sendOne("droids", messageInfo, locals);
+  
+    res.send('{"message":"Email sent."}');
   });
 
   // All remaining requests return the React app, so it can handle routing.
