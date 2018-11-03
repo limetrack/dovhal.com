@@ -24,7 +24,7 @@ class Footer extends Component {
               </Grid>
               <Grid item xs={12} md={4} className={classes.item} >
                 <Typography variant="subtitle2" align="center" className={classes.text}>  
-                  support@dovhal.com
+                  info@dovhal.com
                 </Typography>
               </Grid>
               <Grid item xs={12} md={4} className={classes.item} >
