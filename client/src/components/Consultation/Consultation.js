@@ -25,31 +25,20 @@ const things = [
   },
 ]
 
-const currencies = [
-  {
-    value: 'email',
-    label: 'Email',
-  },
-  {
-    value: 'telegram',
-    label: 'Telegram',
-  },
-  {
-    value: 'viber',
-    label: 'Viber',
-  },
-  {
-    value: 'whatsapp',
-    label: 'WhatsApp',
-  },
+const messengers = [ 
+  'Email',
+  'Telegram',
+  'Viber',
+  'WhatsApp',
 ];
 
 class Consultation extends Component {
   state = {
     name: '',
-    age: '',
-    multiline: '',
-    currency: 'email',
+    company: '',
+    messenger: 'Email',
+    contact: '',
+    text: '',
   };
 
   handleChange = name => event => {
@@ -57,6 +46,18 @@ class Consultation extends Component {
       [name]: event.target.value,
     });
   };
+
+  sendEmail = (email = "adovgal@gmail.com", userName = "Anakin Skywalker") => {
+    return fetch("/api/send_email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ 
+        email: "adovgal@gmail.com", 
+        userName: "Anakin Skywalker",
+      }),
+    }).then(response => response.json());
+  }
+  
 
   render() {
     const { classes } = this.props;
@@ -87,11 +88,11 @@ class Consultation extends Component {
                   </Grid>
                   <Grid item xs={12} md={6}>
                     <TextField
-                      id="outlined-name"
+                      id="outlined-company"
                       label="Company"
                       className={classes.textField}
-                      value={this.state.name}
-                      onChange={this.handleChange('name')}
+                      value={this.state.company}
+                      onChange={this.handleChange('company')}
                       margin="dense"
                       variant="outlined"
                       fullWidth
@@ -99,12 +100,12 @@ class Consultation extends Component {
                   </Grid>
                   <Grid item xs={12} md={6}>
                     <TextField
-                      id="outlined-select-currency"
+                      id="outlined-select-messenger"
                       select
                       label="Preferred means of communication"
                       className={classes.textField}
-                      value={this.state.currency}
-                      onChange={this.handleChange('currency')}
+                      value={this.state.messenger}
+                      onChange={this.handleChange('messenger')}
                       SelectProps={{
                         MenuProps: {
                           className: classes.menu,
@@ -114,21 +115,20 @@ class Consultation extends Component {
                       variant="outlined"
                       fullWidth
                     >
-                      {currencies.map(option => (
-                        <MenuItem key={option.value} value={option.value}>
-                          {option.label}
+                      {messengers.map(option => (
+                        <MenuItem key={option} value={option}>
+                          {option}
                         </MenuItem>
                       ))}
                     </TextField>
                   </Grid>
                   <Grid item xs={12} md={6}>
                     <TextField
-                      id="outlined-email-input"
-                      label={this.state.currency}
+                      id="outlined-contact-input"
+                      label={this.state.messenger}
                       className={classes.textField}
-                      type="email"
-                      name="email"
-                      autoComplete="email"
+                      value={this.state.contact}
+                      onChange={this.handleChange('contact')}
                       margin="dense"
                       variant="outlined"
                       fullWidth
@@ -136,13 +136,13 @@ class Consultation extends Component {
                   </Grid>
                   <Grid item xs={12}>
                     <TextField
-                      id="outlined-multiline-flexible"
+                      id="outlined-multiline-text"
                       label="How can we help"
                       multiline
                       rows="4"
                       rowsMax="4"
-                      value={this.state.multiline}
-                      onChange={this.handleChange('multiline')}
+                      value={this.state.text}
+                      onChange={this.handleChange('text')}
                       className={classes.textField}
                       margin="dense"
                       variant="outlined"
@@ -150,7 +150,14 @@ class Consultation extends Component {
                     />
                   </Grid>
                   <Grid item xs={12} className={classes.button}>
-                    <Button variant="contained" color="primary" fullWidth>Send request</Button>
+                    <Button 
+                      variant="contained" 
+                      color="primary" 
+                      fullWidth
+                      onClick={this.sendEmail}
+                    >
+                      Send request
+                    </Button>
                   </Grid>
                 </Grid>
               </form>

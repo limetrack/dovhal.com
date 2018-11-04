@@ -30,7 +30,7 @@ if (cluster.isMaster) {
   app.use(express.static(path.resolve(__dirname, '../client/build')));
 
   // Answer API requests.
-  app.get("/api/send_email", (req, res) => {
+  app.post("/api/send_email", (req, res) => {
     res.set("Content-Type", "application/json");
 
     const { userName, email } = req.body;
