@@ -27,7 +27,7 @@ exports.sendOne = function(name, company, messenger, contact, text) {
 
   const mailOptions = {
     from: 'does.not.matter@gmail.com', // sender address
-    to: 'limetrack@dovhal.com', // list of receivers
+    to: 'limetrack@gmail.com', // list of receivers
     subject: `New request from ${name} ${company}`, // Subject line
     html: `${messenger} ${contact} ${text}` // plain text body
   };
