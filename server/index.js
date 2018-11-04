@@ -30,20 +30,14 @@ if (cluster.isMaster) {
   app.use(express.static(path.resolve(__dirname, '../client/build')));
 
   // Answer API requests.
-  app.post("/api/send_email", (req, res) => {
+  app.post("/api/send_request", (req, res) => {
     res.set("Content-Type", "application/json");
 
-    const { userName, email } = req.body;
-    const locals = { userName };
-    const messageInfo = {
-      email,
-      fromEmail: "info@ingsw.com",
-      fromName: "Star Wars",
-      subject: "Checkout this awesome droids"
-    };
-    mailer.sendOne("droids", messageInfo, locals);
+    const { name, company, messenger, contact, text } = req.body;
+
+    mailer.sendOne(name, company, messenger, contact, text);
   
-    res.send('{"message":"Email sent."}');
+    res.send('{"message":"Message sent"}');
   });
 
   // All remaining requests return the React app, so it can handle routing.

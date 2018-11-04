@@ -47,13 +47,16 @@ class Consultation extends Component {
     });
   };
 
-  sendEmail = (email = "adovgal@gmail.com", userName = "Anakin Skywalker") => {
-    return fetch("/api/send_email", {
+  sendEmail = () => {
+    return fetch("/api/send_request", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ 
-        email: "adovgal@gmail.com", 
-        userName: "Anakin Skywalker",
+        name: this.state.name, 
+        company: this.state.company,
+        messenger: this.state.messenger,
+        contact: this.state.contact,
+        text: this.state.text,
       }),
     }).then(response => response.json());
   }
