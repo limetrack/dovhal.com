@@ -30,7 +30,10 @@ exports.sendOne = function(name, company, messenger, contact, text) {
     to: 'adovgal78@gmail.com', // list of receivers
     cc: 'limetrack@gmail.com',
     subject: `New request from ${name} ${company}`, // Subject line
-    html: `${messenger} ${contact} ${text}` // plain text body
+    html: `
+      ${messenger} ${contact} 
+      ${text}
+    ` // plain text body
   };
 
   transporter.sendMail(mailOptions, function (err, info) {
