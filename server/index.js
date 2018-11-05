@@ -25,7 +25,9 @@ if (cluster.isMaster) {
 } else {
   const app = express();
 
-  app.use(enforce.HTTPS({ trustProtoHeader: true }));
+  if (process.env.NODE_ENV === 'production') {
+    app.use(enforce.HTTPS({ trustProtoHeader: true }));
+  }
 
   // Parse json in request
   app.use(express.json());
