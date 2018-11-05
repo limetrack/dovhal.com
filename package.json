@@ -16,6 +16,7 @@
     "client/node_modules"
   ],
   "dependencies": {
+    "compression": "^1.7.3",
     "dotenv": "^6.0.0",
     "ejs": "^2.6.1",
     "email-templates": "^4.0.1",
