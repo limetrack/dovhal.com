@@ -4,6 +4,8 @@ const path = require('path');
 const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
 const mailer = require("./mailer");
+const http = require('http');
+const enforce = require('express-sslify');
 
 const PORT = process.env.PORT || 5000;
 
@@ -23,6 +25,10 @@ if (cluster.isMaster) {
 } else {
   const app = express();
 
+  if (process.env.NODE_ENV === 'production') {
+    app.use(enforce.HTTPS({ trustProtoHeader: true }));
+  }
+
   // Parse json in request
   app.use(express.json());
 
@@ -30,20 +36,14 @@ if (cluster.isMaster) {
   app.use(express.static(path.resolve(__dirname, '../client/build')));
 
   // Answer API requests.
-  app.get("/api/send_email", (req, res) => {
+  app.post("/api/send_request", (req, res) => {
     res.set("Content-Type", "application/json");
 
-    const { userName, email } = req.body;
-    const locals = { userName };
-    const messageInfo = {
-      email,
-      fromEmail: "info@ingsw.com",
-      fromName: "Star Wars",
-      subject: "Checkout this awesome droids"
-    };
-    mailer.sendOne("droids", messageInfo, locals);
+    const { name, company, messenger, contact, text } = req.body;
+
+    mailer.sendOne(name, company, messenger, contact, text);
   
-    res.send('{"message":"Email sent."}');
+    res.send('{"message":"Message sent"}');
   });
 
   // All remaining requests return the React app, so it can handle routing.

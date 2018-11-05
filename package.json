@@ -20,6 +20,7 @@
     "ejs": "^2.6.1",
     "email-templates": "^4.0.1",
     "express": "^4.16.3",
+    "express-sslify": "^1.2.0",
     "node-mailjet": "^3.2.1",
     "nodemailer": "^4.6.7"
   },
