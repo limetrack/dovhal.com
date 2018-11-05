@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
-import { Grid, Typography, List, ListItem, ListItemText, Avatar, TextField, MenuItem, Button } from '@material-ui/core';
+import { Grid, Typography, List, ListItem, ListItemText, Avatar, TextField, MenuItem, Button, Grow } from '@material-ui/core';
 import { HearingOutlined, WhereToVoteOutlined, BeachAccessOutlined } from '@material-ui/icons';
 import { SectionLayout } from 'containers';
 import styles from './Consultation.style.js';
@@ -33,12 +33,22 @@ const messengers = [
 ];
 
 class Consultation extends Component {
-  state = {
-    name: '',
-    company: '',
-    messenger: 'Email',
-    contact: '',
-    text: '',
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      name: '',
+      company: '',
+      messenger: 'Email',
+      contact: '',
+      text: '',
+      showForm: true,
+    }
+  }
+  
+  componentDidMount() {
+    const contactGridHeight = document.getElementById('contact-grid').clientHeight;
+    this.setState({ contactGridHeight });
   };
 
   handleChange = name => event => {
@@ -58,112 +68,147 @@ class Consultation extends Component {
         contact: this.state.contact,
         text: this.state.text,
       }),
-    }).then(response => response.json());
+    }).then(response => {
+      response.json();
+      this.setState({ showForm: false });
+      setTimeout(() => {
+        this.setState({ 
+          name: '',
+          company: '',
+          messenger: 'Email',
+          contact: '',
+          text: '',
+          showForm: true });
+      }, 4000);
+    });
   }
   
 
   render() {
     const { classes } = this.props;
+    const { showForm, contactGridHeight } = this.state;
 
     return (
       <section id="contact" className={classes.consultation}>
         <SectionLayout>
           <Grid container spacing={32} justify="center" direction="row" className={classes.main}>
-            <Grid item xs={12} md={6} className={classes.contactForm}>
-              <form noValidate autoComplete="off">
-                <Grid container spacing={8}>
-                  <Grid item xs={12}>
-                    <Typography variant="h4" gutterBottom>
-                      Get in Touch
+            <Grid id="contact-grid" item xs={12} md={6} className={classes.contactForm} style={{ minHeight: contactGridHeight }}>
+              <Grow
+                in={showForm}
+                style={!showForm ? { display: 'none' } : {}}
+                {...(showForm ? { timeout: 1000 } : {})}
+              >
+                <form noValidate autoComplete="off">
+                  <Grid container spacing={8}>
+                    <Grid item xs={12}>
+                      <Typography variant="h4" gutterBottom>
+                        Get in Touch
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                      <TextField
+                        id="outlined-name"
+                        label="Name"
+                        className={classes.textField}
+                        value={this.state.name}
+                        onChange={this.handleChange('name')}
+                        margin="dense"
+                        variant="outlined"
+                        fullWidth
+                      />
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                      <TextField
+                        id="outlined-company"
+                        label="Company"
+                        className={classes.textField}
+                        value={this.state.company}
+                        onChange={this.handleChange('company')}
+                        margin="dense"
+                        variant="outlined"
+                        fullWidth
+                      />
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                      <TextField
+                        id="outlined-select-messenger"
+                        select
+                        label="Preferred means of communication"
+                        className={classes.textField}
+                        value={this.state.messenger}
+                        onChange={this.handleChange('messenger')}
+                        SelectProps={{
+                          MenuProps: {
+                            className: classes.menu,
+                          },
+                        }}
+                        margin="dense"
+                        variant="outlined"
+                        fullWidth
+                      >
+                        {messengers.map(option => (
+                          <MenuItem key={option} value={option}>
+                            {option}
+                          </MenuItem>
+                        ))}
+                      </TextField>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                      <TextField
+                        id="outlined-contact-input"
+                        label={this.state.messenger}
+                        className={classes.textField}
+                        value={this.state.contact}
+                        onChange={this.handleChange('contact')}
+                        margin="dense"
+                        variant="outlined"
+                        fullWidth
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <TextField
+                        id="outlined-multiline-text"
+                        label="How can we help"
+                        multiline
+                        rows="4"
+                        rowsMax="4"
+                        value={this.state.text}
+                        onChange={this.handleChange('text')}
+                        className={classes.textField}
+                        margin="dense"
+                        variant="outlined"
+                        fullWidth
+                      />
+                    </Grid>
+                    <Grid item xs={12} className={classes.button}>
+                      <Button 
+                        variant="contained" 
+                        color="primary" 
+                        fullWidth
+                        onClick={this.sendEmail}
+                      >
+                        Send request
+                      </Button>
+                    </Grid>
+                  </Grid>
+                </form>
+              </Grow>
+              <Grow
+                in={!showForm}
+                style={showForm ? { display: 'none' } : {}}
+                {...(!showForm ? { timeout: 1000 } : {})}
+              >
+                <Grid container spacing={32} direction="column" alignItems="center" justify="center" className={classes.thanks}>
+                  <Grid item>
+                    <Typography variant="h6" align="center" gutterBottom>
+                      Thank you
+                    </Typography>
+                    <Typography variant="subtitle1" align="center" gutterBottom>
+                      Our team will be in touch soon!
                     </Typography>
                   </Grid>
-                  <Grid item xs={12} md={6}>
-                    <TextField
-                      id="outlined-name"
-                      label="Name"
-                      className={classes.textField}
-                      value={this.state.name}
-                      onChange={this.handleChange('name')}
-                      margin="dense"
-                      variant="outlined"
-                      fullWidth
-                    />
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                    <TextField
-                      id="outlined-company"
-                      label="Company"
-                      className={classes.textField}
-                      value={this.state.company}
-                      onChange={this.handleChange('company')}
-                      margin="dense"
-                      variant="outlined"
-                      fullWidth
-                    />
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                    <TextField
-                      id="outlined-select-messenger"
-                      select
-                      label="Preferred means of communication"
-                      className={classes.textField}
-                      value={this.state.messenger}
-                      onChange={this.handleChange('messenger')}
-                      SelectProps={{
-                        MenuProps: {
-                          className: classes.menu,
-                        },
-                      }}
-                      margin="dense"
-                      variant="outlined"
-                      fullWidth
-                    >
-                      {messengers.map(option => (
-                        <MenuItem key={option} value={option}>
-                          {option}
-                        </MenuItem>
-                      ))}
-                    </TextField>
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                    <TextField
-                      id="outlined-contact-input"
-                      label={this.state.messenger}
-                      className={classes.textField}
-                      value={this.state.contact}
-                      onChange={this.handleChange('contact')}
-                      margin="dense"
-                      variant="outlined"
-                      fullWidth
-                    />
-                  </Grid>
-                  <Grid item xs={12}>
-                    <TextField
-                      id="outlined-multiline-text"
-                      label="How can we help"
-                      multiline
-                      rows="4"
-                      rowsMax="4"
-                      value={this.state.text}
-                      onChange={this.handleChange('text')}
-                      className={classes.textField}
-                      margin="dense"
-                      variant="outlined"
-                      fullWidth
-                    />
-                  </Grid>
-                  <Grid item xs={12} className={classes.button}>
-                    <Button 
-                      variant="contained" 
-                      color="primary" 
-                      fullWidth
-                      onClick={this.sendEmail}
-                    >
-                      Send request
-                    </Button>
-                  </Grid>
                 </Grid>
-              </form>
+              </Grow>
             </Grid>
             <Grid item xs={12} md={6} className={classes.friends}>
               <Typography variant="h4" gutterBottom className={classes.text}>

@@ -41,4 +41,7 @@ export default (theme) => ({
   description: {
     marginTop: `${theme.spacing.unit * 2.5}px`,
   },
+  thanks: {
+    height: '100%',
+  },
 })
