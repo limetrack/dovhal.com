@@ -4,6 +4,8 @@ const path = require('path');
 const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
 const mailer = require("./mailer");
+const http = require('http');
+const enforce = require('express-sslify');
 
 const PORT = process.env.PORT || 5000;
 
@@ -22,6 +24,8 @@ if (cluster.isMaster) {
 
 } else {
   const app = express();
+
+  app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
   // Parse json in request
   app.use(express.json());
