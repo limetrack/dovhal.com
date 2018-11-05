@@ -6,6 +6,7 @@ const numCPUs = require('os').cpus().length;
 const mailer = require("./mailer");
 const http = require('http');
 const enforce = require('express-sslify');
+const compression = require('compression');
 
 const PORT = process.env.PORT || 5000;
 
@@ -28,6 +29,8 @@ if (cluster.isMaster) {
   if (process.env.NODE_ENV === 'production') {
     app.use(enforce.HTTPS({ trustProtoHeader: true }));
   }
+
+  app.use(compression());
 
   // Parse json in request
   app.use(express.json());
