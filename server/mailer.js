@@ -31,8 +31,8 @@ exports.sendOne = function(name, company, messenger, contact, text) {
     cc: 'limetrack@gmail.com',
     subject: `New request from ${name} ${company}`, // Subject line
     html: `
-      ${messenger} ${contact} 
-      ${text}
+      <p>${messenger} <strong>${contact}</strong></p> 
+      <p>${text}</p>
     ` // plain text body
   };
 
