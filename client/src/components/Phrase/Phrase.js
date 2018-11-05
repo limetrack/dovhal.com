@@ -5,6 +5,7 @@ import { Grid, Typography } from '@material-ui/core';
 import { SectionLayout } from 'containers';
 import styles from './Phrase.style.js';
 import idovgal from './img/idovgal.png';
+import sign from './img/sign.png';
 
 class Phrase extends Component {
   render() {
@@ -34,7 +35,8 @@ class Phrase extends Component {
                     of an activity of creating masterpieces.
                   </Typography>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={12} className={classes.signItem}>
+                  <img src={sign} alt="sign" className={classes.sign} />
                 </Grid>
               </Grid>
             </Grid>
