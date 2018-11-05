@@ -21,7 +21,7 @@ class Phrase extends Component {
               <Grid container spacing={32} alignItems="center" className={classes.description}>
                 <Grid item xs={12}>
                   <Typography variant="h4" gutterBottom>
-                    Dovhal Ivan
+                    Ivan Dovhal
                   </Typography>
                   <Typography variant="subtitle1" color="primary" gutterBottom className={classes.me}>
                     Founder
