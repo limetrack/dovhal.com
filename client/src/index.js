@@ -6,6 +6,10 @@ import { CoreLayout } from 'containers';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import registerServiceWorker from './registerServiceWorker';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-128835667-1');
+ReactGA.pageview('/');
 
 library.add(fab);
 
