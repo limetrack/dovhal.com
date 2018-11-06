@@ -15,6 +15,16 @@ export default (theme) => ({
     maxWidth: '100%',
     maxHeight: `${theme.spacing.unit * 70}px`,
   },
+  sign: {
+    maxWidth: '100%',
+    maxHeight: `${theme.spacing.unit * 40}px`,
+    [theme.breakpoints.up('md')]: {
+      marginLeft: `${theme.spacing.unit * 15}px`,
+    },
+  },
+  signItem: {
+    marginTop: `-${theme.spacing.unit * 10}px`,
+  },
   me: {
     marginLeft: '2px',
   },

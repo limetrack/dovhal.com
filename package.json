@@ -23,7 +23,8 @@
     "express": "^4.16.3",
     "express-sslify": "^1.2.0",
     "node-mailjet": "^3.2.1",
-    "nodemailer": "^4.6.7"
+    "nodemailer": "^4.6.7",
+    "react-material-ui-form-validator": "^2.0.2"
   },
   "repository": {
     "type": "git",

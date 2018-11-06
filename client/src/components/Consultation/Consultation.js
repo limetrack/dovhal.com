@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import { Grid, Typography, List, ListItem, ListItemText, Avatar, TextField, MenuItem, Button, Grow } from '@material-ui/core';
 import { HearingOutlined, WhereToVoteOutlined, BeachAccessOutlined } from '@material-ui/icons';
+import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 import { SectionLayout } from 'containers';
 import styles from './Consultation.style.js';
 
@@ -27,23 +28,25 @@ const things = [
 
 const messengers = [ 
   'Email',
-  'Telegram',
   'Viber',
+  'Telegram',
   'WhatsApp',
 ];
+
+const initialState = {
+  name: '',
+  company: '',
+  messenger: 'Email',
+  contact: '',
+  text: '',
+  showForm: true,
+}
 
 class Consultation extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      name: '',
-      company: '',
-      messenger: 'Email',
-      contact: '',
-      text: '',
-      showForm: true,
-    }
+    this.state = initialState;
   }
   
   componentDidMount() {
@@ -57,7 +60,7 @@ class Consultation extends Component {
     });
   };
 
-  sendEmail = () => {
+  handleSubmit = () => {
     return fetch("/api/send_request", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -69,20 +72,11 @@ class Consultation extends Component {
         text: this.state.text,
       }),
     }).then(response => {
-      response.json();
+      // response.json();
       this.setState({ showForm: false });
-      setTimeout(() => {
-        this.setState({ 
-          name: '',
-          company: '',
-          messenger: 'Email',
-          contact: '',
-          text: '',
-          showForm: true });
-      }, 4000);
+      setTimeout(() => this.setState(initialState), 4000);
     });
-  }
-  
+  };
 
   render() {
     const { classes } = this.props;
@@ -98,7 +92,10 @@ class Consultation extends Component {
                 style={!showForm ? { display: 'none' } : {}}
                 {...(showForm ? { timeout: 1000 } : {})}
               >
-                <form noValidate autoComplete="off">
+                <ValidatorForm
+                  onSubmit={this.handleSubmit}
+                  onError={errors => console.log(errors)}
+                >
                   <Grid container spacing={8}>
                     <Grid item xs={12}>
                       <Typography variant="h4" gutterBottom>
@@ -106,27 +103,30 @@ class Consultation extends Component {
                       </Typography>
                     </Grid>
                     <Grid item xs={12} md={6}>
-                      <TextField
+                      <TextValidator
                         id="outlined-name"
+                        name="name"
                         label="Name"
-                        className={classes.textField}
                         value={this.state.name}
+                        className={classes.textField}
                         onChange={this.handleChange('name')}
+                        fullWidth
                         margin="dense"
                         variant="outlined"
-                        fullWidth
+                        validators={['required']}
+                        errorMessages={['']}
                       />
                     </Grid>
                     <Grid item xs={12} md={6}>
                       <TextField
                         id="outlined-company"
                         label="Company"
-                        className={classes.textField}
                         value={this.state.company}
+                        className={classes.textField}
                         onChange={this.handleChange('company')}
+                        fullWidth
                         margin="dense"
                         variant="outlined"
-                        fullWidth
                       />
                     </Grid>
                     <Grid item xs={12} md={6}>
@@ -134,17 +134,12 @@ class Consultation extends Component {
                         id="outlined-select-messenger"
                         select
                         label="Preferred means of communication"
-                        className={classes.textField}
                         value={this.state.messenger}
+                        className={classes.textField}
                         onChange={this.handleChange('messenger')}
-                        SelectProps={{
-                          MenuProps: {
-                            className: classes.menu,
-                          },
-                        }}
+                        fullWidth
                         margin="dense"
                         variant="outlined"
-                        fullWidth
                       >
                         {messengers.map(option => (
                           <MenuItem key={option} value={option}>
@@ -154,44 +149,50 @@ class Consultation extends Component {
                       </TextField>
                     </Grid>
                     <Grid item xs={12} md={6}>
-                      <TextField
+                      <TextValidator
                         id="outlined-contact-input"
+                        name="contact"
                         label={this.state.messenger}
-                        className={classes.textField}
                         value={this.state.contact}
+                        className={classes.textField}
                         onChange={this.handleChange('contact')}
+                        fullWidth
                         margin="dense"
                         variant="outlined"
-                        fullWidth
+                        validators={['required']}
+                        errorMessages={['']}
                       />
                     </Grid>
                     <Grid item xs={12}>
-                      <TextField
+                      <TextValidator
                         id="outlined-multiline-text"
+                        name="text"
                         label="How can we help"
                         multiline
                         rows="4"
                         rowsMax="4"
                         value={this.state.text}
-                        onChange={this.handleChange('text')}
                         className={classes.textField}
+                        onChange={this.handleChange('text')}
+                        fullWidth
                         margin="dense"
                         variant="outlined"
-                        fullWidth
+                        validators={['required']}
+                        errorMessages={['']}
                       />
                     </Grid>
                     <Grid item xs={12} className={classes.button}>
                       <Button 
-                        variant="contained" 
-                        color="primary" 
+                        type="submit"
+                        color="primary"
+                        variant="contained"
                         fullWidth
-                        onClick={this.sendEmail}
                       >
                         Send request
                       </Button>
                     </Grid>
                   </Grid>
-                </form>
+                </ValidatorForm>
               </Grow>
               <Grow
                 in={!showForm}
