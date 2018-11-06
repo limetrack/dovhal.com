@@ -10,7 +10,8 @@ export default (theme) => ({
     color: theme.palette.grey['300'],
   },
   icon: {
-    marginRight: `${theme.spacing.unit * 2}px`,
+    marginRight: `${theme.spacing.unit * 1}px`,
+    marginLeft: `${theme.spacing.unit * 1}px`,
     '&:hover': {
       color: theme.palette.primary.light,
     },

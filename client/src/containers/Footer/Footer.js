@@ -18,7 +18,7 @@ class Footer extends Component {
         <Consultation />
         <footer className={classes.footer}>
           <SectionLayout>
-            <Grid container spacing={32} justify="space-around">
+            <Grid container spacing={8} justify="space-around">
               <Grid item xs={12} md={4} className={classes.item} >
                 <Link to="/#top"><img src={logo} className={classes.logo} alt="dovhal" /></Link>
               </Grid>
@@ -41,11 +41,11 @@ class Footer extends Component {
           <SectionLayout>
             <Grid container spacing={32} justify="center">
               <Grid item xs={12}>
-                <Typography variant="subtitle2" align="center" gutterBottom className={classes.text}>
-                  <Button color="inherit" component={Link} to="/services#top">Services</Button>
-                  <Button color="inherit" component={Link} to="/works#top">Works</Button>
-                  <Button color="inherit" component={Link} to="/about#top">About</Button>
-                  <Button color="inherit" component={Link} to="/careers#top">Careers</Button>
+                <Typography align="center" gutterBottom className={classes.text}>
+                  <Button color="inherit" size="small" component={Link} to="/services#top">Services</Button>
+                  <Button color="inherit" size="small" component={Link} to="/works#top">Works</Button>
+                  <Button color="inherit" size="small" component={Link} to="/about#top">About</Button>
+                  <Button color="inherit" size="small" component={Link} to="/careers#top">Careers</Button>
                 </Typography>
                 <Typography variant="subtitle2" align="center" gutterBottom className={classes.text}>  
                   © 2018 Dovhal. All rights reserved.
