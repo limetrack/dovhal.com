@@ -8,8 +8,12 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import registerServiceWorker from './registerServiceWorker';
 import ReactGA from 'react-ga';
 
-ReactGA.initialize('UA-128835667-1');
-ReactGA.pageview('/');
+const PRODUCTION_HOSTNAME_EX = /^(https?:\/\/)?(www\.)?dovhal\.com$/;
+
+if (PRODUCTION_HOSTNAME_EX.test(window.location.hostname)) {
+  ReactGA.initialize('UA-128835667-1');
+  ReactGA.pageview('/');
+}
 
 library.add(fab);
 
