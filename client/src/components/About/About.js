@@ -27,7 +27,7 @@ class About extends Component {
                   </Grid>
                   <Grid item xs={12} md={8}>
                     <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
-                      Dovhal Ltd. designs and builds beautiful world-class iOS, Android, and Web apps for startups and big brands. 
+                      Dovhal designs and builds beautiful world-class iOS, Android, and Web apps for startups and big brands. 
                       We bring together the best customer experience talent to hear what users have to say and turn thoughtful 
                       solutions into apps that make an impact. One user at a time, we’re improving lives.
                     </Typography>
