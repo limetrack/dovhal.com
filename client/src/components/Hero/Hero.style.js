@@ -2,6 +2,8 @@ export default (theme) => ({
   hero: {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    backgroundAttachment: 'fixed',
+    backgroundRepeat: 'no-repeat',
     // background: 'rgba(0, 0, 0, 0.6)',
     // position: 'relative',
     // '&:before': {
