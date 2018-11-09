@@ -2,15 +2,6 @@ export default (theme) => ({
   hero: {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    // background: 'rgba(0, 0, 0, 0.6)',
-    // position: 'relative',
-    // '&:before': {
-    //   content: '""',
-    //   position: 'absolute',
-    //   width: '100%',
-    //   height: '100%',
-    //   zIndex: '-1',
-    // }
   },
   main: {
     minHeight: `${theme.spacing.unit * 40}px`,
