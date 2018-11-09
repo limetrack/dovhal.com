@@ -26,7 +26,10 @@
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      <!-- <div class="lds-ripple"><div></div><div></div></div> -->
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -37,5 +40,116 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <style type="text/css">
+      .lds-grid {
+        width: 64px;
+        height: 64px;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      .lds-grid div {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #159eee;
+        animation: lds-grid 1.2s linear infinite;
+      }
+      .lds-grid div:nth-child(1) {
+        top: 6px;
+        left: 6px;
+        animation-delay: 0s;
+      }
+      .lds-grid div:nth-child(2) {
+        top: 6px;
+        left: 26px;
+        animation-delay: -0.4s;
+      }
+      .lds-grid div:nth-child(3) {
+        top: 6px;
+        left: 45px;
+        animation-delay: -0.8s;
+      }
+      .lds-grid div:nth-child(4) {
+        top: 26px;
+        left: 6px;
+        animation-delay: -0.4s;
+      }
+      .lds-grid div:nth-child(5) {
+        top: 26px;
+        left: 26px;
+        animation-delay: -0.8s;
+      }
+      .lds-grid div:nth-child(6) {
+        top: 26px;
+        left: 45px;
+        animation-delay: -1.2s;
+      }
+      .lds-grid div:nth-child(7) {
+        top: 45px;
+        left: 6px;
+        animation-delay: -0.8s;
+      }
+      .lds-grid div:nth-child(8) {
+        top: 45px;
+        left: 26px;
+        animation-delay: -1.2s;
+      }
+      .lds-grid div:nth-child(9) {
+        top: 45px;
+        left: 45px;
+        animation-delay: -1.6s;
+      }
+      @keyframes lds-grid {
+        0%, 100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+    </style>
+    <style type="text/css">
+      .lds-ripple {
+        width: 64px;
+        height: 64px;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      .lds-ripple div {
+        position: absolute;
+        border: 4px solid #159eee;
+        opacity: 1;
+        border-radius: 50%;
+        animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+      }
+      .lds-ripple div:nth-child(2) {
+        animation-delay: -0.5s;
+      }
+      @keyframes lds-ripple {
+        0% {
+          top: 28px;
+          left: 28px;
+          width: 0;
+          height: 0;
+          opacity: 1;
+        }
+        100% {
+          top: -1px;
+          left: -1px;
+          width: 58px;
+          height: 58px;
+          opacity: 0;
+        }
+      }
+    </style>
   </body>
 </html>
