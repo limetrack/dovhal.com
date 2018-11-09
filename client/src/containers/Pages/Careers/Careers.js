@@ -6,7 +6,9 @@ import { Grid, Typography, List, ListItem, ListItemText, } from '@material-ui/co
 import { SectionLayout } from 'containers';
 import { Hero } from 'components';
 import styles from './Careers.style.js';
-import hero from './images/hero.jpg';
+import heroXs from './images/hero@xs.jpg';
+import heroMd from './images/hero@md.jpg';
+import heroXl from './images/hero@xl.jpg';
 
 const developers = [
   'Front-end developer',
@@ -22,7 +24,12 @@ class Careers extends Component {
 
     return (
       <Fragment>
-        <Hero backgroundImage={hero} title="Careers" />
+        <Hero 
+          title="Careers" 
+          backgroundImageXs={heroXs}
+          backgroundImageMd={heroMd}
+          backgroundImageXl={heroXl} 
+        />
         <section className={classes.careers}>
           <SectionLayout>
             <Grid container spacing={32} justify="center">

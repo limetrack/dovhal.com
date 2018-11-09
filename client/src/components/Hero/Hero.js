@@ -2,15 +2,31 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
-import { Grid, Button, Typography } from '@material-ui/core';
+import { Grid, Button, Typography, withWidth } from '@material-ui/core';
 import { SectionLayout } from 'containers';
 import { HashLink } from 'react-router-hash-link';
 import styles from './Hero.style.js';
-import hero from './images/hero.jpg';
+import heroXs from './images/hero@xs.jpg';
+import heroMd from './images/hero@md.jpg';
+import heroXl from './images/hero@xl.jpg';
 
 class Hero extends Component {
+  getBackground = () => ({
+    xs: this.props.backgroundImageXs,
+    sm:  this.props.backgroundImageXs,
+    md:  this.props.backgroundImageMd,
+    lg:  this.props.backgroundImageMd,
+    xl:  this.props.backgroundImageXl,
+  })
+
   render() {
-    const { classes, backgroundImage, mainHero, title } = this.props;
+    const { 
+      classes, 
+      width,
+      mainHero, 
+      title } = this.props;
+
+    const backgroundImage = this.getBackground()[width];
 
     return (
       <section className={classes.hero} style={{ backgroundImage: `url(${backgroundImage})` }}>
@@ -73,7 +89,9 @@ class Hero extends Component {
 
 Hero.defaultProps = {
   mainHero: false,
-  backgroundImage: hero,
+  backgroundImageXs: heroXs,
+  backgroundImageMd: heroMd,
+  backgroundImageXl: heroXl,
   title: 'Default title',
 }
 
@@ -81,7 +99,9 @@ Hero.propTypes = {
   classes: PropTypes.object.isRequired,
   title: PropTypes.string,
   mainHero: PropTypes.bool,
-  backgroundImage: PropTypes.string,
+  backgroundImageXs: PropTypes.string,
+  backgroundImageMd: PropTypes.string,
+  backgroundImageXl: PropTypes.string,
 };
 
-export default withStyles(styles)(Hero);
+export default withStyles(styles)(withWidth()(Hero));

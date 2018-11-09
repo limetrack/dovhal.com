@@ -14,42 +14,9 @@ import { CheckCircle } from '@material-ui/icons';
 import { SectionLayout } from 'containers';
 import { Hero, Project } from 'components';
 import styles from './Works.style.js';
-import hero from './images/hero.jpg';
-
-// import { PROJECTS } from 'components/Projects/Project/Project';
-
-// const WORKS_DATA = {
-//   vi: {
-//     title: '',
-//     subtitle: '',
-//     description: [
-//       '',
-//     ],
-//     list: [
-//       '',
-//     ],
-//   },
-//   newtend: {
-//     title: '',
-//     subtitle: '',
-//     description: [
-//       '',
-//     ],
-//     list: [
-//       '',
-//     ],
-//   },
-//   tesla : {
-//     title: '',
-//     subtitle: '',
-//     description: [
-//       '',
-//     ],
-//     list: [
-//       '',
-//     ],
-//   },
-// }
+import heroXs from './images/hero@xs.jpg';
+import heroMd from './images/hero@md.jpg';
+import heroXl from './images/hero@xl.jpg';
 
 class Works extends Component {
   render() {
@@ -57,7 +24,12 @@ class Works extends Component {
 
     return (
       <Fragment>
-        <Hero backgroundImage={hero} title="Our works" />
+        <Hero 
+          title="Our works" 
+          backgroundImageXs={heroXs}
+          backgroundImageMd={heroMd}
+          backgroundImageXl={heroXl} 
+        />
         <section className={classes.works}>
           <SectionLayout>
             <Grid container spacing={32} alignItems="center" justify="center" className={classes.main}>

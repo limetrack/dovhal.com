@@ -16,7 +16,9 @@ import { CheckCircle } from '@material-ui/icons';
 import { SectionLayout } from 'containers';
 import { Hero } from 'components';
 import styles from './Services.style.js';
-import hero from './images/hero.jpg';
+import heroXs from './images/hero@xs.jpg';
+import heroMd from './images/hero@md.jpg';
+import heroXl from './images/hero@xl.jpg';
 import app from './images/app.jpg';
 import web from './images/web.jpg';
 import support from './images/support.jpg';
@@ -64,7 +66,12 @@ class Services extends Component {
 
     return (
       <Fragment>
-        <Hero backgroundImage={hero} title="Our services" />
+        <Hero 
+          title="Our services" 
+          backgroundImageXs={heroXs}
+          backgroundImageMd={heroMd}
+          backgroundImageXl={heroXl} 
+        />
         <section className={classes.services}>
           <SectionLayout>
             <Grid container spacing={32} justify="center">

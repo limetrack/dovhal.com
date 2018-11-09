@@ -7,7 +7,9 @@ import { FingerprintOutlined, HighQualityOutlined, PeopleOutlined, VerifiedUserO
 import { SectionLayout } from 'containers';
 import { Hero } from 'components';
 import styles from './About.style.js';
-import hero from './images/hero.jpg';
+import heroXs from './images/hero@xs.jpg';
+import heroMd from './images/hero@md.jpg';
+import heroXl from './images/hero@xl.jpg';
 
 class About extends Component {
   render() {
@@ -15,7 +17,12 @@ class About extends Component {
 
     return (
       <Fragment>
-        <Hero backgroundImage={hero} title="About us" />
+        <Hero 
+          title="About us" 
+          backgroundImageXs={heroXs}
+          backgroundImageMd={heroMd}
+          backgroundImageXl={heroXl} 
+        />
         <section className={classes.about}>
           <SectionLayout>
             <Grid container spacing={32} justify="center">
