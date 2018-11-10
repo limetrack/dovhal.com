@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import { Grid, Typography, Divider, Button } from '@material-ui/core';
+import { Grid, Typography, Divider, Button, ButtonBase } from '@material-ui/core';
 import { SectionLayout } from 'containers';
 import { Consultation } from 'components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -26,13 +26,24 @@ class Footer extends Component {
                 <Typography variant="subtitle2" align="center" className={classes.text}>  
                   info@dovhal.com
                 </Typography>
+                <Typography variant="subtitle2" align="center" gutterBottom className={classes.text}>  
+                  +38 099 0354 001
+                </Typography>
               </Grid>
               <Grid item xs={12} md={4} className={classes.item} >
                 <Typography variant="h6" align="right" className={classes.text}>
-                  <FontAwesomeIcon icon={['fab', 'skype']} className={classes.icon} />
-                  <FontAwesomeIcon icon={['fab', 'whatsapp']} className={classes.icon} />
-                  <FontAwesomeIcon icon={['fab', 'telegram']} className={classes.icon} />
-                  <FontAwesomeIcon icon={['fab', 'viber']} className={classes.icon} />
+                  <ButtonBase href="skype:380990354001?chat" target="_blank" disableRipple>
+                    <FontAwesomeIcon icon={['fab', 'skype']} className={classes.icon} />
+                  </ButtonBase>
+                  <ButtonBase href="https://api.whatsapp.com/send?phone=380990354001" target="_blank" disableRipple>
+                    <FontAwesomeIcon icon={['fab', 'whatsapp']} className={classes.icon} />
+                  </ButtonBase>
+                  <ButtonBase href="https://t.me/dovhal_com" target="_blank" disableRipple>
+                    <FontAwesomeIcon icon={['fab', 'telegram']} className={classes.icon} />
+                  </ButtonBase>
+                  <ButtonBase href="viber://chat?number=380990354001" target="_blank" disableRipple>
+                    <FontAwesomeIcon icon={['fab', 'viber']} className={classes.icon} />
+                  </ButtonBase>
                 </Typography>
               </Grid>
             </Grid>
