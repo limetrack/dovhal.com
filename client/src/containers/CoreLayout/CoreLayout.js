@@ -10,11 +10,11 @@ class CoreLayout extends Component {
         <Fragment>
           <Route component={Header}/>
           <Switch>
-            <Route exact path="/" component={FrontPage} />
             <Route path="/services" component={Services} />
             <Route path="/works" component={Works} />
             <Route path="/about" component={About} />
             <Route path="/careers" component={Careers} />
+            <Route component={FrontPage} />
           </Switch>
           <Route component={Footer}/>
         </Fragment>

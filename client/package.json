@@ -24,7 +24,7 @@
     "react-jss": "^8.6.1",
     "react-router-dom": "^4.3.1",
     "react-router-hash-link": "^1.2.0",
-    "react-scripts": "1.1.5",
+    "react-scripts": "2.1.1",
     "typeface-roboto": "0.0.54",
     "react-material-ui-form-validator": "^2.0.2"
   },
@@ -33,5 +33,11 @@
   },
   "engines": {
     "node": "8.11.3"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
