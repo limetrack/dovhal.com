@@ -22,7 +22,7 @@ class About extends Component {
                       About company
                     </Typography>
                     <Typography variant="h4" align="center">
-                      We Provided Services All Over The World
+                      We Provide Services All Over The World
                     </Typography>
                   </Grid>
                   <Grid item xs={12} md={8}>

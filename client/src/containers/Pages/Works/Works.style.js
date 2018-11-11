@@ -19,4 +19,14 @@ export default (theme) => ({
     marginRight: 0,
     marginLeft: `${theme.spacing.unit * 2}px`,
   },
+  mobile: {
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
+    },
+  },
+  desktop: {
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
+  }
 })
