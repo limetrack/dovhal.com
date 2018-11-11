@@ -1,7 +1,6 @@
 export default (theme) => ({
   about: {
     marginTop: `-${theme.spacing.unit * 10}px`,
-    // minHeight: `${theme.spacing.unit * 70}px`,
     paddingBottom: `${theme.spacing.unit * 5}px`,
     position: 'relative',
   },

@@ -23,12 +23,16 @@ class Footer extends Component {
                 <Link to="/#top"><img src={logo} className={classes.logo} alt="dovhal" /></Link>
               </Grid>
               <Grid item xs={12} md={4} className={classes.item} >
-                <Typography variant="subtitle2" align="center" className={classes.text}>  
-                  info@dovhal.com
-                </Typography>
-                <Typography variant="subtitle2" align="center" gutterBottom className={classes.text}>  
-                  +38 099 0354 001
-                </Typography>
+                <a href="mailto:info@dovhal.com" className={classes.link}>
+                  <Typography variant="subtitle2" align="center" className={classes.text}>
+                    info@dovhal.com  
+                  </Typography>
+                </a>
+                <a href="tel:info@dovhal.com" className={classes.link}>
+                  <Typography variant="subtitle2" align="center" gutterBottom className={classes.text}>  
+                    +38 099 0354 001
+                  </Typography>
+                </a>
               </Grid>
               <Grid item xs={12} md={4} className={classes.item} >
                 <Typography variant="h6" align="right" className={classes.text}>

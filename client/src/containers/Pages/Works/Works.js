@@ -93,7 +93,7 @@ class Works extends Component {
                   The electronic trading platform
                 </Typography>
               </Grid> 
-              <Grid item xs={12} md={8}>
+              <Grid item xs={12} md={8} className={classes.desktop}>
                 <Typography variant="subtitle2" color="textSecondary" align="right" gutterBottom>
                   NEWTEND is a high quality and prompt service for participation in the pre-threshold and above-threshold government tenders.
                   NEWTEND participated in the development of the ProZorro system and has all four accreditation levels.
@@ -130,6 +130,35 @@ class Works extends Component {
               </Grid>
               <Grid item xs={12} md={4} className={classes.paper}>
                 <Project name="newtend" />
+              </Grid>
+              <Grid item xs={12} md={8} className={classes.mobile}>
+                <Typography variant="subtitle2" color="textSecondary" gutterBottom>
+                  NEWTEND is a high quality and prompt service for participation in the pre-threshold and above-threshold government tenders.
+                  NEWTEND participated in the development of the ProZorro system and has all four accreditation levels.
+                </Typography>
+                <Typography variant="subtitle2" color="textSecondary" gutterBottom paragraph>
+                  We provide the suppliers with:
+                </Typography>
+                <List dense disablePadding>
+                  <ListItem disableGutters>
+                    <ListItemIcon>
+                        <CheckCircle color="primary"/>
+                    </ListItemIcon>
+                    <ListItemText primary="Open new marketing outlets" />
+                  </ListItem>
+                  <ListItem disableGutters>
+                    <ListItemIcon>
+                        <CheckCircle color="primary"/>
+                    </ListItemIcon>
+                    <ListItemText primary="Equal access to the government orders" />
+                  </ListItem>
+                  <ListItem disableGutters>
+                    <ListItemIcon>
+                        <CheckCircle color="primary"/>
+                    </ListItemIcon>
+                    <ListItemText primary="A prompt mailout of current procurements" />
+                  </ListItem>
+                </List>
               </Grid>
             </Grid>
           </SectionLayout>

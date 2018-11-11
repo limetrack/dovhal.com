@@ -26,4 +26,7 @@ export default (theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  link: {
+    textDecoration: 'none',
+  },
 })

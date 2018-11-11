@@ -40,7 +40,7 @@ class Hero extends Component {
                   <Typography variant="h2" align="center" className={classNames(classes.title, classes.text, classes.desktop)}>
                     Custom software development
                   </Typography>
-                  <Typography variant="h3" align="center" className={classNames(classes.title, classes.text, classes.mobile)}>
+                  <Typography variant="h4" align="center" className={classNames(classes.title, classes.text, classes.mobile)}>
                     Custom software development
                   </Typography>
                 </Grid>
@@ -75,7 +75,7 @@ class Hero extends Component {
                 <Typography variant="h2" align="center" className={classNames(classes.title, classes.text, classes.desktop)}>
                   {title}
                 </Typography>
-                <Typography variant="h3" align="center" className={classNames(classes.title, classes.text, classes.mobile)}>
+                <Typography variant="h4" align="center" className={classNames(classes.title, classes.text, classes.mobile)}>
                   {title}
                 </Typography>
               </Grid>
