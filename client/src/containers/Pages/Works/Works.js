@@ -25,7 +25,7 @@ class Works extends Component {
     return (
       <Fragment>
         <Hero 
-          title="Our works" 
+          title="Our succeses" 
           backgroundImageXs={heroXs}
           backgroundImageMd={heroMd}
           backgroundImageXl={heroXl} 
@@ -95,8 +95,8 @@ class Works extends Component {
               </Grid> 
               <Grid item xs={12} md={8} className={classes.desktop}>
                 <Typography variant="subtitle2" color="textSecondary" align="right" gutterBottom>
-                  NEWTEND is a high quality and prompt service for participation in the pre-threshold and above-threshold government tenders.
-                  NEWTEND participated in the development of the ProZorro system and has all four accreditation levels.
+                  NEWTEND is a high quality and immediate service used to participate in the pre-threshold and above-threshold governmental tenders.
+                  NEWTEND and ProZorro work hand in hand to allow efficient distiribution at all four accreditation levels.
                 </Typography>
                 <Typography variant="subtitle2" color="textSecondary" align="right" gutterBottom paragraph>
                   We provide the suppliers with:
@@ -104,7 +104,7 @@ class Works extends Component {
                 <List dense disablePadding>
                   <ListItem disableGutters>
                     <ListItemText 
-                      primary="Open new marketing outlets"
+                      primary="New marketing outlets"
                       primaryTypographyProps={{ align: 'right' }} />
                     <ListItemIcon className={classes.iconRight}>
                         <CheckCircle color="primary"/>
@@ -120,7 +120,7 @@ class Works extends Component {
                   </ListItem>
                   <ListItem disableGutters>
                     <ListItemText 
-                      primary="A prompt mailout of current procurements"
+                      primary="A prompt notification of current projects"
                       primaryTypographyProps={{ align: 'right' }} />
                     <ListItemIcon className={classes.iconRight}>
                         <CheckCircle color="primary"/>
@@ -133,8 +133,8 @@ class Works extends Component {
               </Grid>
               <Grid item xs={12} md={8} className={classes.mobile}>
                 <Typography variant="subtitle2" color="textSecondary" gutterBottom>
-                  NEWTEND is a high quality and prompt service for participation in the pre-threshold and above-threshold government tenders.
-                  NEWTEND participated in the development of the ProZorro system and has all four accreditation levels.
+                  NEWTEND is a high quality and immediate service used to participate in the pre-threshold and above-threshold governmental tenders.
+                  NEWTEND and ProZorro work hand in hand to allow efficient distiribution at all four accreditation levels.
                 </Typography>
                 <Typography variant="subtitle2" color="textSecondary" gutterBottom paragraph>
                   We provide the suppliers with:
@@ -144,7 +144,7 @@ class Works extends Component {
                     <ListItemIcon>
                         <CheckCircle color="primary"/>
                     </ListItemIcon>
-                    <ListItemText primary="Open new marketing outlets" />
+                    <ListItemText primary="New marketing outlets" />
                   </ListItem>
                   <ListItem disableGutters>
                     <ListItemIcon>
@@ -156,7 +156,7 @@ class Works extends Component {
                     <ListItemIcon>
                         <CheckCircle color="primary"/>
                     </ListItemIcon>
-                    <ListItemText primary="A prompt mailout of current procurements" />
+                    <ListItemText primary="A prompt notification of current projects" />
                   </ListItem>
                 </List>
               </Grid>
@@ -173,7 +173,7 @@ class Works extends Component {
               </Grid>
               <Grid item xs={12}>
                 <Typography variant="subtitle2" color="textSecondary" align="center" gutterBottom>
-                 The company of energy solutions for houses №1 on the Ukrainian market
+                 Top energy solutions for homes in Ukraine
                 </Typography>
               </Grid> 
               <Grid item xs={12} md={4} className={classes.paper}>
@@ -181,8 +181,8 @@ class Works extends Component {
               </Grid>
               <Grid item xs={12} md={8}>
                 <Typography variant="subtitle2" color="textSecondary" gutterBottom>
-                  Teslaenergo is a demanding professional in the Ukrainian energy market, relying on future innovations and premium quality.
-                  We offer business cooperation to those who are willing to invest in the future of green energy.
+                  TeslaEnergo is the preeminent suppplier of new ideas and innovations in the Ukrainian energy market.
+                  We collaborate with businesses that invest in the future of green energy.
                 </Typography>
                 <Typography variant="subtitle2" color="textSecondary" gutterBottom paragraph>
                   We monitor the most promising technological solutions in Europe to create:
@@ -192,19 +192,19 @@ class Works extends Component {
                     <ListItemIcon>
                         <CheckCircle color="primary"/>
                     </ListItemIcon>
-                    <ListItemText primary="A smart" />
+                    <ListItemText primary="Smart Technology" />
                   </ListItem>
                   <ListItem disableGutters>
                     <ListItemIcon>
                         <CheckCircle color="primary"/>
                     </ListItemIcon>
-                    <ListItemText primary="Energy-efficient home" />
+                    <ListItemText primary="Energy-efficient homes" />
                   </ListItem>
                   <ListItem disableGutters>
                     <ListItemIcon>
                         <CheckCircle color="primary"/>
                     </ListItemIcon>
-                    <ListItemText primary="The first to bring them to the Ukrainian market" />
+                    <ListItemText primary="Pioneers in Ukraine" />
                   </ListItem>
                 </List>
               </Grid>

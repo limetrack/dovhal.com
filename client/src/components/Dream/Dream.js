@@ -8,11 +8,11 @@ import styles from './Dream.style.js';
 import adovgal from './img/adovgal.png';
 
 const advantages = [
-  'It has been designed specifically for specific business needs.',
-  'It is easier and more intuitive to use and does not contain unnecessary installations.',
-  'One of the most important aspects is its flexibility.',
-  'Expandable and connectable to different web services.',
-  'Custom software is created to have a simple interface with other software.',
+  'Designed for specific business needs',
+  'Easier and more intuitive to use without unnecessary installations',
+  'Flexible',
+  'Expandable and connectable to different web services',
+  'Created with other software in mind',
 ];
 
 class Dream extends Component {
@@ -36,7 +36,9 @@ class Dream extends Component {
                 <Grid item xs={12}>
                   <Typography variant="subtitle2" color="textSecondary" gutterBottom>
                     then we are the ones who will help you make it come true. We know that software, 
-                    like a magic wand, turns an idea into a real business.
+                    like a magic wand, can turn an idea into a real business.
+                  </Typography>
+                  <Typography variant="subtitle2" color="textSecondary" gutterBottom>
                     Advantages of custom software:
                   </Typography>
                 </Grid>

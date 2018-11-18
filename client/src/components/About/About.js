@@ -19,17 +19,17 @@ class About extends Component {
                 <Grid container spacing={32} justify="center">
                   <Grid item xs={12}>
                     <Typography variant="subtitle2" align="center" color="primary" className={classes.title}>
-                      About company
+                      About us
                     </Typography>
                     <Typography variant="h4" align="center">
-                      We Provide Services All Over The World
+                      Worldwide
                     </Typography>
                   </Grid>
                   <Grid item xs={12} md={8}>
                     <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
-                      Dovhal designs and builds beautiful world-class iOS, Android, and Web apps for startups and big brands. 
-                      We bring together the best customer experience talent to hear what users have to say and turn thoughtful 
-                      solutions into apps that make an impact. One user at a time, we’re improving lives.
+                      Dovhal designs and builds beautiful world-class iOS, Android, and Web apps for startups and established brands. 
+                      We bring together the best talent. We listen to ouy users and turn thoughtful ideas into 
+                      solutions that make a difference. One user at a time, we’re improving lives.
                     </Typography>
                   </Grid> 
                   <Grid item xs={12}>
@@ -40,8 +40,8 @@ class About extends Component {
                           App Development
                         </Typography>
                         <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
-                          We use our expertise in a variety of technologies to craft code that opens the door for ongoing iterations 
-                          with our clients’ users. Our teams ensure a build with the foundation for success.
+                          We use our expertise in a variety of technologies to craft code that opens the door for iterations 
+                          with our clients’ users. Our teams guarantee success.
                         </Typography>
                       </Grid>
                       <Grid item xs={12} md={4}>
@@ -50,7 +50,7 @@ class About extends Component {
                           Web Development
                         </Typography>
                         <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
-                          Our web development process is geared toward an intuitive experience for users. We create products that are 
+                          Our web development process ensures an intuitive experience for users. We create products that are 
                           both aesthetically pleasing and user friendly.
                         </Typography>
                       </Grid> 
@@ -60,7 +60,7 @@ class About extends Component {
                           Support
                         </Typography>
                         <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
-                          A launch date doesn’t mean “goodbye.” We continue collaborating for exponential success, keeping you and your products online.
+                          A launch date doesn’t mean “goodbye.” We continue collaborating for exponential success, keeping you and your products up to date.
                         </Typography>
                       </Grid> 
                     </Grid>

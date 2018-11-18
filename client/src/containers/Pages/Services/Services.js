@@ -27,7 +27,7 @@ const services = [
   {
     image: app,
     title: 'App Development',
-    description: 'We use our expertise in a variety of technologies to craft code that opens the door for ongoing iterations with our clients’ users. Our teams ensure a build with the foundation for success.',
+    description: 'We use our expertise in a variety of technologies to craft code that opens the door for ongoing iterations with our clients’ users. Our teams ensure success.',
     listItems: [
       'iOS App Development',
       'Android App Development',
@@ -49,7 +49,7 @@ const services = [
   {
     image: support,
     title: 'Support',
-    description: 'A launch date doesn’t mean “goodbye.” We continue collaborating for exponential success, keeping you and your products online.',
+    description: 'A launch date doesn’t mean “goodbye.” We continue collaborating for exponential success, keeping you and your products up to date.',
     listItems: [
       'Incident management',
       'Problem management',
@@ -82,8 +82,8 @@ class Services extends Component {
                 </Grid>
                 <Grid item xs={12} md={8}>
                   <Typography variant="subtitle2" color="textSecondary" align="center" gutterBottom className={classes.description}>
-                    Our team uses our expertise in design and development to explore and define the best strategy for your team. 
-                    We work to grow and maintain a transparent collaboration that extends beyond a launch date. From concept to delivery, 
+                    Our team uses our expertise in design and development to create and define the best strategy for your team. 
+                    We maintain a transparent collaboration that extends beyond a launch date. From concept to delivery, 
                     we offer solutions that will ensure a successful product.
                   </Typography>
                 </Grid>

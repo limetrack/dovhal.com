@@ -33,7 +33,7 @@ class About extends Component {
               </Grid>
               <Grid item xs={12} md={8}>
                 <Typography variant="subtitle2" color="textSecondary" align="center" gutterBottom className={classes.text}>
-                  We believe in building software that improves lives and makes us a little happier
+                  We believe in building software that improves lives and makes us happier
                 </Typography>
               </Grid>
               <Grid item xs={12}>
@@ -46,7 +46,7 @@ class About extends Component {
                       </Typography>
                       <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
                         As capabilities of technology are expected to continue growing exponentially, it is certain that the 
-                        future of business will increasingly efficient.
+                        future of business will become increasingly efficient.
                       </Typography>
                     </Paper>
                   </Grid> 
@@ -57,7 +57,7 @@ class About extends Component {
                         High quality
                       </Typography>
                       <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
-                        It’s easier than you think to balance quality and cost for your business when real professionals come to work.
+                        Our professionals at Dovhal will create <strong>harmony</strong> of quality and cost.
                       </Typography>
                     </Paper>
                   </Grid> 
@@ -68,7 +68,7 @@ class About extends Component {
                         Individual approach
                       </Typography>
                       <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
-                        Every person wants to feel special, and an individual approach lets us give you the care you need.
+                        Every person demands unique attention, and our individual approach lets us give you the care you need.
                       </Typography>
                     </Paper>
                   </Grid> 
@@ -79,7 +79,7 @@ class About extends Component {
                         Warranty and support
                       </Typography>
                       <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
-                        When we talk about warranty, we mean much more, namely warmth and care that we give to our loved ones.
+                        When it comes to gaurenteed value, we mean much more; namely the warmth and care that we give to our clients.
                       </Typography>
                     </Paper>
                   </Grid> 
@@ -98,20 +98,20 @@ class About extends Component {
                 </Grid>
                 <Grid item xs={12} md={8}>
                   <Typography variant="subtitle2" align="center" gutterBottom className={classes.whiteText}>
-                    Technology is inescapable. It pervades every facet of our life. From how we work, play and live our lives, 
-                    technology has created a revolution that will grow for as long as humans continue to advance in their capabilities.
+                    Technology is inescapable. It pervades every facet of our lives. From how we work, play and live our lives, 
+                    technology has created a revolution that will grow for as long as humans chase their dreams.
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={8}>
                   <Typography variant="subtitle2" align="center" gutterBottom className={classes.whiteText}>
-                    As the days, months and years go by, technology just gets better and better. What was once the latest 
-                    and greatest yesterday, is old hat today. The bottom line is, technology doesn’t wait for you and if 
+                    As the days, months and years go by, technology gets better and better. What was once the latest 
+                    and greatest, is old hat today. The bottom line is that technology doesn’t wait for you and if 
                     your organization isn’t keeping up with it, you will surely be left in the dust by one of your competitors.
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={8}>
                   <Typography variant="subtitle2" align="center" gutterBottom className={classes.whiteText}>
-                    Our main advantage is the use of only the latest proven technologies.
+                    We use only proven, cutting edge technologies.
                   </Typography>
                 </Grid>
             </Grid>

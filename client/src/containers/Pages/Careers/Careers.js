@@ -11,11 +11,11 @@ import heroMd from './images/hero@md.jpg';
 import heroXl from './images/hero@xl.jpg';
 
 const developers = [
-  'Front-end developer',
-  'NodeJS developer',
-  'iOS developer',
-  'Android developer',
-  'Designer',
+  'Front-end developers',
+  'NodeJS developers',
+  'iOS developers',
+  'Android developers',
+  'Web designers',
 ]
 
 class Careers extends Component {
@@ -44,10 +44,10 @@ class Careers extends Component {
                   </Typography>
                   <Typography variant="subtitle2" color="textSecondary" align="center" gutterBottom className={classes.description}>
                     What if, instead of letting our differences separate us, they sparked creativity and innovation? 
-                    What if you didn’t have to fit into a mold but could be yourself at work?
-                    Our differences, both visible and invisible, benefit our teams, our communities, and the products we craft. 
+                    What if you didn’t have to fit into a mold, but could be yourself at work?
+                    Our unique skills, both visible and invisible, benefit our teams, our communities, and the products we craft. 
                     That’s why dovhal.com strives to build a team with diverse backgrounds, skills, and perspectives. 
-                    We’re committed to creating an environment of inclusion — a place where every Tree can thrive.
+                    We’re committed to creating an environment of inclusion — a place where every tree can thrive.
                   </Typography>
                 </Grid>
             </Grid>
@@ -85,8 +85,8 @@ class Careers extends Component {
                     Join the Team
                   </Typography>
                   <Typography variant="subtitle2" color="textSecondary" align="center" gutterBottom className={classes.description}>
-                    We’re driven by our goal of improving lives through the products we design and build. We look for people with a commitment 
-                    to excellence who take initiative to make products great.
+                    We’re driven by our goal of improving lives through the products we design and build. We look for people committed 
+                    to excellence, who use bold initiative to make products great.
                   </Typography>
                   <Typography variant="subtitle2" color="textSecondary" align="center" gutterBottom className={classes.description}>
                     We look forward to hearing from you!

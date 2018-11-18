@@ -58,7 +58,7 @@ class Footer extends Component {
               <Grid item xs={12}>
                 <Typography align="center" gutterBottom className={classes.text}>
                   <Button color="inherit" size="small" component={Link} to="/services#top">Services</Button>
-                  <Button color="inherit" size="small" component={Link} to="/works#top">Works</Button>
+                  <Button color="inherit" size="small" component={Link} to="/successes#top">Successes</Button>
                   <Button color="inherit" size="small" component={Link} to="/about#top">About</Button>
                   <Button color="inherit" size="small" component={Link} to="/careers#top">Careers</Button>
                 </Typography>

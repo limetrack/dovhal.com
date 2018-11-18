@@ -30,9 +30,13 @@ class Phrase extends Component {
                 </Grid>
                 <Grid item xs={10}>
                   <Typography variant="subtitle1" color="textSecondary" align="left" gutterBottom>
-                    We are feeling intense enthusiasm and compelling desire for making software. 
-                    Our passion stems from admiration for an idea.  We get enthusiastic enjoyment 
-                    of an activity of creating masterpieces.
+                    We have a compelling desire to create software.
+                  </Typography>
+                  <Typography variant="subtitle1" color="textSecondary" align="left" gutterBottom>
+                    Our success stems from our passion to innovate.
+                  </Typography>
+                  <Typography variant="subtitle1" color="textSecondary" align="left" gutterBottom>
+                    <strong>Come with us to develop your masterpiece.</strong>
                   </Typography>
                 </Grid>
                 <Grid item xs={12} className={classes.signItem}>
