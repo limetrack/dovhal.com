@@ -46,7 +46,7 @@ class Hero extends Component {
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <Typography variant="subtitle1" color="textSecondary" align="center" gutterBottom className={classes.text}>
-                    we strive to create the best user experience
+                    we will create the best user experience
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={12}>

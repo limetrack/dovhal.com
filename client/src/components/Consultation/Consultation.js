@@ -11,17 +11,17 @@ import styles from './Consultation.style.js';
 const things = [
   {
     title: 'We hear you',
-    description: 'We listen to you carefully, because the client is always right',
+    description: 'We listen attentively, because the client is always right',
     icon: HearingOutlined,
   },
   {
     title: 'We are here for you',
-    description: 'We are always ready to help. As soon as we need you, we are right there at the distance of one message',
+    description: "As soon as you need us, we're only one message away - 24/7",
     icon: WhereToVoteOutlined,
   },
   {
-    title: 'We cherish all interaction',
-    description: 'Every appeals are carefully considered, analyzed and get a decent response',
+    title: 'We value all interaction',
+    description: 'Every idea is carefully considered and analyzed',
     icon: BeachAccessOutlined,
   },
 ]
@@ -167,7 +167,7 @@ class Consultation extends Component {
                       <TextValidator
                         id="outlined-multiline-text"
                         name="text"
-                        label="How can we help"
+                        label="How can we help?"
                         multiline
                         rows="4"
                         rowsMax="4"
@@ -216,8 +216,7 @@ class Consultation extends Component {
                 Our customers are our friends
               </Typography>
               <Typography variant="subtitle2" color="textSecondary" gutterBottom className={classNames(classes.text, classes.description)}>
-                We always try to build our relationships on friendship and trust, hence comes a deep understanding of 
-                desires and successful achievement of goals
+                We'll know what you want before you do - and we'll make it come true
               </Typography>
               <List>
                 {things.map(thing => {

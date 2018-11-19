@@ -53,9 +53,9 @@ class Header extends Component {
             <ListItemIcon><ServicesIcon /></ListItemIcon>
             <ListItemText primary="Services" />
           </ListItem>
-          <ListItem button component={HashLink} to={`/works#top`}>
+          <ListItem button component={HashLink} to={`/successes#top`}>
             <ListItemIcon><WorksIcon /></ListItemIcon>
-            <ListItemText primary="Works" />
+            <ListItemText primary="Successes" />
           </ListItem>
           <ListItem button component={HashLink} to={`/about#top`}>
             <ListItemIcon><AboutIcon /></ListItemIcon>
@@ -105,7 +105,7 @@ class Header extends Component {
               <div className={classes.grow} />
               <div className={classes.sectionDesktop}>
                 <Button color="inherit" component={Link} to="/services">Services</Button>
-                <Button color="inherit" component={Link} to="/works">Works</Button>
+                <Button color="inherit" component={Link} to="/successes">Successes</Button>
                 <Button color="inherit" component={Link} to="/about">About</Button>
                 <Button color="inherit" component={Link} to="/careers">Careers</Button>
               </div>

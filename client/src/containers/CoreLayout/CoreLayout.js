@@ -11,7 +11,7 @@ class CoreLayout extends Component {
           <Route component={Header}/>
           <Switch>
             <Route path="/services" component={Services} />
-            <Route path="/works" component={Works} />
+            <Route path="/successes" component={Works} />
             <Route path="/about" component={About} />
             <Route path="/careers" component={Careers} />
             <Route component={FrontPage} />

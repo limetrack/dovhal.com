@@ -18,7 +18,7 @@ class Projects extends Component {
           <Grid container spacing={32} justify="center">
             <Grid item xs={12}>
               <Typography variant="h4" align="center">
-                Our works
+                Our successes
               </Typography>
             </Grid>
             <Grid item xs={12} md={8}>
