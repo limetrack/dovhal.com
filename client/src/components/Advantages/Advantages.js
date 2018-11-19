@@ -6,26 +6,26 @@ import { FingerprintOutlined, HighQualityOutlined, PeopleOutlined, VerifiedUserO
 import { SectionLayout } from 'containers';
 import styles from './Advantages.style.js';
 
-const advantages = [
+export const advantagesList = [
   {
     icon: FingerprintOutlined,
     title: 'Up to date technologies',
-    description: 'As capabilities of technology are expected to continue growing exponentially, it is certain that the future of business will increasingly efficient.',
+    description: 'As capabilities of technology are expected to continue growing exponentially, it is certain that the future of business will become increasingly efficient.',
   },
   {
     icon: HighQualityOutlined,
     title: 'High quality',
-    description: 'It’s easier than you think to balance quality and cost for your business when real professionals come to work.',
+    description: 'Our professionals at Dovhal will create harmony of quality and cost.',
   },
   {
     icon: PeopleOutlined,
     title: 'Individual approach',
-    description: 'Every person wants to feel special, and an individual approach lets us give you the care you need.',
+    description: 'Every person demands unique attention, and our individual approach lets us give you the care you need.',
   },
   {
     icon: VerifiedUserOutlined,
     title: 'Warranty and support',
-    description: 'When we talk about warranty, we mean much more, namely warmth and care that we give to our loved ones.',
+    description: 'When it comes to gaurenteed value, we mean much more; namely the warmth and care that we give to our clients.',
   },
 ];
 
@@ -49,7 +49,7 @@ class Advantages extends Component {
             </Grid> 
             <Grid item xs={12}>
               <Grid container spacing={32} justify="center" className={classes.papers}>
-                {advantages.map(adv => {
+                {advantagesList.map(adv => {
                   const Icon = adv.icon;
 
                   return (

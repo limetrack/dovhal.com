@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import { Grid, Paper, Typography, Hidden } from '@material-ui/core';
-import { FingerprintOutlined, HighQualityOutlined, PeopleOutlined, VerifiedUserOutlined } from '@material-ui/icons';
 import { SectionLayout } from 'containers';
 import { Hero } from 'components';
 import styles from './About.style.js';
 import heroXs from './images/hero@xs.jpg';
 import heroMd from './images/hero@md.jpg';
 import heroXl from './images/hero@xl.jpg';
+
+import { advantagesList } from 'components/Advantages/Advantages'
 
 class About extends Component {
   render() {
@@ -38,51 +39,23 @@ class About extends Component {
               </Grid>
               <Grid item xs={12}>
                 <Grid container spacing={32} justify="center">
-                  <Grid item xs={12} md={3}>
-                    <Paper className={classes.paper} elevation={1}>
-                      <FingerprintOutlined fontSize="large" color="primary" className={classes.icon} />
-                      <Typography variant="h6" align="center">
-                        Up to date technologies
-                      </Typography>
-                      <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
-                        As capabilities of technology are expected to continue growing exponentially, it is certain that the 
-                        future of business will become increasingly efficient.
-                      </Typography>
-                    </Paper>
-                  </Grid> 
-                  <Grid item xs={12} md={3}>
-                    <Paper className={classes.paper} elevation={1}>
-                      <HighQualityOutlined fontSize="large" color="primary" className={classes.icon} />
-                      <Typography variant="h6" align="center">
-                        High quality
-                      </Typography>
-                      <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
-                        Our professionals at Dovhal will create <strong>harmony</strong> of quality and cost.
-                      </Typography>
-                    </Paper>
-                  </Grid> 
-                  <Grid item xs={12} md={3}>
-                    <Paper className={classes.paper} elevation={1}>
-                      <PeopleOutlined fontSize="large" color="primary" className={classes.icon} />
-                      <Typography variant="h6" align="center">
-                        Individual approach
-                      </Typography>
-                      <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
-                        Every person demands unique attention, and our individual approach lets us give you the care you need.
-                      </Typography>
-                    </Paper>
-                  </Grid> 
-                  <Grid item xs={12} md={3}>
-                    <Paper className={classes.paper} elevation={1}>
-                      <VerifiedUserOutlined fontSize="large" color="primary" className={classes.icon} />
-                      <Typography variant="h6" align="center">
-                        Warranty and support
-                      </Typography>
-                      <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
-                        When it comes to gaurenteed value, we mean much more; namely the warmth and care that we give to our clients.
-                      </Typography>
-                    </Paper>
-                  </Grid> 
+                  {advantagesList.map(adv => {
+                    const Icon = adv.icon;
+
+                    return (
+                      <Grid key={adv.title} item xs={12} md={3}>
+                        <Paper className={classes.paper} elevation={1}>
+                          <Icon fontSize="large" color="primary" className={classes.icon} />
+                          <Typography variant="h6" align="center">
+                            {adv.title}
+                          </Typography>
+                          <Typography variant="subtitle2" color="textSecondary" align="center" className={classes.description}>
+                            {adv.description}
+                          </Typography>
+                        </Paper>
+                      </Grid>
+                    )
+                  })}
                 </Grid>
               </Grid> 
             </Grid>
@@ -130,15 +103,6 @@ class About extends Component {
                   style={{ border: 0, display: 'block' }}
                   allowFullScreen>
                 </iframe>
-                {/* <iframe 
-                  title="photo"
-                  src="https://www.google.com/maps/embed?pb=!4v1540766112052!6m8!1m7!1sf4rmqdmPtfno7zbATB7WtQ!2m2!1d50.49571534142549!2d30.52025289993295!3f314.92!4f42.91999999999999!5f0.5970117501821992" 
-                  width="100%" 
-                  height="600" 
-                  frameBorder="0" 
-                  style={{ border: 0, display: 'block' }}
-                  allowFullScreen>
-                </iframe> */}
               </Grid>
             </Hidden>
             <Grid item xs={12} md={6}>
