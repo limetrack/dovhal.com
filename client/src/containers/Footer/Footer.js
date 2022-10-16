@@ -30,24 +30,24 @@ class Footer extends Component {
                 </a>
                 <a href="tel:info@dovhal.com" className={classes.link}>
                   <Typography variant="subtitle2" align="center" gutterBottom className={classes.text}>  
-                    +38 099 0354 001
+                    +38 050 261 76 16
                   </Typography>
                 </a>
               </Grid>
               <Grid item xs={12} md={4} className={classes.item} >
                 <Typography variant="h6" align="right" className={classes.text}>
-                  <ButtonBase href="skype:380990354001?chat" target="_blank" disableRipple>
+                  {/* <ButtonBase href="skype:380990354001?chat" target="_blank" disableRipple>
                     <FontAwesomeIcon icon={['fab', 'skype']} className={classes.icon} />
-                  </ButtonBase>
-                  <ButtonBase href="https://api.whatsapp.com/send?phone=380990354001" target="_blank" disableRipple>
+                  </ButtonBase> */}
+                  {/* <ButtonBase href="https://api.whatsapp.com/send?phone=380990354001" target="_blank" disableRipple>
                     <FontAwesomeIcon icon={['fab', 'whatsapp']} className={classes.icon} />
-                  </ButtonBase>
-                  <ButtonBase href="https://t.me/dovhal_com" target="_blank" disableRipple>
+                  </ButtonBase> */}
+                  <ButtonBase href="https://t.me/limetrack" target="_blank" disableRipple>
                     <FontAwesomeIcon icon={['fab', 'telegram']} className={classes.icon} />
                   </ButtonBase>
-                  <ButtonBase href="viber://chat?number=380990354001" target="_blank" disableRipple>
+                  {/* <ButtonBase href="viber://chat?number=380990354001" target="_blank" disableRipple>
                     <FontAwesomeIcon icon={['fab', 'viber']} className={classes.icon} />
-                  </ButtonBase>
+                  </ButtonBase> */}
                 </Typography>
               </Grid>
             </Grid>
